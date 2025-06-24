@@ -1,0 +1,6 @@
+{
+  "testName": "link-multiple-links",
+  "timestamp": "2025-06-24T18:27:49.149Z",
+  "htmlContent": "<div style=\"padding: 20px; background-color: rgb(248, 249, 250); display: flex; gap: 15px; flex-wrap: wrap; min-width: 400px; border-radius: 8px;\"><a class=\"sc-bRKDuR hsgkbQ\">Home</a><a class=\"sc-bRKDuR hsgkbQ\">Sobre</a><a class=\"sc-bRKDuR hsgkbQ\">Contato</a><a class=\"sc-bRKDuR hsgkbQ\">Serviços</a></div>",
+  "note": "Este é um PNG placeholder. Para gerar PNGs reais, use ferramentas de E2E como Cypress ou Playwright."
+}

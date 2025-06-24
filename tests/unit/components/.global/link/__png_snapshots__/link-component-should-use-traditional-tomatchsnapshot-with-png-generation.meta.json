@@ -1,0 +1,6 @@
+{
+  "testName": "Link Component should use traditional toMatchSnapshot with PNG generation",
+  "timestamp": "2025-06-24T18:27:49.187Z",
+  "htmlContent": "<div style=\"padding: 25px; background-color: rgb(255, 243, 224); display: inline-block; min-width: 250px; border-radius: 12px; border: 2px solid rgb(255, 152, 0);\"><a class=\"sc-bRKDuR hsgkbQ\">Link com Border</a></div>",
+  "note": "Este é um PNG placeholder. Para gerar PNGs reais, use ferramentas de E2E como Cypress ou Playwright."
+}

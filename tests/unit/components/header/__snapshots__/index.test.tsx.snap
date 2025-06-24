@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Header Component should match snapshot 1`] = `
+<header
+  class="sc-bRKDuR gJwjwH"
+>
+  <img
+    alt="Sou Junior Logo"
+    class="sc-hvigdm jCrChq"
+    src="test-file-stub"
+  />
+  <nav
+    class="sc-fhHczv gdjGrq"
+  >
+    <a
+      class="sc-ggWZvA hthFqS"
+    >
+      Sobre nós
+    </a>
+    <a
+      class="sc-ggWZvA hthFqS"
+    >
+      Nossas iniciativas
+    </a>
+  </nav>
+</header>
+`;

@@ -1,0 +1,6 @@
+{
+  "testName": "link-custom-styling",
+  "timestamp": "2025-06-24T18:27:49.121Z",
+  "htmlContent": "<div style=\"padding: 30px; background-color: rgb(227, 242, 253); display: inline-block; min-width: 200px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);\"><a class=\"sc-bRKDuR hsgkbQ\">Link Customizado</a></div>",
+  "note": "Este é um PNG placeholder. Para gerar PNGs reais, use ferramentas de E2E como Cypress ou Playwright."
+}

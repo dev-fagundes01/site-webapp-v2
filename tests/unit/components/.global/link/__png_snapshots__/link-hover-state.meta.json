@@ -1,0 +1,6 @@
+{
+  "testName": "link-hover-state",
+  "timestamp": "2025-06-24T18:27:49.050Z",
+  "htmlContent": "<div style=\"padding: 20px; background-color: rgb(248, 249, 250); display: inline-block; min-width: 200px; border-radius: 8px;\"><a class=\"sc-bRKDuR hsgkbQ\" style=\"text-decoration: underline;\">Hover Link</a></div>",
+  "note": "Este é um PNG placeholder. Para gerar PNGs reais, use ferramentas de E2E como Cypress ou Playwright."
+}

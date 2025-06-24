@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Link Component should generate PNG for Link hover state 1`] = `"<div style="padding: 20px; background-color: rgb(248, 249, 250); display: inline-block; min-width: 200px; border-radius: 8px;"><a class="sc-bRKDuR hsgkbQ" style="text-decoration: underline;">Hover Link</a></div>"`;
+
+exports[`Link Component should generate PNG for Link with custom styling 1`] = `"<div style="padding: 30px; background-color: rgb(227, 242, 253); display: inline-block; min-width: 200px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"><a class="sc-bRKDuR hsgkbQ">Link Customizado</a></div>"`;
+
+exports[`Link Component should generate PNG for Link with different text 1`] = `"<div style="padding: 20px; background-color: rgb(248, 249, 250); display: inline-block; min-width: 300px; border-radius: 8px;"><a class="sc-bRKDuR hsgkbQ">Este é um link mais longo para teste</a></div>"`;
+
+exports[`Link Component should generate PNG for multiple Links 1`] = `"<div style="padding: 20px; background-color: rgb(248, 249, 250); display: flex; gap: 15px; flex-wrap: wrap; min-width: 400px; border-radius: 8px;"><a class="sc-bRKDuR hsgkbQ">Home</a><a class="sc-bRKDuR hsgkbQ">Sobre</a><a class="sc-bRKDuR hsgkbQ">Contato</a><a class="sc-bRKDuR hsgkbQ">Serviços</a></div>"`;
+
+exports[`Link Component should match the screenshot and generate PNG automatically 1`] = `"<div style="padding: 20px; background-color: rgb(248, 249, 250); display: inline-block; min-width: 200px; border-radius: 8px;"><a class="sc-bRKDuR hsgkbQ">Test Link</a></div>"`;
+
+exports[`Link Component should use traditional toMatchSnapshot with PNG generation 1`] = `"<div style="padding: 25px; background-color: rgb(255, 243, 224); display: inline-block; min-width: 250px; border-radius: 12px; border: 2px solid rgb(255, 152, 0);"><a class="sc-bRKDuR hsgkbQ">Link com Border</a></div>"`;

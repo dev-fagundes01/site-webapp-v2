@@ -1,0 +1,6 @@
+{
+  "testName": "link-long-text",
+  "timestamp": "2025-06-24T18:27:49.084Z",
+  "htmlContent": "<div style=\"padding: 20px; background-color: rgb(248, 249, 250); display: inline-block; min-width: 300px; border-radius: 8px;\"><a class=\"sc-bRKDuR hsgkbQ\">Este é um link mais longo para teste</a></div>",
+  "note": "Este é um PNG placeholder. Para gerar PNGs reais, use ferramentas de E2E como Cypress ou Playwright."
+}
