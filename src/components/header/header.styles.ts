@@ -1,14 +1,18 @@
 import styled from "styled-components";
+import { pxToRem } from "../../utils/pxToRem";
 
 export const HeaderContainer = styled.header`
-  display: flex;  
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  gap: ${pxToRem(24)};
   padding: 1rem 2rem;
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #dee2e6;
   min-height: 60px; /* Ensure adequate touch target height */
+  font-weight: 500;
+  font-style: Medium; //TODO ?
+  font-size: ${pxToRem(16)};
+  position: relative;
 
   & div {
     display: flex;
@@ -57,4 +61,11 @@ export const NavLinks = styled.nav`
     width: 100%;
     gap: 0.5rem;
   }
+`;
+
+export const Line = styled.hr`
+  width: 100%;
+  position: absolute;
+  top: 4.4rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 `;

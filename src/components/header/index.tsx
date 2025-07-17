@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { HeaderContainer, Logo, NavLinks } from "./header.styles";
+import { HeaderContainer, Line, Logo, NavLinks } from "./header.styles";
 import Link from "../.global/link";
 import { HeaderProps } from "./types";
 import logo from "../../assets/sou-junior-logo.png";
@@ -31,6 +31,8 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
           ))}
         </NavLinks>
       </div>
+
+      <Line/>
 
       <NavLinks role="navigation" aria-label="Navegação secundaria">
           {links[1].map((link) => (
