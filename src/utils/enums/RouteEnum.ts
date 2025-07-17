@@ -6,3 +6,17 @@ export enum RouteEnum {
   SUPPORT_US = "/seja-um-apoiador",
   DESIGN = "/design",
 }
+
+export enum RouteEnum2 {
+  BUSINESS = "/business",
+  TECH_RECRUITER = "/tech-recruiter",
+  PRODUCTS = "/produtos",
+  AGILITY = "/agilidade",
+  SOCIAL_MEDIA = "/social-media",
+  UI_UX_DESIGN = "/ui-ux-design",
+  FRONT_END = "/front-end",
+  BACK_END = "/back-end",
+  DATA = "/dados",
+  QA = "/qa",
+  DEV_OPS = "/dev-ops"
+}

@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
-  display: flex;
+  display: flex;  
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
@@ -9,9 +10,14 @@ export const HeaderContainer = styled.header`
   border-bottom: 1px solid #dee2e6;
   min-height: 60px; /* Ensure adequate touch target height */
 
+  & div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
   /* Responsive design */
   @media (max-width: 768px) {
-    flex-direction: column;
     gap: 1rem;
     padding: 1rem;
   }
