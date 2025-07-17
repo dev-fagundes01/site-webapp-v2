@@ -11,7 +11,6 @@ export const HeaderContainer = styled.header`
   min-height: 60px; /* Ensure adequate touch target height */
   font-weight: 500;
   font-style: Medium; //TODO ?
-  font-size: ${pxToRem(16)};
   position: relative;
 
   & div {
@@ -48,7 +47,7 @@ export const NavLinks = styled.nav`
   display: flex;
   gap: 0.5rem; /* Reduced gap to allow for link padding */
   align-items: center;
-
+  
   /* Responsive navigation */
   @media (max-width: 768px) {
     flex-wrap: wrap;

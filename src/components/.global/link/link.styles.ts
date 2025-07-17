@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import { pxToRem } from '../../../utils/pxToRem';
 
 export const StyledLink = styled.a`
   color: #0056b3; /* Darker blue for better contrast */
   text-decoration: none;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: ${pxToRem(16)};
   font-weight: 500;
   border-radius: 4px;
   padding: 8px 12px;

@@ -5,6 +5,7 @@ import {
   useScreenReaderAnnouncer,
   useFocusManagement,
 } from "../../../hooks/useAccessibility";
+import Subtitle from '../../../components/.global/subtitle'
 import Title from "../../../components/.global/title";
 
 const DesignView: React.FC<HeaderProps> = ({ links }) => {
@@ -44,6 +45,7 @@ const DesignView: React.FC<HeaderProps> = ({ links }) => {
         aria-label="Conteúdo principal da página de design"
       >
         <section aria-labelledby="design-heading">
+          <Subtitle>Áreas de Atuação</Subtitle>
           <Title>Design</Title>
 
           <p>
