@@ -164,7 +164,7 @@ input:valid {
 .design-content h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: var(--dark-color);
+  color: var(--primary-color);
   line-height: 1.2;
 }
 

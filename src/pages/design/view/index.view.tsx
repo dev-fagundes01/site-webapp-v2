@@ -5,6 +5,7 @@ import {
   useScreenReaderAnnouncer,
   useFocusManagement,
 } from "../../../hooks/useAccessibility";
+import Title from "../../../components/.global/title";
 
 const DesignView: React.FC<HeaderProps> = ({ links }) => {
   const { announce } = useScreenReaderAnnouncer();
@@ -43,9 +44,7 @@ const DesignView: React.FC<HeaderProps> = ({ links }) => {
         aria-label="Conteúdo principal da página de design"
       >
         <section aria-labelledby="design-heading">
-          <h1 id="design-heading" tabIndex={-1}>
-            Sistema de Design
-          </h1>
+          <Title>Design</Title>
 
           <p>
             Bem-vindo ao sistema de design da Sou Junior. Aqui você encontrará
