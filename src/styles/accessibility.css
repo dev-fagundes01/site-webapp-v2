@@ -97,13 +97,14 @@ textarea,
 :root {
   --primary-color: #0056b3;
   --primary-hover: #003d82;
-  --secondary-color: #6c757d;
+  --secondary-color: #323232;
   --success-color: #155724;
   --warning-color: #856404;
   --danger-color: #721c24;
   --info-color: #0c5460;
   --light-color: #f8f9fa;
   --dark-color: #343a40;
+  --neutral-color: #666666;
 }
 
 /* Error and success states */
@@ -154,17 +155,19 @@ input:valid {
 }
 
 .design-content {
+  display: flex;
   flex: 1;
-  padding: 2rem;
+  gap: 3rem;
+  width: 1020px;
   max-width: 1200px;
   margin: 0 auto;
-  width: 100%;
+  padding: 2rem;
 }
 
 .design-content h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: var(--primary-color);
+  color: rgba(0, 57, 134, 1);
   line-height: 1.2;
 }
 
@@ -173,6 +176,14 @@ input:valid {
   line-height: 1.6;
   color: var(--secondary-color);
   margin-bottom: 1.5rem;
+}
+
+.design-content button {
+  color: #fff;
+  background: rgba(0, 57, 134, 1);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: none;
 }
 
 /* Responsive design */
