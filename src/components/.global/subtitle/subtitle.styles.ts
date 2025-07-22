@@ -1,8 +1,13 @@
 import styled from "styled-components";
 import { pxToRem } from '../../../utils/pxToRem';
 
-export const SubtitleContainer = styled.h2`
-  font-size: ${pxToRem(24)};
-  color: rgba(102, 102, 102, 1);
+interface SubtitleContainerProps {
+  size: number;
+  color: string;
+}
+
+export const SubtitleContainer = styled.h2<SubtitleContainerProps>`
+  font-size: ${({size = 24}) => `${pxToRem(size)}`};
+  color: ${({color}) => `${color}`};
   margin-bottom: 0.75rem;
 `;
