@@ -1,9 +1,10 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { HeaderContainer, Line, Logo, NavLinks } from "./header.styles";
+import { HeaderContainer, Line, NavLinks } from "./header.styles";
 import Link from "../.global/link";
 import { HeaderProps } from "./types";
-import logo from "../../assets/sou-junior-logo.png";
+import logoImage from "../../assets/sou-junior-logo.png";
+import Logo from '../.global/logo'
 
 const Header: React.FC<HeaderProps> = ({ links }) => {
   const { t } = useTranslation();
@@ -12,7 +13,7 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
     <HeaderContainer role="banner">
       <div>
         <Logo
-          src={logo}
+          src={logoImage}
           alt="Sou Junior - Logo da organização que impulsiona carreiras em tecnologia"
           role="img"
         />

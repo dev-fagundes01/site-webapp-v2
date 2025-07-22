@@ -32,17 +32,6 @@ export const HeaderContainer = styled.header`
   }
 `;
 
-export const Logo = styled.img`
-  height: 40px;
-  max-width: 200px;
-  object-fit: contain;
-
-  /* Ensure logo is accessible */
-  @media (max-width: 480px) {
-    height: 32px;
-  }
-`;
-
 export const NavLinks = styled.nav`
   display: flex;
   gap: 0.5rem; /* Reduced gap to allow for link padding */
