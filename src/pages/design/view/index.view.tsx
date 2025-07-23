@@ -84,63 +84,54 @@ const DesignView: React.FC<HeaderProps> = ({ links }) => {
       </Title>
 
       <Card
+        width={500}
         imageSrc={Imagem}
         title="UX - User Experience"
         titleAs="h3"
         titleSize={24}
+        marginTop={45}
         description="Aqui, você vai investigar dores e necessidades das pessoas usuárias,
             mapear jornadas, criar fluxos e wireframes. É uma área muito
             colaborativa, que conversa com Produto, Tech e Pesquisa."
+        descriptionLineHeight={1.6}
         descriptionSize={16}
-        descriptionColor="#323232"
+        descriptionColor="#000000"
         descriptionWeight={400}
+        list={[
+          'Criar fluxos e mapas de navegação.',
+          'Fazer entrevistas e testes de usabilidade (junto da pesquisa).',
+          'Prototipar soluções de forma iterativa.',
+          'Garantir acessibilidade e clareza na experiência.',
+        ]}
+        listSize={16}
+        listColor="#000000"
+        listWeight={400}
       />
 
-      <section
-        className="design-content"
-        style={{ borderColor: '#338AFF', borderWidth: '1px' }}
-      >
-        <img src={Imagem} alt="" />
+      <Card
+        title='Por que atuar com Design na SouJunior?'
+        list={[
+          'Participar de entregas de verdade, com contexto e propósito.',
+          'Trabalhar com pessoas de Produto, Tech, Marketing e Pesquisa.',
+          'Desenvolver seu portfólio com segurança e acompanhamento.',
+          'Aprender a colaborar, iterar e defender ideias com base em dados.',
+        ]}
+        listSize={16}
+        listColor="#000000"
+        listWeight={400}
+      />
 
-        <div>
-          <Title as="h3" size={24}>
-            UX - User Experience
-          </Title>
-          <Text size={16} color="#323232" weight={400}>
-            Aqui, você vai investigar dores e necessidades das pessoas usuárias,
-            mapear jornadas, criar fluxos e wireframes. É uma área muito
-            colaborativa, que conversa com Produto, Tech e Pesquisa.
-          </Text>
-          <ul style={{ marginLeft: '2rem' }}>
-            <li>Criar fluxos e mapas de navegação.</li>
-            <li>
-              Fazer entrevistas e testes de usabilidade (junto da pesquisa).
-            </li>
-            <li>Prototipar soluções de forma iterativa.</li>
-            <li>Garantir acessibilidade e clareza na experiência.</li>
-          </ul>
-        </div>
-      </section>
+      <div>
+        <Card
+          title='Junte-se a nós e faça parte dessa jornada transformadora!'
+          description="Sua contribuição pode ser um passo importante para impulsionar
+      carreiras e transformar o futuro de muitos profissionais da área
+      tech."      
+      />
+        <button>Faça parte!</button>
+      </div>
 
       <section className="design-content" style={{ display: 'block' }}>
-        <div style={{ margin: 'auto' }}>
-          <Title as="h2" size={24} color="#0056b3">
-            Por que atuar com Design na SouJunior?
-          </Title>
-          <ul style={{ marginLeft: '13rem' }}>
-            <li>
-              Participar de entregas de verdade, com contexto e propósito.
-            </li>
-            <li>
-              Trabalhar com pessoas de Produto, Tech, Marketing e Pesquisa.
-            </li>
-            <li>Desenvolver seu portfólio com segurança e acompanhamento.</li>
-            <li>
-              Aprender a colaborar, iterar e defender ideias com base em dados.
-            </li>
-          </ul>
-        </div>
-
         <div style={{ marginTop: '2rem' }}>
           <Title as="h2" size={24} color="#0056b3">
             Junte-se a nós e faça parte dessa jornada transformadora!

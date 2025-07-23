@@ -3,6 +3,7 @@ import { pxToRem } from '../../../utils/pxToRem';
 
 interface TitleContainerProps {
   size?: number;
+  marginTop?: number;
 }
 
 export const TitleContainer = styled.h1<TitleContainerProps>`
@@ -11,5 +12,6 @@ export const TitleContainer = styled.h1<TitleContainerProps>`
   font-size: ${({ size = 32 }) => `${pxToRem(size)}`};
   width: 36rem;
   margin: auto;
+  margin-top: ${({ marginTop = 0 }) => `${pxToRem(marginTop)}`};
   margin-bottom: 1rem;
 `;

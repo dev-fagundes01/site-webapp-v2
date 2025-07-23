@@ -7,9 +7,10 @@ const Title: React.FC<TitleProps> = ({
   size = 32,
   color,
   as = 'h1',
+  marginTop,
 }) => {
   return (
-    <TitleContainer as={as} size={size} color={color}>
+    <TitleContainer as={as} size={size} color={color} marginTop={marginTop}>
       {children}
     </TitleContainer>
   );

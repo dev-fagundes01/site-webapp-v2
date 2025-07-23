@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { pxToRem } from "../../../utils/pxToRem";
 
-interface TextContainerProps {
+interface ListContainerProps {
   width?: number;
   color?: string;
   size?: number;
@@ -9,8 +9,8 @@ interface TextContainerProps {
   lineHeight?: number;
 }
 
-export const TextContainer = styled.p<TextContainerProps>`
-  width: ${(props) => `${pxToRem(props.width ?? 400)}`};
+export const ListContainer = styled.p<ListContainerProps>`
+  width: ${(props) => props.width ? pxToRem(props.width) : "100%"};
   font-size: ${(props) => `${pxToRem(props.size ?? 20)}`};
   font-weight: ${(props) => `${props.weight}`};
   line-height: ${(props) => `${props.lineHeight}`};

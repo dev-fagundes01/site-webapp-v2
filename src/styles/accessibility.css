@@ -157,7 +157,7 @@ input:valid {
 .design-content {
   display: flex;
   flex: 1;
-  gap: 3rem;
+  gap: 1rem;
   width: 1020px;
   max-width: 1200px;
   margin: 0 auto;

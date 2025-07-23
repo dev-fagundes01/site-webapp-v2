@@ -1,7 +1,5 @@
-import { ReactNode } from "react";
-
-export interface TextProps {
-  children: ReactNode;
+export interface  ListProps {
+  list: string[];
   width?: number;
   color?: string;
   size?: number;
