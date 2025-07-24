@@ -1,19 +1,13 @@
 import styled from "styled-components";
 import { pxToRem } from "../../../utils/pxToRem";
+import { TextProps } from './types';
 
-interface TextContainerProps {
-  width?: number;
-  color?: string;
-  size?: number;
-  weight?: number;
-  lineHeight?: number;
-}
-
-export const TextContainer = styled.p<TextContainerProps>`
+export const TextContainer = styled.p<TextProps>`
   width: ${(props) => `${pxToRem(props.width ?? 400)}`};
   font-size: ${(props) => `${pxToRem(props.size ?? 20)}`};
   font-weight: ${(props) => `${props.weight}`};
   line-height: ${(props) => `${props.lineHeight}`};
   color: ${(props) => `${props.color}`};
+  margin-left: ${(props) => `${pxToRem(props.marginLeft ?? 0)}`};
   margin-bottom: 1rem;
 `;

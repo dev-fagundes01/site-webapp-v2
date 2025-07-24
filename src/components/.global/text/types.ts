@@ -7,4 +7,5 @@ export interface TextProps {
   size?: number;
   weight?: number;
   lineHeight?: number;
+  marginLeft?: number;
 }

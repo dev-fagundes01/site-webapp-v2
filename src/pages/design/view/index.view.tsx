@@ -11,6 +11,7 @@ import Title from '../../../components/.global/title';
 import IlustracaoInterface from '../../../assets/conceito-d-interface-d-usuario-movel-ux.png';
 import Imagem from '../../../assets/Imagem.png';
 import Card from '../../../components/card';
+import Button from '../../../components/.global/button';
 
 const DesignView: React.FC<HeaderProps> = ({ links }) => {
   const { announce } = useScreenReaderAnnouncer();
@@ -69,7 +70,7 @@ const DesignView: React.FC<HeaderProps> = ({ links }) => {
             etapas e perfis do design.
           </Text>
 
-          <button>Faça parte!</button>
+          <Button variant='primary'>Faça parte!</Button>
 
           {/* Placeholder for future content */}
           <div aria-live="polite" aria-atomic="true">
@@ -79,16 +80,17 @@ const DesignView: React.FC<HeaderProps> = ({ links }) => {
         <img src={IlustracaoInterface} alt="" />
       </main>
 
-      <Title as="h2" size={32}>
+      <Title as="h2" size={32} width={510}>
         Conheça os cargos de Design que você pode explorar com a gente:
       </Title>
 
       <Card
-        width={500}
+        padding='2rem 1rem'
         imageSrc={Imagem}
         title="UX - User Experience"
         titleAs="h3"
         titleSize={24}
+        titleWidth={36}
         marginTop={45}
         description="Aqui, você vai investigar dores e necessidades das pessoas usuárias,
             mapear jornadas, criar fluxos e wireframes. É uma área muito
@@ -97,6 +99,7 @@ const DesignView: React.FC<HeaderProps> = ({ links }) => {
         descriptionSize={16}
         descriptionColor="#000000"
         descriptionWeight={400}
+        descriptionWidth={500}
         list={[
           'Criar fluxos e mapas de navegação.',
           'Fazer entrevistas e testes de usabilidade (junto da pesquisa).',
@@ -121,29 +124,17 @@ const DesignView: React.FC<HeaderProps> = ({ links }) => {
         listWeight={400}
       />
 
-      <div>
+      <div style={{ margin: 'auto', textAlign: 'center' }}>
         <Card
+          marginLeftDescription={53}
           title='Junte-se a nós e faça parte dessa jornada transformadora!'
           description="Sua contribuição pode ser um passo importante para impulsionar
       carreiras e transformar o futuro de muitos profissionais da área
-      tech."      
-      />
-        <button>Faça parte!</button>
+      tech."
+          descriptionWidth={545}
+        />
+        <Button variant='primary'>Faça parte!</Button>
       </div>
-
-      <section className="design-content" style={{ display: 'block' }}>
-        <div style={{ marginTop: '2rem' }}>
-          <Title as="h2" size={24} color="#0056b3">
-            Junte-se a nós e faça parte dessa jornada transformadora!
-          </Title>
-          <Text size={20} color="#323232" weight={400}>
-            Sua contribuição pode ser um passo importante para impulsionar
-            carreiras e transformar o futuro de muitos profissionais da área
-            tech.
-          </Text>
-          <button>Faça parte!</button>
-        </div>
-      </section>
     </div>
   );
 };

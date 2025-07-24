@@ -178,14 +178,6 @@ input:valid {
   margin-bottom: 1.5rem;
 }
 
-.design-content button {
-  color: #fff;
-  background: rgba(0, 57, 134, 1);
-  padding: 1rem 2rem;
-  border-radius: 10px;
-  border: none;
-}
-
 /* Responsive design */
 @media (max-width: 768px) {
   .design-content {

@@ -7,7 +7,7 @@ import Text from '../.global/text';
 import List from '../.global/list';
 
 const Card: React.FC<CardProps> = ({
-  width,
+  padding,
   imageSrc,
   title,
   titleAs = 'h2',
@@ -19,6 +19,8 @@ const Card: React.FC<CardProps> = ({
   descriptionSize = 16,
   descriptionColor = '#323232',
   descriptionWeight = 400,
+  descriptionWidth,
+  marginLeftDescription,
   list,
   listSize = 16,
   listColor = '#000000',
@@ -26,8 +28,8 @@ const Card: React.FC<CardProps> = ({
   onClick,
 }) => {
   return (
-    <CardContainer onClick={onClick}>
-      {imageSrc && <Image src={imageSrc} alt={title} role="img" />}
+    <CardContainer onClick={onClick} padding={padding}>
+      {imageSrc && <Image src={imageSrc} alt={title ?? ''} role="img" />}
       <div>
         <Title as={titleAs} size={titleSize} marginTop={marginTop}>
           {title}
@@ -35,11 +37,12 @@ const Card: React.FC<CardProps> = ({
         {subtitle && <Subtitle>{subtitle}</Subtitle>}
         {description && (
           <Text
-            width={width}
+            width={descriptionWidth}
             lineHeight={descriptionLineHeight}
             size={descriptionSize}
             color={descriptionColor}
             weight={descriptionWeight}
+            marginLeft={marginLeftDescription}
           >
             {description}
           </Text>          

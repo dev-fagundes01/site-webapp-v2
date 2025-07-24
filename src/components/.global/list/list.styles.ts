@@ -1,15 +1,8 @@
 import styled from "styled-components";
 import { pxToRem } from "../../../utils/pxToRem";
+import { ListProps } from './types';
 
-interface ListContainerProps {
-  width?: number;
-  color?: string;
-  size?: number;
-  weight?: number;
-  lineHeight?: number;
-}
-
-export const ListContainer = styled.p<ListContainerProps>`
+export const ListContainer = styled.p<ListProps>`
   width: ${(props) => props.width ? pxToRem(props.width) : "100%"};
   font-size: ${(props) => `${pxToRem(props.size ?? 20)}`};
   font-weight: ${(props) => `${props.weight}`};

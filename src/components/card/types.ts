@@ -1,11 +1,12 @@
 import React from 'react';
 
 export interface CardProps {
-  width?: number;
+  padding?: string;
   imageSrc?: string;
-  title: string;
+  title?: string;
   titleAs?: keyof React.JSX.IntrinsicElements;
   titleSize?: number;
+  titleWidth?: number;  
   marginTop?: number;  
   subtitle?: string;
   description?: string;
@@ -13,6 +14,8 @@ export interface CardProps {
   descriptionSize?: number;
   descriptionColor?: string;
   descriptionWeight?: number;
+  descriptionWidth?: number;
+  marginLeftDescription?: number;
   list?: string[];
   listSize?: number;
   listColor?: string;
