@@ -4,14 +4,11 @@ import { TitleProps } from './types';
 
 const Title: React.FC<TitleProps> = ({
   children,
-  size = 32,
-  width,
-  color,
   as = 'h1',
-  marginTop,
+  ...props
 }) => {
   return (
-    <TitleContainer as={as} size={size} color={color} marginTop={marginTop} width={width}>
+    <TitleContainer as={as} {...props}>
       {children}
     </TitleContainer>
   );

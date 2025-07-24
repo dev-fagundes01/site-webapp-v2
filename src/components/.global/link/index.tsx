@@ -8,7 +8,7 @@ const Link: React.FC<LinkProps> = ({
   ariaLabel,
   ariaDescribedBy,
   role = "button",
-  tabIndex = 0,
+  tabIndex,
 }) => {
   const handleClick = (
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>

@@ -8,24 +8,29 @@ import List from '../.global/list';
 
 const Card: React.FC<CardProps> = ({
   padding,
+  onClick,
+
   imageSrc,
+
   title,
   titleAs = 'h2',
-  titleSize = 24,
+  titleSize,
   marginTop,
+
   subtitle,
+
   description,
-  descriptionLineHeight = 1.5,
-  descriptionSize = 16,
-  descriptionColor = '#323232',
-  descriptionWeight = 400,
+  descriptionLineHeight,
+  descriptionSize,
+  descriptionColor,
+  descriptionWeight,
   descriptionWidth,
   marginLeftDescription,
+
   list,
-  listSize = 16,
-  listColor = '#000000',
-  listWeight = 400,
-  onClick,
+  listSize,
+  listColor,
+  listWeight,
 }) => {
   return (
     <CardContainer onClick={onClick} padding={padding}>

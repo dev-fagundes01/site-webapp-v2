@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { pxToRem } from "../../../utils/pxToRem";
 import { ListProps } from './types';
 
-export const ListContainer = styled.p<ListProps>`
+export const ListContainer = styled.p<Omit<ListProps, "list">>`
   width: ${(props) => props.width ? pxToRem(props.width) : "100%"};
   font-size: ${(props) => `${pxToRem(props.size ?? 20)}`};
   font-weight: ${(props) => `${props.weight}`};
