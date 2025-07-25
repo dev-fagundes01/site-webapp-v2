@@ -5,5 +5,5 @@ export interface HeaderLink {
 }
 
 export interface HeaderProps {
-  links: HeaderLink[];
+  links: HeaderLink[][];
 }

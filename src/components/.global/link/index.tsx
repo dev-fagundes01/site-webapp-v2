@@ -8,7 +8,8 @@ const Link: React.FC<LinkProps> = ({
   ariaLabel,
   ariaDescribedBy,
   role = "button",
-  tabIndex = 0,
+  tabIndex,
+  img = false,
 }) => {
   const handleClick = (
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
@@ -38,7 +39,12 @@ const Link: React.FC<LinkProps> = ({
       role={role}
       tabIndex={tabIndex}
     >
-      {children}
+      {img ? (
+        <img src={children as string} alt={ariaLabel} />
+      ) : (
+        children
+      )
+      }
     </StyledLink>
   );
 };

@@ -6,4 +6,5 @@ export interface LinkProps {
   ariaDescribedBy?: string;
   role?: string;
   tabIndex?: number;
+  img?: boolean;
 }

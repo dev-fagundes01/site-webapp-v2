@@ -6,7 +6,28 @@
       "initiatives": "Nossas iniciativas",
       "testimonials": "Depoimentos",
       "joinUs": "Faça parte",
-      "supportUs": "Seja Um Apoiador"
+      "supportUs": "Seja Um Apoiador",
+      "business": "Business",
+      "techRecruiter": "Tech Recruiter",
+      "products": "Produtos",
+      "agility": "Agilidade",
+      "socialMedia": "Social Media",
+      "uiUxDesign": "UI & UX Design",
+      "frontEnd": "Front End",
+      "backEnd": "Back End",
+      "data": "Dados",
+      "qA": "QA",
+      "devOps": "DevOps"
     }
+  },
+  "footer": {
+    "links": {
+      "aboutUs": "Sobre nós",
+      "missionValuesVision": "Missão, Valores e Visão",
+      "initiatives": "Nossas Iniciativas",
+      "faq": "FAQ",
+      "ombudsman": "Ouvidoria"
+    },
+    "copyRight": "Copyright © 2023 Sou Junior. Todos os direitos reservados."
   }
 }
