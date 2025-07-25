@@ -15,7 +15,6 @@ export interface CardProps {
   descriptionColor?: string;
   descriptionWeight?: number;
   descriptionWidth?: number;
-  marginLeftDescription?: number;
   list?: string[];
   listSize?: number;
   listColor?: string;

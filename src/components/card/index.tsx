@@ -25,7 +25,6 @@ const Card: React.FC<CardProps> = ({
   descriptionColor,
   descriptionWeight,
   descriptionWidth,
-  marginLeftDescription,
 
   list,
   listSize,
@@ -47,7 +46,6 @@ const Card: React.FC<CardProps> = ({
             size={descriptionSize}
             color={descriptionColor}
             weight={descriptionWeight}
-            marginLeft={marginLeftDescription}
           >
             {description}
           </Text>          
