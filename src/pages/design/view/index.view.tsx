@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import Header from '../../../components/header';
-import { HeaderProps } from '../../../components/header/types';
 import {
   useScreenReaderAnnouncer,
   useFocusManagement,
@@ -12,8 +11,19 @@ import IlustracaoInterface from '../../../assets/conceito-d-interface-d-usuario-
 import Imagem from '../../../assets/Imagem.png';
 import Card from '../../../components/card';
 import Button from '../../../components/.global/button';
+import { HeaderLink } from '../../../components/header/types';
+import { FooterProps } from '../../../components/footer/types';
+import Footer from '../../../components/footer';
 
-const DesignView: React.FC<HeaderProps> = ({ links }) => {
+interface DesignViewProps {
+  headerLinks: HeaderLink[][];
+  footerLinks: FooterProps['links'];
+  // footerLinks2?: FooterProps['links'];
+  socialLinks: FooterProps['socialLinks'];
+  copyright: FooterProps['copyright'];
+}
+
+const DesignView: React.FC<DesignViewProps> = ({ headerLinks, footerLinks, socialLinks, copyright }) => {
   const { announce } = useScreenReaderAnnouncer();
   const { focusMainContent } = useFocusManagement();
 
@@ -41,9 +51,8 @@ const DesignView: React.FC<HeaderProps> = ({ links }) => {
 
   return (
     <div className="design-page">
-      <Header links={links} />
+      <Header links={headerLinks} />
 
-      {/* Main content area */}
       <main
         className="design-content"
         role="main"
@@ -126,15 +135,20 @@ const DesignView: React.FC<HeaderProps> = ({ links }) => {
 
       <div style={{ margin: 'auto', textAlign: 'center' }}>
         <Card
-          marginLeftDescription={53}
           title='Junte-se a nós e faça parte dessa jornada transformadora!'
           description="Sua contribuição pode ser um passo importante para impulsionar
       carreiras e transformar o futuro de muitos profissionais da área
       tech."
-          descriptionWidth={545}
+          descriptionWidth={670}
         />
         <Button variant='primary'>Faça parte!</Button>
       </div>
+
+      <Footer
+        links={footerLinks}
+        socialLinks={socialLinks}
+        copyright={copyright}
+      />
     </div>
   );
 };

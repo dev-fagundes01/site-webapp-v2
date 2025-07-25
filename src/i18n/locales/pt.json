@@ -19,5 +19,15 @@
       "qA": "QA",
       "devOps": "DevOps"
     }
+  },
+  "footer": {
+    "links": {
+      "aboutUs": "Sobre nós",
+      "missionValuesVision": "Missão, Valores e Visão",
+      "initiatives": "Nossas Iniciativas",
+      "faq": "FAQ",
+      "ombudsman": "Ouvidoria"
+    },
+    "copyRight": "Copyright © 2023 Sou Junior. Todos os direitos reservados."
   }
 }
