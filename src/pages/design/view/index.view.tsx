@@ -7,8 +7,8 @@ import {
 import Subtitle from '../../../components/.global/subtitle';
 import Text from '../../../components/.global/text';
 import Title from '../../../components/.global/title';
-import IlustracaoInterface from '../../../assets/conceito-d-interface-d-usuario-movel-ux.png';
-import Imagem from '../../../assets/Imagem.png';
+import ImageDesign from '../../../assets/image-design.png';
+import ImageDesign2 from '../../../assets/Image-design2.png';
 import Card from '../../../components/card';
 import Button from '../../../components/.global/button';
 import { HeaderLink } from '../../../components/header/types';
@@ -18,12 +18,13 @@ import Footer from '../../../components/footer';
 interface DesignViewProps {
   headerLinks: HeaderLink[][];
   footerLinks: FooterProps['links'];
-  // footerLinks2?: FooterProps['links'];
+  footerLinks2?: FooterProps['links2'];
+  footerLinks3?: FooterProps['links'];
   socialLinks: FooterProps['socialLinks'];
   copyright: FooterProps['copyright'];
 }
 
-const DesignView: React.FC<DesignViewProps> = ({ headerLinks, footerLinks, socialLinks, copyright }) => {
+const DesignView: React.FC<DesignViewProps> = ({ headerLinks, footerLinks, footerLinks2, footerLinks3, socialLinks, copyright }) => {
   const { announce } = useScreenReaderAnnouncer();
   const { focusMainContent } = useFocusManagement();
 
@@ -86,7 +87,7 @@ const DesignView: React.FC<DesignViewProps> = ({ headerLinks, footerLinks, socia
             {/* Dynamic content will be announced to screen readers */}
           </div>
         </section>
-        <img src={IlustracaoInterface} alt="" />
+        <img src={ImageDesign} alt="" />
       </main>
 
       <Title as="h2" size={32} width={510}>
@@ -95,7 +96,7 @@ const DesignView: React.FC<DesignViewProps> = ({ headerLinks, footerLinks, socia
 
       <Card
         padding='2rem 1rem'
-        imageSrc={Imagem}
+        imageSrc={ImageDesign2}
         title="UX - User Experience"
         titleAs="h3"
         titleSize={24}
@@ -146,6 +147,8 @@ const DesignView: React.FC<DesignViewProps> = ({ headerLinks, footerLinks, socia
 
       <Footer
         links={footerLinks}
+        links2={footerLinks2}
+        links3={footerLinks3}
         socialLinks={socialLinks}
         copyright={copyright}
       />

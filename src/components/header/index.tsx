@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { HeaderContainer, Line, NavLinks } from "./header.styles";
 import Link from "../.global/link";
 import { HeaderProps } from "./types";
-import logoImage from "../../assets/sou-junior-logo.png";
+import logoImage from "../../assets/sj-logo-header.png";
 import Logo from '../.global/logo'
 
 const Header: React.FC<HeaderProps> = ({ links }) => {

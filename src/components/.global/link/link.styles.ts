@@ -12,7 +12,6 @@ export const StyledLink = styled.a`
   transition: all 0.2s ease-in-out;
   position: relative;
 
-  /* Ensure minimum touch target size (44x44px) */
   min-height: 44px;
   min-width: 44px;
   display: inline-flex;

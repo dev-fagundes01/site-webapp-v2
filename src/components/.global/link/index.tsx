@@ -40,7 +40,7 @@ const Link: React.FC<LinkProps> = ({
       tabIndex={tabIndex}
     >
       {img ? (
-        <img src={children as string} alt={ariaLabel} />
+        <img src={children as string} alt={ariaLabel} style={{ width: "24px", height: "24px" }}/>
       ) : (
         children
       )

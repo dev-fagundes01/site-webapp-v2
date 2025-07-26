@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import DesignView from "../view/index.view";
 import { RouteEnum, RouteEnum2 } from "../../../utils/enums/RouteEnum";
-import { LinkFooterEnum } from '../../../utils/enums/LinkFooterEnum';
+import { LinkFooterEnum, LinkFooterEnum2, LinkFooterEnum3 } from '../../../utils/enums/LinkFooterEnum';
 import Telegram from '../../../assets/social/Telegram.png'
 import Twitch from '../../../assets/social/Twitch.png'
 import Discord from '../../../assets/social/discord.png'
@@ -104,34 +104,47 @@ const DesignController: React.FC = () => {
   ];
 
   const footerLinks = [
-
     {
-      label: "aboutUs",
+      label: "Conheça a SouJunior",
+      to: LinkFooterEnum.MEET_SOUJUNIOR.toString(),
+    },
+    {
+      label: "Sobre Nós",
       to: LinkFooterEnum.ABOUT_US.toString(),
     },
     {
-      label: "missionValuesVision",
+      label: "Missão, Valores e Visão",
       to: LinkFooterEnum.MISSION_VALUES_VISION.toString(),
     },
     {
-      label: "initiatives",
+      label: "Nossas Iniciativas",
       to: LinkFooterEnum.INITIATIVES.toString(),
     },
   ]
 
-  // const footerLinks2 = [
-  //   {
-  //     label: "faq",
-  //     to: LinkFooterEnum2.FAQ.toString(),
-  //   },
-  //   {
-  //     label: "ombudsman",
-  //     to: LinkFooterEnum2.OMBUDSMAN.toString(),
-  //   },
-  // ]
+  const footerLinks2 = [
+    {
+      label: "Fale Conosco",
+      to: LinkFooterEnum2.CONTACT_US.toString(),
+    },
+    {
+      label: "faq",
+      to: LinkFooterEnum2.FAQ.toString(),
+    },
+    {
+      label: "ombudsman",
+      to: LinkFooterEnum2.OMBUDSMAN.toString(),
+    },
+  ]
+
+  const footerLinks3 = [
+    {
+      label: "Faça Parte",
+      to: LinkFooterEnum3.TAKE_PART.toString(),
+    }
+  ]
 
   const socialLinks = [
-    { icon: Twitch, to: "https://twitch.tv" },
     { icon: Linkedin, to: "https://linkedin.com" },
     { icon: Github, to: "https://github.com" },
     { icon: Discord, to: "https://discord.com" },
@@ -140,6 +153,7 @@ const DesignController: React.FC = () => {
     { icon: Instagram, to: "https://instagram.com" },
     { icon: Facebook, to: "https://facebook.com" },
     { icon: Telegram, to: "https://telegram.org" },
+    { icon: Twitch, to: "https://twitch.tv" },
   ];
 
   const copyright = '© 2025 SouJunior. Todos os direitos reservados.'
@@ -147,7 +161,8 @@ const DesignController: React.FC = () => {
   return <DesignView 
   headerLinks={headerLinks} 
   footerLinks={footerLinks} 
-  // footerLinks2={footerLinks2} 
+  footerLinks2={footerLinks2}  
+  footerLinks3={footerLinks3} 
   socialLinks={socialLinks} 
   copyright={copyright}
   />;
