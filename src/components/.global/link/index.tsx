@@ -10,6 +10,10 @@ const Link: React.FC<LinkProps> = ({
   role = "button",
   tabIndex,
   img = false,
+  paddingY,
+  paddingX,
+  width,
+  height,
 }) => {
   const handleClick = (
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
@@ -38,6 +42,10 @@ const Link: React.FC<LinkProps> = ({
       aria-describedby={ariaDescribedBy}
       role={role}
       tabIndex={tabIndex}
+      paddingY={paddingY}
+      paddingX={paddingX}
+      width={width}
+      height={height}
     >
       {img ? (
         <img src={children as string} alt={ariaLabel} style={{ width: "24px", height: "24px" }}/>

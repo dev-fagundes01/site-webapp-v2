@@ -1,19 +1,28 @@
 import styled from "styled-components";
 import { pxToRem } from '../../../utils/pxToRem';
 
-export const StyledLink = styled.a`
+interface LinkProps {
+  paddingY?: number; 
+  paddingX?: number;
+  width?: number;
+  height?: number;}
+
+export const StyledLink = styled.a<LinkProps>`
   color: #0056b3; /* Darker blue for better contrast */
   text-decoration: none;
   cursor: pointer;
   font-size: ${pxToRem(16)};
   font-weight: 500;
   border-radius: 4px;
-  padding: 8px 12px;
+  padding-block: ${props => props.paddingY ? pxToRem(props.paddingY) : 'auto'};
+  padding-inline: ${props => props.paddingX ? pxToRem(props.paddingX) : 'auto'};
   transition: all 0.2s ease-in-out;
   position: relative;
 
-  min-height: 44px;
-  min-width: 44px;
+  min-height: 16px;
+  min-width: 16px;
+  width: ${props => props.width ?? 'auto'};
+  height: ${props => props.height ?? 'auto'};  
   display: inline-flex;
   align-items: center;
   justify-content: center;

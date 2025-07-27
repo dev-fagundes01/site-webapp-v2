@@ -46,7 +46,7 @@ const Footer: React.FC<FooterProps> = ({
       {socialLinks && (
         <SocialList>
           {socialLinks.map((social) => (
-            <Link key={social.to} to={social.to} img={true}>
+            <Link key={social.to} to={social.to} img={true} width={24} height={24} >
               {social.icon}
             </Link>
           ))}

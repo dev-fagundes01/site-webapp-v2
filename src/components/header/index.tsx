@@ -26,6 +26,8 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
               link.ariaLabel || `Navegar para ${t(`links.${link.label}`)}`
             }
             role="menuitem"
+            paddingY={8}
+            paddingX={12}
             >
               {t(`links.${link.label}`)}
             </Link>
@@ -44,6 +46,8 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
                 link.ariaLabel || `Navegar para ${t(`links.${link.label}`)}`
               }
               role="menuitem"
+              paddingY={8}
+              paddingX={12}
             >
               {t(`links.${link.label}`)}
             </Link>
