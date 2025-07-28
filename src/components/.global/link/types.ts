@@ -7,6 +7,7 @@ export interface LinkProps {
   role?: string;
   tabIndex?: number;
   img?: boolean;
+  size?: number;
   paddingY?: number; 
   paddingX?: number;
   width?: number;

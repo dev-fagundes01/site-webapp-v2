@@ -10,6 +10,7 @@ const Link: React.FC<LinkProps> = ({
   role = "button",
   tabIndex,
   img = false,
+  size,
   paddingY,
   paddingX,
   width,
@@ -42,6 +43,7 @@ const Link: React.FC<LinkProps> = ({
       aria-describedby={ariaDescribedBy}
       role={role}
       tabIndex={tabIndex}
+      size={size}
       paddingY={paddingY}
       paddingX={paddingX}
       width={width}

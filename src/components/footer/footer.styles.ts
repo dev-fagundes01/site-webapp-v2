@@ -11,13 +11,12 @@ export const FooterContainer = styled.footer`
     "social social . . ."
     "hr hr hr hr hr"
     ". . . copy copy";
-  padding: 4rem 0rem;
+  padding: 4.5rem 0rem;
   text-align: center;
 `;
 
 export const Logo = styled.div`
   grid-area: logo;
-  margin-left: 0.5rem;
 `;
 
 export const NavContainer = styled.div`
@@ -34,8 +33,6 @@ export const Nav = styled.nav`
   margin-bottom: 1rem;
 
   a {
-    font-size: ${pxToRem(16)};
-    margin: 0 1rem;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
@@ -48,10 +45,11 @@ export const Nav = styled.nav`
 export const SocialList = styled.div`
   grid-area: social;
   width: 26.5rem;
-  margin-bottom: 1rem;
-  margin-left: 1rem;
+  margin-bottom: 2rem;
+  margin-left: 0.1rem;
   display: flex;
   gap: 1rem;
+  
   a {
     font-size: 1.5rem;
     color: #0056b3;

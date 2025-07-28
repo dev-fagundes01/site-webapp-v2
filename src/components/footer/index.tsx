@@ -18,25 +18,25 @@ const Footer: React.FC<FooterProps> = ({
         <Image src={logoImage} alt="Sou Junior - Logo da organização que impulsiona carreiras em tecnologia" role="img" />
       </Logo>
       <NavContainer>
-        <div style={{ display: 'flex', gap: '3rem' }}>
+        <div style={{ display: 'flex', gap: '3rem', marginBottom: '2.5rem' }}>
           <Nav>
-            {links.map((link) => (
-              <Link key={link.label} to={link.to}>
+            {links.map((link, index) => (
+              <Link key={link.label} to={link.to} size={index === 0 ? 20 : 16} >
                 {link.label}
               </Link>
             )
             )}
           </Nav>
           <Nav>
-            {links2 && links2.map((link) => (
-              <Link key={link.label} to={link.to}>
+            {links2 && links2.map((link, index) => (
+              <Link key={link.label} to={link.to} size={index === 0 ? 20 : 16}>
                 {link.label}
               </Link>
             ))}
           </Nav>
           <Nav>
-            {links3 && links3.map((link) => (
-              <Link key={link.label} to={link.to}>
+            {links3 && links3.map((link, index) => (
+              <Link key={link.label} to={link.to} size={index === 0 ? 20 : 16}>
                 {link.label}
               </Link>
             ))}

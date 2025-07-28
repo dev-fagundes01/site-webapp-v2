@@ -1,28 +1,32 @@
 import styled from "styled-components";
-import { pxToRem } from '../../../utils/pxToRem';
+import { pxToRem } from "../../../utils/pxToRem";
 
 interface LinkProps {
-  paddingY?: number; 
+  size?: number;
+  paddingY?: number;
   paddingX?: number;
   width?: number;
-  height?: number;}
+  height?: number;
+}
 
 export const StyledLink = styled.a<LinkProps>`
   color: #0056b3; /* Darker blue for better contrast */
   text-decoration: none;
   cursor: pointer;
-  font-size: ${pxToRem(16)};
+  font-size: ${(props) => (props.size ? pxToRem(props.size) : "16px")};
   font-weight: 500;
   border-radius: 4px;
-  padding-block: ${props => props.paddingY ? pxToRem(props.paddingY) : 'auto'};
-  padding-inline: ${props => props.paddingX ? pxToRem(props.paddingX) : 'auto'};
+  padding-block: ${(props) =>
+    props.paddingY ? pxToRem(props.paddingY) : "auto"};
+  padding-inline: ${(props) =>
+    props.paddingX ? pxToRem(props.paddingX) : "auto"};
   transition: all 0.2s ease-in-out;
   position: relative;
 
   min-height: 16px;
   min-width: 16px;
-  width: ${props => props.width ?? 'auto'};
-  height: ${props => props.height ?? 'auto'};  
+  width: ${(props) => props.width ?? "auto"};
+  height: ${(props) => props.height ?? "auto"};
   display: inline-flex;
   align-items: center;
   justify-content: center;
