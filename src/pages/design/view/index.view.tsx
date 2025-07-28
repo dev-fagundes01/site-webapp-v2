@@ -67,7 +67,9 @@ const DesignView: React.FC<DesignViewProps> = ({
         aria-label="Conteúdo principal da página de design"
       >
         <section aria-labelledby="design-heading">
-          <Subtitle marginBottom={36} marginTop={16}>Áreas de Atuação</Subtitle>
+          <Subtitle marginBottom={36} marginTop={16}>
+            Áreas de Atuação
+          </Subtitle>
           <Title size={40}>Design</Title>
 
           <Text size={20} color="#323232" weight={400}>
@@ -97,39 +99,43 @@ const DesignView: React.FC<DesignViewProps> = ({
         <img src={ImageDesign} alt="" />
       </main>
 
-      <Title as="h2" size={32} width={510}>
-        Conheça os cargos de Design que você pode explorar com a gente:
-      </Title>
+      <section>
+        <Title as="h2" size={32} width={510}>
+          Conheça os cargos de Design que você pode explorar com a gente:
+        </Title>
 
-      <Card
-        padding="2rem 1rem"
-        imageSrc={ImageDesign2}
-        title="UX - User Experience"
-        titleAs="h3"
-        titleSize={24}
-        titleWidth={36}
-        marginTop={45}
-        description="Aqui, você vai investigar dores e necessidades das pessoas usuárias,
+        <Card
+          edgeSection
+          padding="2rem 1rem"
+          width={1042}
+          imageSrc={ImageDesign2}
+          title="UX - User Experience"
+          titleAs="h3"
+          titleSize={24}
+          titleWidth={36}
+          marginTop={45}
+          description="Aqui, você vai investigar dores e necessidades das pessoas usuárias,
             mapear jornadas, criar fluxos e wireframes. É uma área muito
             colaborativa, que conversa com Produto, Tech e Pesquisa."
-        descriptionLineHeight={1.6}
-        descriptionSize={16}
-        descriptionColor="#000000"
-        descriptionWeight={400}
-        descriptionWidth={500}
-        list={[
-          "Criar fluxos e mapas de navegação.",
-          "Fazer entrevistas e testes de usabilidade (junto da pesquisa).",
-          "Prototipar soluções de forma iterativa.",
-          "Garantir acessibilidade e clareza na experiência.",
-        ]}
-        listSize={16}
-        listColor="#000000"
-        listWeight={400}
-      />
+          descriptionLineHeight={1.6}
+          descriptionSize={16}
+          descriptionColor="#000000"
+          descriptionWeight={400}
+          descriptionWidth={500}
+          list={[
+            "Criar fluxos e mapas de navegação.",
+            "Fazer entrevistas e testes de usabilidade (junto da pesquisa).",
+            "Prototipar soluções de forma iterativa.",
+            "Garantir acessibilidade e clareza na experiência.",
+          ]}
+          listSize={16}
+          listColor="#000000"
+          listWeight={400}
+        />
+      </section>
 
       <Card
-      marginBlock='2rem'
+        marginBlock="2rem"
         title="Por que atuar com Design na SouJunior?"
         list={[
           "Participar de entregas de verdade, com contexto e propósito.",

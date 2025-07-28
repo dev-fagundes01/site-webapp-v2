@@ -1,8 +1,10 @@
 import React from 'react';
 
 export interface CardProps {
+  edgeSection?: boolean;
   marginBlock?: string;
   padding?: string;
+  width?: number;
   imageSrc?: string;
   title?: string;
   titleAs?: keyof React.JSX.IntrinsicElements;

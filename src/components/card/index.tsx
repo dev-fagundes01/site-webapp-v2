@@ -8,8 +8,10 @@ import List from "../.global/list";
 import Button from "../.global/button";
 
 const Card: React.FC<CardProps> = ({
+  edgeSection,
   marginBlock,
   padding,
+  width,
   onClick,
 
   imageSrc,
@@ -38,7 +40,7 @@ const Card: React.FC<CardProps> = ({
   buttonVariant,
 }) => {
   return (
-    <CardContainer marginBlock={marginBlock} padding={padding}>
+    <CardContainer edgeSection={edgeSection} marginBlock={marginBlock} padding={padding} width={width}>
       {imageSrc && <Image src={imageSrc} alt={title ?? ""} role="img" />}
 
       <div>
