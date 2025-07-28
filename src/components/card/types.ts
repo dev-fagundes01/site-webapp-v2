@@ -19,5 +19,7 @@ export interface CardProps {
   listSize?: number;
   listColor?: string;
   listWeight?: number;
+  buttonText?: string;
+  buttonVariant?: 'primary' | 'secondary' | 'tertiary';
   onClick?: () => void;
 }

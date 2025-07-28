@@ -1,10 +1,11 @@
-import Subtitle from '../.global/subtitle';
-import Title from '../.global/title';
-import { CardContainer } from './card.styles';
-import { CardProps } from './types';
-import Image from '../.global/image';
-import Text from '../.global/text';
-import List from '../.global/list';
+import Subtitle from "../.global/subtitle";
+import Title from "../.global/title";
+import { CardContainer } from "./card.styles";
+import { CardProps } from "./types";
+import Image from "../.global/image";
+import Text from "../.global/text";
+import List from "../.global/list";
+import Button from "../.global/button";
 
 const Card: React.FC<CardProps> = ({
   padding,
@@ -13,7 +14,7 @@ const Card: React.FC<CardProps> = ({
   imageSrc,
 
   title,
-  titleAs = 'h2',
+  titleAs = "h2",
   titleSize,
   marginTop,
 
@@ -30,14 +31,19 @@ const Card: React.FC<CardProps> = ({
   listSize,
   listColor,
   listWeight,
+
+  buttonText,
+  buttonVariant,
 }) => {
   return (
-    <CardContainer onClick={onClick} padding={padding}>
-      {imageSrc && <Image src={imageSrc} alt={title ?? ''} role="img" />}
+    <CardContainer padding={padding}>
+      {imageSrc && <Image src={imageSrc} alt={title ?? ""} role="img" />}
+
       <div>
         <Title as={titleAs} size={titleSize} marginTop={marginTop}>
           {title}
         </Title>
+
         {subtitle && <Subtitle>{subtitle}</Subtitle>}
         {description && (
           <Text
@@ -48,10 +54,21 @@ const Card: React.FC<CardProps> = ({
             weight={descriptionWeight}
           >
             {description}
-          </Text>          
+          </Text>
         )}
+
         {list && list.length > 0 && (
-          <List list={list} size={listSize} color={listColor} weight={listWeight}/>
+          <List
+            list={list}
+            size={listSize}
+            color={listColor}
+            weight={listWeight}
+          />
+        )}
+        {buttonText && (
+          <Button variant={buttonVariant} onClick={onClick}>
+            {buttonText}
+          </Button>
         )}
       </div>
     </CardContainer>
