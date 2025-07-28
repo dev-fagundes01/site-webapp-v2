@@ -67,7 +67,7 @@ const DesignView: React.FC<DesignViewProps> = ({
         aria-label="Conteúdo principal da página de design"
       >
         <section aria-labelledby="design-heading">
-          <Subtitle>Áreas de Atuação</Subtitle>
+          <Subtitle marginBottom={36} marginTop={16}>Áreas de Atuação</Subtitle>
           <Title size={40}>Design</Title>
 
           <Text size={20} color="#323232" weight={400}>
