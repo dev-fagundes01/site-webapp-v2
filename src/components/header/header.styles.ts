@@ -10,7 +10,7 @@ export const HeaderContainer = styled.header`
   padding: 1rem 2rem;
   min-height: 60px; /* Ensure adequate touch target height */
   font-weight: 500;
-  font-style: Medium; //TODO ?
+  font-style: medium; //TODO ?
   position: relative;
 
   & div {

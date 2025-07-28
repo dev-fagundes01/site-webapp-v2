@@ -12,7 +12,7 @@ const Footer: React.FC<FooterProps> = ({
   socialLinks,
   copyright,
 }) => (
-  <div style={{ backgroundColor: '#001633', display: 'flex', justifyContent: 'center', marginTop: '4rem' }}>
+  <div style={{ backgroundColor: '#001633', display: 'flex', justifyContent: 'center', marginTop: '2.5rem' }}>
     <FooterContainer>
       <Logo>
         <Image src={logoImage} alt="Sou Junior - Logo da organização que impulsiona carreiras em tecnologia" role="img" />

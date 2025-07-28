@@ -8,4 +8,5 @@ export interface TextProps {
   weight?: number;
   lineHeight?: number;
   margin?: number;  
+  marginBlock?: number;
 }

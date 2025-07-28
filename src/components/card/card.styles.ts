@@ -6,5 +6,6 @@ export const CardContainer = styled.div<CardProps>`
   gap: 1rem;
   max-width: 1200px;
   margin: 0 auto;
+  margin-block: ${({ marginBlock }) => marginBlock || 'auto'};
   padding: ${({ padding }) => padding || '1rem'};
 `;

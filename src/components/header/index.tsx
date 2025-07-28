@@ -37,7 +37,7 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
 
       <Line/>
 
-      <NavLinks role="navigation" aria-label="Navegação secundaria">
+      <NavLinks role="navigation" aria-label="Navegação secundaria" style={{gap: '1.25rem'}}>
           {links[1].map((link) => (
             <Link
               key={link.label}

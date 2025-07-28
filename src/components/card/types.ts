@@ -1,6 +1,7 @@
 import React from 'react';
 
 export interface CardProps {
+  marginBlock?: string;
   padding?: string;
   imageSrc?: string;
   title?: string;
@@ -15,6 +16,7 @@ export interface CardProps {
   descriptionColor?: string;
   descriptionWeight?: number;
   descriptionWidth?: number;
+  descriptionBlockMargin?: number;
   list?: string[];
   listSize?: number;
   listColor?: string;

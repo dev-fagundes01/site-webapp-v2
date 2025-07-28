@@ -128,11 +128,11 @@ const DesignController: React.FC = () => {
       to: LinkFooterEnum2.CONTACT_US.toString(),
     },
     {
-      label: "faq",
+      label: "FAQ",
       to: LinkFooterEnum2.FAQ.toString(),
     },
     {
-      label: "ombudsman",
+      label: "Ouvidoria",
       to: LinkFooterEnum2.OMBUDSMAN.toString(),
     },
   ]

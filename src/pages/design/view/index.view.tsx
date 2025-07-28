@@ -129,6 +129,7 @@ const DesignView: React.FC<DesignViewProps> = ({
       />
 
       <Card
+      marginBlock='2rem'
         title="Por que atuar com Design na SouJunior?"
         list={[
           "Participar de entregas de verdade, com contexto e propósito.",
@@ -148,6 +149,7 @@ const DesignView: React.FC<DesignViewProps> = ({
       carreiras e transformar o futuro de muitos profissionais da área
       tech."
           descriptionWidth={670}
+          descriptionBlockMargin={24}
           buttonText="Faca parte!"
           buttonVariant="primary"
         />
