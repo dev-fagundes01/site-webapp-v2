@@ -31,15 +31,6 @@ export const Nav = styled.nav`
   align-items: flex-start;
   gap: 1.5rem;
   margin-bottom: 1rem;
-
-  a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 `;
 
 export const SocialList = styled.div`

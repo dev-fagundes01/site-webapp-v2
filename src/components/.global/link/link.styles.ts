@@ -3,11 +3,11 @@ import { pxToRem } from "../../../utils/pxToRem";
 import { LinkProps } from "./types";
 
 export const StyledLink = styled.a<
-  Pick<LinkProps, "size" | "paddingY" | "paddingX" | "width" | "height">
+  Pick<LinkProps, "size" | "paddingY" | "paddingX" | "width" | "height" | "isFistLink">
 >`
-  color: #0056b3; /* Darker blue for better contrast */
+  color: #fff; /* Darker blue for better contrast */
   text-decoration: none;
-  cursor: pointer;
+  cursor: ${({ isFistLink }) => (isFistLink ? "auto" : "pointer")};
   font-size: ${({ size = 16 }) => pxToRem(size)};
   font-weight: 500;
   border-radius: 4px;
@@ -25,9 +25,9 @@ export const StyledLink = styled.a<
   justify-content: center;
 
   &:hover {
-    text-decoration: underline;
-    background-color: rgba(0, 86, 179, 0.1);
-    color: #003d82;
+    text-decoration: ${({ isFistLink }) => (isFistLink ? "none" : "underline")};
+    background-color: ${({ isFistLink }) => (isFistLink ? "transparent" : "rgba(0, 86, 179, 0.1)")};
+    color: ${({ isFistLink }) => (isFistLink ? "#fff" : "#0056b3")};
   }
 
   &:focus {
