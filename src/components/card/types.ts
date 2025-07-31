@@ -9,6 +9,7 @@ export interface CardProps {
   title?: string;
   titleAs?: keyof React.JSX.IntrinsicElements;
   titleSize?: number;
+  textAlign?: 'left' | 'center' | 'right' | 'justify' | 'initial';
   titleWidth?: number;  
   marginTop?: number;  
   subtitle?: string;

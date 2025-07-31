@@ -13,7 +13,7 @@ import Twitter from '../../../assets/social/twitter.png'
 import Youtube from '../../../assets/social/youtube.png'
 import Github from '../../../assets/social/github.png'
 
-const DesignController: React.FC = () => {
+const ProductController: React.FC = () => {
   const navigate = useNavigate();
 
   const headerLinks = [
@@ -165,4 +165,4 @@ const DesignController: React.FC = () => {
   />;
 };
 
-export default DesignController;
+export default ProductController;
