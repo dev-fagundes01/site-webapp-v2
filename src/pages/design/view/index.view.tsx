@@ -21,7 +21,6 @@ interface DesignViewProps {
   footerLinks2?: FooterProps["links2"];
   footerLinks3?: FooterProps["links"];
   socialLinks: FooterProps["socialLinks"];
-  copyright: FooterProps["copyright"];
 }
 
 const DesignView: React.FC<DesignViewProps> = ({
@@ -30,7 +29,6 @@ const DesignView: React.FC<DesignViewProps> = ({
   footerLinks2,
   footerLinks3,
   socialLinks,
-  copyright,
 }) => {
   const { announce } = useScreenReaderAnnouncer();
   const { focusMainContent } = useFocusManagement();
@@ -143,9 +141,10 @@ const DesignView: React.FC<DesignViewProps> = ({
           "Desenvolver seu portfólio com segurança e acompanhamento.",
           "Aprender a colaborar, iterar e defender ideias com base em dados.",
         ]}
-        listSize={16}
-        listColor="#000000"
+        listSize={20}
+        listColor="#323232"
         listWeight={400}
+        lineHeight="140%"
       />
 
       <div style={{ margin: "auto", textAlign: "center" }}>
@@ -166,7 +165,7 @@ const DesignView: React.FC<DesignViewProps> = ({
         links2={footerLinks2}
         links3={footerLinks3}
         socialLinks={socialLinks}
-        copyright={copyright}
+        copyright="© 2025 SouJunior. Todos os direitos reservados."
       />
     </div>
   );

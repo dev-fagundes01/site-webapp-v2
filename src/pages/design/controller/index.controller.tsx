@@ -156,15 +156,12 @@ const DesignController: React.FC = () => {
     { icon: Twitch, to: "https://twitch.tv" },
   ];
 
-  const copyright = '© 2025 SouJunior. Todos os direitos reservados.'
-
   return <DesignView 
   headerLinks={headerLinks} 
   footerLinks={footerLinks} 
   footerLinks2={footerLinks2}  
   footerLinks3={footerLinks3} 
   socialLinks={socialLinks} 
-  copyright={copyright}
   />;
 };
 

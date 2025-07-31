@@ -35,6 +35,7 @@ const Card: React.FC<CardProps> = ({
   listSize,
   listColor,
   listWeight,
+  lineHeight,
 
   buttonText,
   buttonVariant,
@@ -68,6 +69,7 @@ const Card: React.FC<CardProps> = ({
             size={listSize}
             color={listColor}
             weight={listWeight}
+            lineHeight={lineHeight}
           />
         )}
         {buttonText && (

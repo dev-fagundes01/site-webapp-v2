@@ -23,6 +23,7 @@ export interface CardProps {
   listSize?: number;
   listColor?: string;
   listWeight?: number;
+  lineHeight?: string;
   buttonText?: string;
   buttonVariant?: 'primary' | 'secondary' | 'tertiary';
   onClick?: () => void;
