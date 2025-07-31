@@ -3,9 +3,9 @@ import { pxToRem } from "../../../utils/pxToRem";
 import { LinkProps } from "./types";
 
 export const StyledLink = styled.a<
-  Pick<LinkProps, "size" | "paddingY" | "paddingX" | "width" | "height" | "isFistLink">
+  Pick<LinkProps, "color" | "size" | "paddingY" | "paddingX" | "width" | "height" | "isFistLink">
 >`
-  color: #fff; /* Darker blue for better contrast */
+  color: ${({ color }) => (color ? color : "#0056b3")}; /* Darker blue for better contrast */
   text-decoration: none;
   cursor: ${({ isFistLink }) => (isFistLink ? "auto" : "pointer")};
   font-size: ${({ size = 16 }) => pxToRem(size)};

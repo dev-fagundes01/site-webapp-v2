@@ -45,6 +45,7 @@ const Footer: React.FC<FooterProps> = ({
                 <Link
                   key={link.label}
                   to={link.to}
+                  color='#fff'
                   size={index === 0 ? 20 : 16}
                   isFistLink={isFirst}
                 >
@@ -56,33 +57,35 @@ const Footer: React.FC<FooterProps> = ({
           <Nav>
             {links2 &&
               links2.map((link, index) => {
-                              const isFirst = index === 0;
-              return (
-                <Link
-                  key={link.label}
-                  to={link.to}
-                  size={index === 0 ? 20 : 16}
-                  isFistLink={isFirst}
-                >
-                  {link.label}
-                </Link>
-              );
+                const isFirst = index === 0;
+                return (
+                  <Link
+                    key={link.label}
+                    to={link.to}
+                    color='#fff'
+                    size={index === 0 ? 20 : 16}
+                    isFistLink={isFirst}
+                  >
+                    {link.label}
+                  </Link>
+                );
               })}
           </Nav>
           <Nav>
             {links3 &&
               links3.map((link, index) => {
-                              const isFirst = index === 0;
-              return (
-                <Link
-                  key={link.label}
-                  to={link.to}
-                  size={index === 0 ? 20 : 16}
-                  isFistLink={isFirst}
-                >
-                  {link.label}
-                </Link>
-              );
+                const isFirst = index === 0;
+                return (
+                  <Link
+                    key={link.label}
+                    to={link.to}
+                    color='#fff'
+                    size={index === 0 ? 20 : 16}
+                    isFistLink={isFirst}
+                  >
+                    {link.label}
+                  </Link>
+                );
               })}
           </Nav>
         </div>
