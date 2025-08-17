@@ -12,7 +12,7 @@ export enum RouteEnum2 {
   PRODUCT = "/produto",
   AGILITY = "/agilidade",
   SOCIAL_MEDIA = "/social-media",
-  UI_UX_DESIGN = "/ui-ux-design",
+  UI_UX_DESIGN = "/",
   FRONT_END = "/front-end",
   BACK_END = "/back-end",
   DATA = "/dados",
