@@ -1,8 +1,6 @@
 import puppeteer, { Browser } from "puppeteer";
 import * as fs from "fs";
 import * as path from "path";
-import { renderToString } from "react-dom/server";
-import React from "react";
 
 // Cache do browser para otimizar performance
 let browserInstance: Browser | null = null;
@@ -53,11 +51,6 @@ const generatePNGWithPuppeteer = async (
               cursor: pointer;
               font-size: 16px;
               transition: all 0.3s ease;
-            }
-            
-            a:hover {
-              text-decoration: underline;
-              color: #1565C0;
             }
             
             a:active {

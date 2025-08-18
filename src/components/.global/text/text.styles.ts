@@ -3,11 +3,12 @@ import { pxToRem } from "../../../utils/pxToRem";
 import { TextProps } from './types';
 
 export const TextContainer = styled.p<TextProps>`
-  width: ${(props) => (props.width ? pxToRem(props.width) : "100%")};
-  font-size: ${(props) => `${pxToRem(props.size ?? 20)}`};
-  font-weight: ${(props) => `${props.weight ?? 400}`};
-  line-height: ${(props) => `${props.lineHeight}`};
-  color: ${(props) => `${props.color ?? '#323232'}`};
+  width: ${({ width }) => (width ? pxToRem(width) : "100%")};
+  font-size: ${({size = 20}) => pxToRem(size)};
+  font-weight: ${({weight = 400}) => weight };
+  /* font-style: regular; */
+  line-height: ${({lineHeight}) => lineHeight};
+  color: ${({color = '#323232'}) => color };
   margin: 0 auto;
-  margin-bottom: 1rem;
+  margin-block: ${({ marginBlock = 16 }) => pxToRem(marginBlock)};
 `;

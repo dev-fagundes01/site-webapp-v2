@@ -1,6 +1,6 @@
 export interface HeaderLink {
-  label: string;
   onClick: () => void;
+  label: string;
   ariaLabel?: string;
 }
 

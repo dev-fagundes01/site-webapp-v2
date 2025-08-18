@@ -15,7 +15,7 @@ import { HeaderLink } from "../../../components/header/types";
 import { FooterProps } from "../../../components/footer/types";
 import Footer from "../../../components/footer";
 
-interface DesignViewProps {
+interface ProductViewProps {
   headerLinks: HeaderLink[][];
   footerLinks: FooterProps["links"];
   footerLinks2?: FooterProps["links2"];
@@ -23,7 +23,7 @@ interface DesignViewProps {
   socialLinks: FooterProps["socialLinks"];
 }
 
-const DesignView: React.FC<DesignViewProps> = ({
+const ProductView: React.FC<ProductViewProps> = ({
   headerLinks,
   footerLinks,
   footerLinks2,
@@ -68,23 +68,19 @@ const DesignView: React.FC<DesignViewProps> = ({
           <Subtitle marginBottom={36} marginTop={16}>
             Áreas de Atuação
           </Subtitle>
-          <Title size={40}>Design</Title>
+          <Title size={40}>Product</Title>
 
           <Text size={20} color="#323232" weight={400}>
-            Na área de Design, o foco está em criar experiências que sejam
-            bonitas, intuitivas e centradas nas pessoas. Aqui, design não é só
-            aparência, é sobre resolver problemas, facilitar jornadas e gerar
-            conexões reais com quem usa o projeto.
+            A área de Produto é o coração estratégico de muitos times. São
+            analisados problemas reais, organização de  ideias, validação de 
+            hipóteses e acompanha a criação de soluções que geram valor para
+            quem as usa.
           </Text>
 
           <Text size={20} color="#323232" weight={400}>
-            Se você é uma pessoa criativa, curiosa e gosta de pensar em como as
-            coisas funcionam para os outros, essa área tem muito a te oferecer.
-          </Text>
-
-          <Text size={20} color="#323232" weight={400}>
-            Dentro do nosso projeto, temos cargos específicos para diferentes
-            etapas e perfis do design.
+            No nosso voluntariado, a área de Produto está dividida em frentes
+            que oferecem espaço para aprendizado, colaboração e crescimento
+            prático.
           </Text>
 
           <Button variant="primary">Faça parte!</Button>
@@ -98,8 +94,8 @@ const DesignView: React.FC<DesignViewProps> = ({
       </main>
 
       <section>
-        <Title as="h2" textAlign="center" size={32} width={510}>
-          Conheça os cargos de Design que você pode explorar com a gente:
+        <Title as="h2" textAlign="center" size={32} width={568}>
+          Conheça os cargos de Produto que você pode explorar com a gente:
         </Title>
 
         <Card
@@ -107,24 +103,22 @@ const DesignView: React.FC<DesignViewProps> = ({
           padding="2rem 1rem"
           width={1042}
           imageSrc={ImageDesign2}
-          title="UX - User Experience"
+          title="APM – Associate Product Management"
           titleAs="h3"
           titleSize={24}
           titleWidth={36}
           marginTop={45}
-          description="Aqui, você vai investigar dores e necessidades das pessoas usuárias,
-            mapear jornadas, criar fluxos e wireframes. É uma área muito
-            colaborativa, que conversa com Produto, Tech e Pesquisa."
+          description="Se você está começando agora, essa frente é ideal para aprender o básico da gestão de produtos na prática. Como APM, você vai:"
           descriptionLineHeight={1.6}
           descriptionSize={16}
           descriptionColor="#000000"
           descriptionWeight={400}
           descriptionWidth={500}
           list={[
-            "Criar fluxos e mapas de navegação.",
-            "Fazer entrevistas e testes de usabilidade (junto da pesquisa).",
-            "Prototipar soluções de forma iterativa.",
-            "Garantir acessibilidade e clareza na experiência.",
+            "Ajudar na priorização de tarefas e demandas.",
+            "Participar de rituais com o time (como plannings e reviews).",
+            "Apoiar em pesquisas com usuários.",
+            "Aprender a trabalhar com OKRs, MVPs, e Product Discovery",
           ]}
           listSize={16}
           listColor="#000000"
@@ -134,12 +128,13 @@ const DesignView: React.FC<DesignViewProps> = ({
 
       <Card
         marginBlock="2rem"
-        title="Por que atuar com Design na SouJunior?"
+        title="Por que atuar em Produto na SouJunior?"
         list={[
-          "Participar de entregas de verdade, com contexto e propósito.",
-          "Trabalhar com pessoas de Produto, Tech, Marketing e Pesquisa.",
-          "Desenvolver seu portfólio com segurança e acompanhamento.",
-          "Aprender a colaborar, iterar e defender ideias com base em dados.",
+          "Aprenda na prática com pessoas de diferentes áreas.",
+          "Participe de entregas reais com impacto no projeto.",
+          "Desenvolva habilidades valorizadas no mercado.",
+          "Descubra qual frente de Produto mais combina com você.",
+          "Construa um portfólio e fortalecer seu LinkedIn com experiência real.",
         ]}
         listSize={20}
         listColor="#323232"
@@ -171,4 +166,4 @@ const DesignView: React.FC<DesignViewProps> = ({
   );
 };
 
-export default DesignView;
+export default ProductView;

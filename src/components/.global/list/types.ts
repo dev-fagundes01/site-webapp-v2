@@ -4,5 +4,5 @@ export interface  ListProps {
   color?: string;
   size?: number;
   weight?: number;
-  lineHeight?: number;
+  lineHeight?: string;
 }

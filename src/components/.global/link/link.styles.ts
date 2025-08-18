@@ -1,28 +1,33 @@
 import styled from "styled-components";
-import { pxToRem } from '../../../utils/pxToRem';
+import { pxToRem } from "../../../utils/pxToRem";
+import { LinkProps } from "./types";
 
-export const StyledLink = styled.a`
-  color: #0056b3; /* Darker blue for better contrast */
+export const StyledLink = styled.a<
+  Pick<LinkProps, "color" | "size" | "paddingY" | "paddingX" | "width" | "height" | "isFistLink">
+>`
+  color: ${({ color }) => (color ? color : "#0056b3")}; /* Darker blue for better contrast */
   text-decoration: none;
-  cursor: pointer;
-  font-size: ${pxToRem(16)};
+  cursor: ${({ isFistLink }) => (isFistLink ? "auto" : "pointer")};
+  font-size: ${({ size = 16 }) => pxToRem(size)};
   font-weight: 500;
   border-radius: 4px;
-  padding: 8px 12px;
+  padding-block: ${({ paddingY }) => (paddingY ? pxToRem(paddingY) : "auto")};
+  padding-inline: ${({ paddingX }) => (paddingX ? pxToRem(paddingX) : "auto")};
   transition: all 0.2s ease-in-out;
   position: relative;
 
-  /* Ensure minimum touch target size (44x44px) */
-  min-height: 44px;
-  min-width: 44px;
+  min-height: 16px;
+  min-width: 16px;
+  width: ${({ width }) => width ?? "auto"};
+  height: ${({ height }) => height ?? "auto"};
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
   &:hover {
-    text-decoration: underline;
-    background-color: rgba(0, 86, 179, 0.1);
-    color: #003d82;
+    text-decoration: ${({ isFistLink }) => (isFistLink ? "none" : "underline")};
+    background-color: ${({ isFistLink }) => (isFistLink ? "transparent" : "rgba(0, 86, 179, 0.1)")};
+    color: ${({ isFistLink }) => (isFistLink ? "#fff" : "#0056b3")};
   }
 
   &:focus {

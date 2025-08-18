@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 export interface TitleProps extends React.AllHTMLAttributes<HTMLHeadElement> {
   children: ReactNode;
   size?: number;
+  textAlign?: 'left' | 'center' | 'right' | 'justify' | 'initial';
   width?: number;
   marginTop?: number;
   color?: string;

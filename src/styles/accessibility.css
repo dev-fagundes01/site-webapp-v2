@@ -1,4 +1,4 @@
-/* Global Accessibility Styles */
+Global Accessibility Styles
 
 /* Skip link styles */
 .skip-link {
@@ -17,6 +17,11 @@
 .skip-link:focus {
   left: 6px !important;
   top: 6px !important;
+}
+
+.active-link {
+  border-bottom: 2px solid #0056b3;
+  border-radius: 0;
 }
 
 /* Focus indicators */
@@ -39,7 +44,7 @@
   * {
     border-color: currentColor !important;
   }
-  
+
   img {
     filter: contrast(1.5);
   }
@@ -91,41 +96,6 @@ textarea,
 [role="link"] {
   min-height: 44px;
   min-width: 44px;
-}
-
-/* Color contrast improvements */
-:root {
-  --primary-color: #0056b3;
-  --primary-hover: #003d82;
-  --secondary-color: #323232;
-  --success-color: #155724;
-  --warning-color: #856404;
-  --danger-color: #721c24;
-  --info-color: #0c5460;
-  --light-color: #f8f9fa;
-  --dark-color: #343a40;
-  --neutral-color: #666666;
-}
-
-/* Error and success states */
-.error {
-  color: var(--danger-color);
-  border-color: var(--danger-color);
-}
-
-.success {
-  color: var(--success-color);
-  border-color: var(--success-color);
-}
-
-.warning {
-  color: var(--warning-color);
-  border-color: var(--warning-color);
-}
-
-.info {
-  color: var(--info-color);
-  border-color: var(--info-color);
 }
 
 /* Form accessibility improvements */
@@ -183,11 +153,11 @@ input:valid {
   .design-content {
     padding: 1rem;
   }
-  
+
   .design-content h1 {
     font-size: 2rem;
   }
-  
+
   .design-content p {
     font-size: 1rem;
   }

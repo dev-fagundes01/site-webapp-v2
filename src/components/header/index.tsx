@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { HeaderContainer, Line, NavLinks } from "./header.styles";
 import Link from "../.global/link";
 import { HeaderProps } from "./types";
-import logoImage from "../../assets/sou-junior-logo.png";
+import logoImage from "../../assets/sj-logo-header.png";
 import Logo from '../.global/logo'
 
 const Header: React.FC<HeaderProps> = ({ links }) => {
@@ -26,6 +26,8 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
               link.ariaLabel || `Navegar para ${t(`links.${link.label}`)}`
             }
             role="menuitem"
+            paddingY={8}
+            paddingX={12}
             >
               {t(`links.${link.label}`)}
             </Link>
@@ -35,7 +37,7 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
 
       <Line/>
 
-      <NavLinks role="navigation" aria-label="Navegação secundaria">
+      <NavLinks role="navigation" aria-label="Navegação secundaria" style={{gap: '1.25rem'}}>
           {links[1].map((link) => (
             <Link
               key={link.label}
@@ -44,6 +46,8 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
                 link.ariaLabel || `Navegar para ${t(`links.${link.label}`)}`
               }
               role="menuitem"
+              paddingY={8}
+              paddingX={12}
             >
               {t(`links.${link.label}`)}
             </Link>

@@ -1,16 +1,16 @@
-export const SectionFooterEnum = [
-  "Conheça a SouJunior",
-  "Fale Conosco",
-  "Faça Parte",  
-]
-
 export enum LinkFooterEnum {
-  ABOUT_US = "/sobre nós",
-  MISSION_VALUES_VISION = "missão-valores-visão",
+  MEET_SOUJUNIOR = "#",
+  ABOUT_US = "/sobre-nos",
+  MISSION_VALUES_VISION = "missão-valores-visao",
   INITIATIVES = "/nossas-iniciativas",
 } 
 
 export enum LinkFooterEnum2 {
+  CONTACT_US = "#",
   FAQ = "/faq",
   OMBUDSMAN = "/ouvidoria",
+}
+
+export enum LinkFooterEnum3 {
+  TAKE_PART = "#", 
 }
