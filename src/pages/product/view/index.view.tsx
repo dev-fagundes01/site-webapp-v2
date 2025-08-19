@@ -21,6 +21,7 @@ interface ProductViewProps {
   footerLinks2?: FooterProps["links2"];
   footerLinks3?: FooterProps["links"];
   socialLinks: FooterProps["socialLinks"];
+  copyright: string;
 }
 
 const ProductView: React.FC<ProductViewProps> = ({
@@ -29,6 +30,7 @@ const ProductView: React.FC<ProductViewProps> = ({
   footerLinks2,
   footerLinks3,
   socialLinks,
+  copyright,
 }) => {
   const { announce } = useScreenReaderAnnouncer();
   const { focusMainContent } = useFocusManagement();
@@ -160,7 +162,7 @@ const ProductView: React.FC<ProductViewProps> = ({
         links2={footerLinks2}
         links3={footerLinks3}
         socialLinks={socialLinks}
-        copyright="© 2025 SouJunior. Todos os direitos reservados."
+        copyright={copyright}
       />
     </div>
   );

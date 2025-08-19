@@ -19,8 +19,9 @@ interface DesignViewProps {
   headerLinks: HeaderLink[][];
   footerLinks: FooterProps["links"];
   footerLinks2?: FooterProps["links2"];
-  footerLinks3?: FooterProps["links"];
+  footerLinks3?: FooterProps["links3"];
   socialLinks: FooterProps["socialLinks"];
+  copyright: string;
 }
 
 const DesignView: React.FC<DesignViewProps> = ({
@@ -29,14 +30,13 @@ const DesignView: React.FC<DesignViewProps> = ({
   footerLinks2,
   footerLinks3,
   socialLinks,
+  copyright,
 }) => {
   const { announce } = useScreenReaderAnnouncer();
   const { focusMainContent } = useFocusManagement();
 
   // Set page title for screen readers
   useEffect(() => {
-    document.title = "Design System - Sou Junior";
-
     // Add meta description if not present
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
@@ -165,7 +165,7 @@ const DesignView: React.FC<DesignViewProps> = ({
         links2={footerLinks2}
         links3={footerLinks3}
         socialLinks={socialLinks}
-        copyright="© 2025 SouJunior. Todos os direitos reservados."
+        copyright={copyright}
       />
     </div>
   );
