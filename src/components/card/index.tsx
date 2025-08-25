@@ -9,17 +9,28 @@ import Button from "../.global/button";
 
 const Card: React.FC<CardProps> = ({
   edgeSection,
+  flexDirection,
+  justifyContent,
   marginBlock,
+  marginInline,
   padding,
   width,
+  height,
+  border,
+  backgroundColor,
   onClick,
 
   imageSrc,
+  imageWidth,
+  imageHeight,
 
   title,
   titleAs = "h2",
   titleSize,
-  marginTop,
+  titleWidth,
+  titleTextAlign,
+  titleMarginTop,
+  titleColor,
 
   subtitle,
 
@@ -41,11 +52,11 @@ const Card: React.FC<CardProps> = ({
   buttonVariant,
 }) => {
   return (
-    <CardContainer edgeSection={edgeSection} marginBlock={marginBlock} padding={padding} width={width}>
-      {imageSrc && <Image src={imageSrc} alt={title ?? ""} role="img" />}
+    <CardContainer edgeSection={edgeSection} flexDirection={flexDirection} justifyContent={justifyContent} marginBlock={marginBlock} marginInline={marginInline} padding={padding} width={width} height={height} border={border} backgroundColor={backgroundColor}>
+      {imageSrc && <Image src={imageSrc} width={imageWidth} height={imageHeight} alt={title ?? ""} role="img" />}
 
       <div>
-        <Title as={titleAs} size={titleSize} marginTop={marginTop}>
+        <Title as={titleAs} size={titleSize} width={titleWidth} marginTop={titleMarginTop} color={titleColor} textAlign={titleTextAlign}>
           {title}
         </Title>
 
