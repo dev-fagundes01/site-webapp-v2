@@ -104,12 +104,12 @@ const ProductView: React.FC<ProductViewProps> = ({
           edgeSection
           padding="2rem 1rem"
           width={1042}
+          border="1px solid #0056b3"
           imageSrc={ImageDesign2}
           title="APM – Associate Product Management"
           titleAs="h3"
           titleSize={24}
-          titleWidth={36}
-          marginTop={45}
+          titleMarginTop={45}
           description="Se você está começando agora, essa frente é ideal para aprender o básico da gestão de produtos na prática. Como APM, você vai:"
           descriptionLineHeight={1.6}
           descriptionSize={16}

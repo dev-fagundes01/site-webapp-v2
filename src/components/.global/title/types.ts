@@ -5,6 +5,8 @@ export interface TitleProps extends React.AllHTMLAttributes<HTMLHeadElement> {
   textAlign?: 'left' | 'center' | 'right' | 'justify' | 'initial';
   width?: number;
   marginTop?: number;
+  marginBottom?: number;
   color?: string;
+  backgroundColor?: string;
   as?: keyof React.JSX.IntrinsicElements; //"h1" | "h2" | "h3";
 }
