@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Header from "../../../components/header";
 import {
   useScreenReaderAnnouncer,
   useFocusManagement,
@@ -10,22 +9,10 @@ import Title from "../../../components/.global/title";
 import ImageDesign from "../../../assets/image-design.png";
 import Card from "../../../components/card";
 import Button from "../../../components/.global/button";
-import { HeaderLink } from "../../../components/header/types";
-import { FooterProps } from "../../../components/footer/types";
-import Footer from "../../../components/footer";
 import communication from "../../../assets/skills/tech-recruiter/communication.svg";
 import listening from "../../../assets/skills/tech-recruiter/listening.svg";
 import organization from "../../../assets/skills/tech-recruiter/organization.svg";
 import watchfulEye from "../../../assets/skills/tech-recruiter/watchful-eye.svg";
-
-interface TechRecruiterViewProps {
-  headerLinks: HeaderLink[][];
-  footerLinks: FooterProps["links"];
-  footerLinks2?: FooterProps["links2"];
-  footerLinks3?: FooterProps["links"];
-  socialLinks: FooterProps["socialLinks"];
-  copyright: string;
-}
 
 const skillList = [
   {
@@ -46,14 +33,7 @@ const skillList = [
   },
 ];
 
-const TechRecruiterView: React.FC<TechRecruiterViewProps> = ({
-  headerLinks,
-  footerLinks,
-  footerLinks2,
-  footerLinks3,
-  socialLinks,
-  copyright,
-}) => {
+const TechRecruiterView: React.FC = () => {
   const { announce } = useScreenReaderAnnouncer();
   const { focusMainContent } = useFocusManagement();
 
@@ -81,8 +61,6 @@ const TechRecruiterView: React.FC<TechRecruiterViewProps> = ({
 
   return (
     <div className="design-page">
-      <Header links={headerLinks} />
-
       <main
         className="design-content"
         role="main"
@@ -205,14 +183,6 @@ const TechRecruiterView: React.FC<TechRecruiterViewProps> = ({
           buttonVariant="primary"
         />
       </div>
-
-      <Footer
-        links={footerLinks}
-        links2={footerLinks2}
-        links3={footerLinks3}
-        socialLinks={socialLinks}
-        copyright={copyright}
-      />
     </div>
   );
 };
