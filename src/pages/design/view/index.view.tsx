@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Header from "../../../components/header";
 import {
   useScreenReaderAnnouncer,
   useFocusManagement,
@@ -11,27 +10,8 @@ import ImageDesign from "../../../assets/image-design.png";
 import ImageDesign2 from "../../../assets/Image-design2.png";
 import Card from "../../../components/card";
 import Button from "../../../components/.global/button";
-import { HeaderLink } from "../../../components/header/types";
-import { FooterProps } from "../../../components/footer/types";
-import Footer from "../../../components/footer";
 
-interface DesignViewProps {
-  headerLinks: HeaderLink[][];
-  footerLinks: FooterProps["links"];
-  footerLinks2?: FooterProps["links2"];
-  footerLinks3?: FooterProps["links3"];
-  socialLinks: FooterProps["socialLinks"];
-  copyright: string;
-}
-
-const DesignView: React.FC<DesignViewProps> = ({
-  headerLinks,
-  footerLinks,
-  footerLinks2,
-  footerLinks3,
-  socialLinks,
-  copyright,
-}) => {
+const DesignView: React.FC = () => {
   const { announce } = useScreenReaderAnnouncer();
   const { focusMainContent } = useFocusManagement();
 
@@ -57,8 +37,6 @@ const DesignView: React.FC<DesignViewProps> = ({
 
   return (
     <div className="design-page">
-      <Header links={headerLinks} />
-
       <main
         className="design-content"
         role="main"
@@ -165,14 +143,6 @@ const DesignView: React.FC<DesignViewProps> = ({
           buttonVariant="primary"
         />
       </div>
-
-      <Footer
-        links={footerLinks}
-        links2={footerLinks2}
-        links3={footerLinks3}
-        socialLinks={socialLinks}
-        copyright={copyright}
-      />
     </div>
   );
 };

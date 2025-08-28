@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Header from "../../../components/header";
 import {
   useScreenReaderAnnouncer,
   useFocusManagement,
@@ -11,27 +10,8 @@ import ImageDesign from "../../../assets/image-design.png";
 import ImageDesign2 from "../../../assets/Image-design2.png";
 import Card from "../../../components/card";
 import Button from "../../../components/.global/button";
-import { HeaderLink } from "../../../components/header/types";
-import { FooterProps } from "../../../components/footer/types";
-import Footer from "../../../components/footer";
 
-interface ProductViewProps {
-  headerLinks: HeaderLink[][];
-  footerLinks: FooterProps["links"];
-  footerLinks2?: FooterProps["links2"];
-  footerLinks3?: FooterProps["links"];
-  socialLinks: FooterProps["socialLinks"];
-  copyright: string;
-}
-
-const ProductView: React.FC<ProductViewProps> = ({
-  headerLinks,
-  footerLinks,
-  footerLinks2,
-  footerLinks3,
-  socialLinks,
-  copyright,
-}) => {
+const ProductView: React.FC = () => {
   const { announce } = useScreenReaderAnnouncer();
   const { focusMainContent } = useFocusManagement();
 
@@ -59,8 +39,6 @@ const ProductView: React.FC<ProductViewProps> = ({
 
   return (
     <div className="design-page">
-      <Header links={headerLinks} />
-
       <main
         className="design-content"
         role="main"
@@ -156,14 +134,6 @@ const ProductView: React.FC<ProductViewProps> = ({
           buttonVariant="primary"
         />
       </div>
-
-      <Footer
-        links={footerLinks}
-        links2={footerLinks2}
-        links3={footerLinks3}
-        socialLinks={socialLinks}
-        copyright={copyright}
-      />
     </div>
   );
 };
