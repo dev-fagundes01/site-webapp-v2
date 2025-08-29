@@ -2,6 +2,7 @@
   "name": "site-webapp-v2",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@testing-library/dom": "^8.19.1",
     "@types/node": "^16.18.126",
