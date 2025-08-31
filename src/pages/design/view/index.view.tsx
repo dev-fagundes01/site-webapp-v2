@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Header from "../../../components/header";
 import {
   useScreenReaderAnnouncer,
   useFocusManagement,
@@ -11,32 +10,13 @@ import ImageDesign from "../../../assets/image-design.png";
 import ImageDesign2 from "../../../assets/Image-design2.png";
 import Card from "../../../components/card";
 import Button from "../../../components/.global/button";
-import { HeaderLink } from "../../../components/header/types";
-import { FooterProps } from "../../../components/footer/types";
-import Footer from "../../../components/footer";
 
-interface DesignViewProps {
-  headerLinks: HeaderLink[][];
-  footerLinks: FooterProps["links"];
-  footerLinks2?: FooterProps["links2"];
-  footerLinks3?: FooterProps["links"];
-  socialLinks: FooterProps["socialLinks"];
-}
-
-const DesignView: React.FC<DesignViewProps> = ({
-  headerLinks,
-  footerLinks,
-  footerLinks2,
-  footerLinks3,
-  socialLinks,
-}) => {
+const DesignView: React.FC = () => {
   const { announce } = useScreenReaderAnnouncer();
   const { focusMainContent } = useFocusManagement();
 
   // Set page title for screen readers
   useEffect(() => {
-    document.title = "Design System - Sou Junior";
-
     // Add meta description if not present
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
@@ -57,8 +37,6 @@ const DesignView: React.FC<DesignViewProps> = ({
 
   return (
     <div className="design-page">
-      <Header links={headerLinks} />
-
       <main
         className="design-content"
         role="main"
@@ -98,7 +76,13 @@ const DesignView: React.FC<DesignViewProps> = ({
       </main>
 
       <section>
-        <Title as="h2" textAlign="center" size={32} width={510}>
+        <Title
+          as="h2"
+          textAlign="center"
+          size={32}
+          width={510}
+          marginBottom={48}
+        >
           Conheça os cargos de Design que você pode explorar com a gente:
         </Title>
 
@@ -106,12 +90,12 @@ const DesignView: React.FC<DesignViewProps> = ({
           edgeSection
           padding="2rem 1rem"
           width={1042}
+          border="1px solid #0056b3"
           imageSrc={ImageDesign2}
           title="UX - User Experience"
           titleAs="h3"
           titleSize={24}
-          titleWidth={36}
-          marginTop={45}
+          titleMarginTop={45}
           description="Aqui, você vai investigar dores e necessidades das pessoas usuárias,
             mapear jornadas, criar fluxos e wireframes. É uma área muito
             colaborativa, que conversa com Produto, Tech e Pesquisa."
@@ -159,14 +143,6 @@ const DesignView: React.FC<DesignViewProps> = ({
           buttonVariant="primary"
         />
       </div>
-
-      <Footer
-        links={footerLinks}
-        links2={footerLinks2}
-        links3={footerLinks3}
-        socialLinks={socialLinks}
-        copyright="© 2025 SouJunior. Todos os direitos reservados."
-      />
     </div>
   );
 };

@@ -1,9 +1,5 @@
 import { RouteEnum, RouteEnum2 } from './enums/RouteEnum';
 
-/**
-* @param navigate
-* @returns
- */
   export const createHeaderLinks = (navigate: (route: RouteEnum | RouteEnum2) => void) => [
     [
       {

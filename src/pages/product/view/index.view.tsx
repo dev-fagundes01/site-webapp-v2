@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Header from "../../../components/header";
 import {
   useScreenReaderAnnouncer,
   useFocusManagement,
@@ -11,25 +10,8 @@ import ImageDesign from "../../../assets/image-design.png";
 import ImageDesign2 from "../../../assets/Image-design2.png";
 import Card from "../../../components/card";
 import Button from "../../../components/.global/button";
-import { HeaderLink } from "../../../components/header/types";
-import { FooterProps } from "../../../components/footer/types";
-import Footer from "../../../components/footer";
 
-interface ProductViewProps {
-  headerLinks: HeaderLink[][];
-  footerLinks: FooterProps["links"];
-  footerLinks2?: FooterProps["links2"];
-  footerLinks3?: FooterProps["links"];
-  socialLinks: FooterProps["socialLinks"];
-}
-
-const ProductView: React.FC<ProductViewProps> = ({
-  headerLinks,
-  footerLinks,
-  footerLinks2,
-  footerLinks3,
-  socialLinks,
-}) => {
+const ProductView: React.FC = () => {
   const { announce } = useScreenReaderAnnouncer();
   const { focusMainContent } = useFocusManagement();
 
@@ -57,8 +39,6 @@ const ProductView: React.FC<ProductViewProps> = ({
 
   return (
     <div className="design-page">
-      <Header links={headerLinks} />
-
       <main
         className="design-content"
         role="main"
@@ -102,12 +82,12 @@ const ProductView: React.FC<ProductViewProps> = ({
           edgeSection
           padding="2rem 1rem"
           width={1042}
+          border="1px solid #0056b3"
           imageSrc={ImageDesign2}
           title="APM – Associate Product Management"
           titleAs="h3"
           titleSize={24}
-          titleWidth={36}
-          marginTop={45}
+          titleMarginTop={45}
           description="Se você está começando agora, essa frente é ideal para aprender o básico da gestão de produtos na prática. Como APM, você vai:"
           descriptionLineHeight={1.6}
           descriptionSize={16}
@@ -154,14 +134,6 @@ const ProductView: React.FC<ProductViewProps> = ({
           buttonVariant="primary"
         />
       </div>
-
-      <Footer
-        links={footerLinks}
-        links2={footerLinks2}
-        links3={footerLinks3}
-        socialLinks={socialLinks}
-        copyright="© 2025 SouJunior. Todos os direitos reservados."
-      />
     </div>
   );
 };

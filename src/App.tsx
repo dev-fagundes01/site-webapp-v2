@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { routes } from "./routes";
 import ErrorBoundary from "./components/.global/error-boundary";
+import DefaultLayout from './layout/DefaultLayout';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
 
           <main id="main-content" tabIndex={-1}>
             <Routes>
+              <Route element={<DefaultLayout />}>
               {routes.map((route, index) => (
                 <Route
                   key={index}
@@ -43,6 +45,7 @@ function App() {
                   element={React.createElement(route.component)}
                 />
               ))}
+              </Route>
             </Routes>
           </main>
         </div>

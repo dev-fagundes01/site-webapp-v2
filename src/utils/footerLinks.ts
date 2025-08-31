@@ -62,4 +62,6 @@ const footerLinks = [
     { icon: Twitch, to: "https://twitch.tv" },
   ];
 
-export { footerLinks, footerLinks2, footerLinks3, socialLinks };
+  const copyright = "© 2025 SouJunior. Todos os direitos reservados.";
+
+export { footerLinks, footerLinks2, footerLinks3, socialLinks, copyright };
