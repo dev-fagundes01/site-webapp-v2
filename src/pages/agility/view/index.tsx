@@ -2,25 +2,13 @@ import Button from "../../../components/.global/button";
 import Subtitle from "../../../components/.global/subtitle";
 import Text from "../../../components/.global/text";
 import Title from "../../../components/.global/title";
-import Header from "../../../components/header";
 import ImageAgility from "../../../assets/image-agility.png"
 import Card from "../../../components/card";
-import Footer from "../../../components/footer";
-import { HeaderLink } from "../../../components/header/types";
-import { FooterProps } from "../../../components/footer/types";
 import Carousel from "../../../components/.global/carousel";
 import IconChat from "../../../assets/icon-chat.png";
 import IconEar from "../../../assets/icon-ear.png";
 import IconPage from "../../../assets/icon-page.png";
 import IconPuzzle from "../../../assets/icon-puzzle.png";
-
-interface AgilityViewProps {
-  headerLinks: HeaderLink[][];
-  footerLinks: FooterProps["links"];
-  footerLinks2?: FooterProps["links2"];
-  footerLinks3?: FooterProps["links"];
-  socialLinks: FooterProps["socialLinks"];
-};
 
 const carouselItems = [
   { id: 1, description: "Facilitação de runiões", icon: IconChat },
@@ -29,17 +17,10 @@ const carouselItems = [
   { id: 3, description: "Liderança e falicitação", icon: IconPuzzle }
 ];
 
-const AgilityView = ({
-  headerLinks,
-  footerLinks,
-  footerLinks2,
-  footerLinks3,
-  socialLinks,
-}: AgilityViewProps) => {
+const AgilityView = () => {
     
     return (
         <div className="design-page">
-        <Header links={headerLinks} />
 
         <main
             className="design-content"
@@ -76,9 +57,9 @@ const AgilityView = ({
 
         <div>
             <Card
-                marginTop={60}
+                titleMarginTop={60}
                 title="Como aplicamos agilidade no projeto"
-                textAlign="center" 
+                titleTextAlign="center" 
                 description="Aqui, usamos práticas do ágil de forma leve e adaptada
                 à realidade do voluntariado. Nossos times podem trabalhar com:"
                 descriptionAlign="center"
@@ -103,9 +84,9 @@ const AgilityView = ({
         />
     
         <Card
-            marginTop={60}
+            titleMarginTop={60}
             title="Por que ser Agilista na SouJunior?"
-            textAlign="center"
+            titleTextAlign="center"
             list={[
             "Aprender na prática como aplicar agilidade com times reais.",
             "Testar frameworks e adaptar dinâmicas.",
@@ -121,7 +102,7 @@ const AgilityView = ({
 
         <div style={{ margin: "auto", textAlign: "center" }}>
             <Card
-            marginTop={60}
+            titleMarginTop={60}
             title="Junte-se a nós e faça parte dessa jornada transformadora!"
             description="Sua contribuição pode ser um passo importante para impulsionar
             carreiras e transformar o futuro de muitos profissionais da área tech."
@@ -132,14 +113,6 @@ const AgilityView = ({
             buttonVariant="primary"
             />
         </div>
-
-        <Footer
-            links={footerLinks}
-            links2={footerLinks2}
-            links3={footerLinks3}
-            socialLinks={socialLinks}
-            copyright="© 2025 SouJunior. Todos os direitos reservados."
-        />
         </div>
     );
 };

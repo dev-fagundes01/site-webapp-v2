@@ -7,6 +7,6 @@ import TechRecruiterController from './pages/tech-recruiter/controller/index.con
 export const routes = [
   { path: RouteEnum2.UI_UX_DESIGN, component: DesignController },
   { path: RouteEnum2.PRODUCT, component: ProductController },
-  { path: RouteEnum2.AGILITY, component: AgilityController}
+  { path: RouteEnum2.AGILITY, component: AgilityController},
   { path: RouteEnum2.TECH_RECRUITER, component: TechRecruiterController },
 ];

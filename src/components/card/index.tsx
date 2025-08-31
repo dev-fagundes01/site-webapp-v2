@@ -27,8 +27,6 @@ const Card: React.FC<CardProps> = ({
   title,
   titleAs = "h2",
   titleSize,
-  marginTop,
-  textAlign,
   titleWidth,
   titleTextAlign,
   titleMarginTop,
