@@ -6,8 +6,8 @@ import {
 import Subtitle from '../../../components/.global/subtitle';
 import Text from '../../../components/.global/text';
 import Title from '../../../components/.global/title';
-import ImageDesign from '../../../assets/image-design.png';
-import ImageDesign2 from '../../../assets/Image-design2.png';
+import ImageProduct from '../../../assets/areas-expertise/area-activitie.png';
+import ImageProduct2 from '../../../assets/areas-expertise/area-activitie2.png';
 import Card from '../../../components/card';
 import Button from '../../../components/.global/button';
 
@@ -70,7 +70,7 @@ const ProductView: React.FC = () => {
             {/* Dynamic content will be announced to screen readers */}
           </div>
         </section>
-        <img src={ImageDesign} alt="" />
+        <img src={ImageProduct} alt="" />
       </main>
 
       <section>
@@ -83,7 +83,7 @@ const ProductView: React.FC = () => {
           padding="2rem 1rem"
           width={1042}
           border="1px solid #0056b3"
-          imageSrc={ImageDesign2}
+          imageSrc={ImageProduct2}
           title="APM – Associate Product Management"
           titleAs="h3"
           titleSize={24}

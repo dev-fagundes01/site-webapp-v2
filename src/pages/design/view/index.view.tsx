@@ -6,8 +6,8 @@ import {
 import Subtitle from '../../../components/.global/subtitle';
 import Text from '../../../components/.global/text';
 import Title from '../../../components/.global/title';
-import ImageDesign from '../../../assets/image-design.png';
-import ImageDesign2 from '../../../assets/Image-design2.png';
+import ImageDesign from '../../../assets/areas-expertise/area-activitie.png';
+import ImageDesign2 from '../../../assets/areas-expertise/area-activitie2.png';
 import Card from '../../../components/card';
 import Button from '../../../components/.global/button';
 

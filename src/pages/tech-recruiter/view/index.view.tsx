@@ -6,29 +6,29 @@ import {
 import Subtitle from '../../../components/.global/subtitle';
 import Text from '../../../components/.global/text';
 import Title from '../../../components/.global/title';
-import ImageDesign from '../../../assets/image-design.png';
+import ImageRecruiter from '../../../assets/areas-expertise/area-activitie.png';
 import Card from '../../../components/card';
 import Button from '../../../components/.global/button';
-import communication from '../../../assets/skills/tech-recruiter/communication.svg';
-import listening from '../../../assets/skills/tech-recruiter/listening.svg';
-import organization from '../../../assets/skills/tech-recruiter/organization.svg';
-import watchfulEye from '../../../assets/skills/tech-recruiter/watchful-eye.svg';
+import Communication from '../../../assets/skills/communication.svg';
+import Listening from '../../../assets/skills/listening.svg';
+import Organization from '../../../assets/skills/organization.svg';
+import WatchfulEye from '../../../assets/skills/watchful-eye.svg';
 
 const skillList = [
   {
-    image: communication,
+    image: Communication,
     skill: 'Comunicação clara',
   },
   {
-    image: listening,
+    image: Listening,
     skill: 'Escuta ativa.',
   },
   {
-    image: organization,
+    image: Organization,
     skill: 'Organização de processos.',
   },
   {
-    image: watchfulEye,
+    image: WatchfulEye,
     skill: 'Olhar atento para diversidade e inclusão.',
   },
 ];
@@ -92,7 +92,7 @@ const TechRecruiterView: React.FC = () => {
             {/* Dynamic content will be announced to screen readers */}
           </div>
         </section>
-        <img src={ImageDesign} alt="" />
+        <img src={ImageRecruiter} alt="" />
       </main>
 
       <section style={{ marginBlock: '4rem 5rem' }}>
@@ -126,7 +126,7 @@ const TechRecruiterView: React.FC = () => {
           O papel do Tech Recruiter é garantir que tudo isso aconteça com
           clareza e empatia
         </Title>
-        <Text size={20} color="#323232" weight={400}>
+        <Text size={20} color="#323232" weight={400} textAlign="center">
           Além disso, vai desenvolver habilidades como:
         </Text>
 
