@@ -71,7 +71,6 @@ const Card: React.FC<CardProps> = ({
           width={imageWidth}
           height={imageHeight}
           alt={title ?? ''}
-          role="img"
         />
       )}
 

@@ -1,9 +1,9 @@
-import { ReactNode } from "react";
+import type { ReactNode } from 'react';
 
 export interface SubtitleProps {
   children: ReactNode;
   marginTop?: number;
   marginBottom?: number;
   size?: number;
-  color?: string
+  color?: string;
 }

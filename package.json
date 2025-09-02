@@ -32,6 +32,7 @@
     "eject": "react-scripts eject",
     "test:unit": "jest",
     "test:unit:update": "jest --updateSnapshot",
+    "lint-format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\" && eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
     "prepare": "husky"
   },
   "eslintConfig": {

@@ -1,17 +1,25 @@
-import React from "react";
-import { CarouselContainer, CardsWrapper, Card, CardDescription, CardIcon, CarouselTitle, CarouselSubtitle } from "./styles";
+import React from 'react';
+import {
+  CarouselContainer,
+  CardsWrapper,
+  Card,
+  CardDescription,
+  CardIcon,
+  CarouselTitle,
+  CarouselSubtitle,
+} from './styles';
 
 interface CarouselProps {
   items: CardItem[];
   subtitle: string;
   title: string;
-};
+}
 
 interface CardItem {
   id: number;
   icon: string;
   description: string;
-};
+}
 
 const Carousel: React.FC<CarouselProps> = ({ items, title, subtitle }) => {
   return (

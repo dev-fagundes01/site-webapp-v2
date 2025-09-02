@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { ReactNode } from 'react';
 
 export interface TextProps {
   children: ReactNode;
@@ -7,7 +7,7 @@ export interface TextProps {
   size?: number;
   weight?: number;
   lineHeight?: number;
-  margin?: number;  
+  margin?: number;
   marginBlock?: number;
-  textAlign?: "left" | "center" | "right" | "justify";
+  textAlign?: 'left' | 'center' | 'right' | 'justify';
 }

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { pxToRem } from "../../utils/pxToRem";
+import styled from 'styled-components';
+import { pxToRem } from '../../utils/pxToRem';
 
 export const FooterContainer = styled.footer`
   width: ${pxToRem(1216)};
@@ -7,10 +7,10 @@ export const FooterContainer = styled.footer`
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto;
   grid-template-areas:
-    "logo  . nav nav nav"
-    "social social . . ."
-    "hr hr hr hr hr"
-    ". . . copy copy";
+    'logo  . nav nav nav'
+    'social social . . .'
+    'hr hr hr hr hr'
+    '. . . copy copy';
   padding: 4.5rem 0rem;
   text-align: center;
 `;
@@ -40,7 +40,7 @@ export const SocialList = styled.div`
   margin-left: 0.1rem;
   display: flex;
   gap: 1rem;
-  
+
   a {
     font-size: 1.5rem;
     color: #0056b3;

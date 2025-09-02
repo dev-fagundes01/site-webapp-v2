@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { pxToRem } from "../../utils/pxToRem";
+import styled from 'styled-components';
+import { pxToRem } from '../../utils/pxToRem';
 
 export const HeaderContainer = styled.header`
   display: flex;
@@ -36,7 +36,7 @@ export const NavLinks = styled.nav`
   display: flex;
   gap: 0.5rem; /* Reduced gap to allow for link padding */
   align-items: center;
-  
+
   /* Responsive navigation */
   @media (max-width: 768px) {
     flex-wrap: wrap;

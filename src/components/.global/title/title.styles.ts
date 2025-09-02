@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { pxToRem } from '../../../utils/pxToRem';
-import { TitleProps } from './types';
+import type { TitleProps } from './types';
 
 export const TitleContainer = styled.h1<TitleProps>`
   color: ${({ color = '#003986' }) => color};
