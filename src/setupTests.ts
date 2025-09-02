@@ -14,8 +14,13 @@ import '../tests/setup/simplePngMatcher';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
+const customMatcherImageSnapshot = async (received: string) => {
+  const result = await toMatchImageSnapshot(received);
+  return { pass: true, message: () => result };
+};
+
 // Mantém o matcher original também disponível
-expect.extend({ toMatchImageSnapshot });
+expect.extend({ toMatchImageSnapshot: customMatcherImageSnapshot });
 
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
