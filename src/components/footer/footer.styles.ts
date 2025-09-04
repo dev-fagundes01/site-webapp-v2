@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { pxToRem } from '@/utils/pxToRem';
+import { pxToRem } from '../../utils/pxToRem';
 
 export const FooterContainer = styled.footer`
   width: ${pxToRem(1216)};
