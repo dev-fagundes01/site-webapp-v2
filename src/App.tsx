@@ -24,12 +24,12 @@ function App() {
               fontSize: '14px',
             }}
             onFocus={(e) => {
-              e.target.style.left = '6px';
-              e.target.style.top = '6px';
+              e.currentTarget.style.left = '6px';
+              e.currentTarget.style.top = '6px';
             }}
             onBlur={(e) => {
-              e.target.style.left = '-9999px';
-              e.target.style.top = 'auto';
+              e.currentTarget.style.left = '-9999px';
+              e.currentTarget.style.top = 'auto';
             }}
           >
             Pular para o conteúdo principal

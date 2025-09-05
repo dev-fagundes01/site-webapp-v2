@@ -5,7 +5,6 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
-  // Ignorar pastas/arquivos globais
   {
     ignores: [
       'node_modules',
@@ -17,14 +16,8 @@ export default tseslint.config(
       'jest.config.ts',
     ],
   },
-
-  // Regras base JS
   js.configs.recommended,
-
-  // Regras base TS (v8+)
   ...tseslint.configs.recommended,
-
-  // Suas regras do projeto
   {
     files: ['**/*.{ts,tsx,js,jsx}'],
     languageOptions: {
@@ -41,7 +34,6 @@ export default tseslint.config(
     },
     rules: {
       '@typescript-eslint/no-empty-object-type': 'off',
-      // TS
       '@typescript-eslint/no-unused-vars': [
         'warn',
         {
@@ -54,20 +46,21 @@ export default tseslint.config(
         'error',
         { prefer: 'type-imports' },
       ],
-
-      // React Hooks
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
-
-      // React Fast Refresh (Vite)
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
       ],
-
-      // Gerais
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       'no-debugger': 'error',
+    },
+  },
+  {
+    files: ['**/*.d.ts'],
+    rules: {
+      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-require-imports': 'off',
     },
   },
 );

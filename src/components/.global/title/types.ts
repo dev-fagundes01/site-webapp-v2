@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
-export interface TitleProps extends React.AllHTMLAttributes<HTMLHeadElement> {
+export interface TitleProps
+  extends React.AllHTMLAttributes<HTMLHeadingElement> {
   children: ReactNode;
   size?: number;
   textAlign?: 'left' | 'center' | 'right' | 'justify' | 'initial';

@@ -72,7 +72,10 @@ const DesignView: React.FC = () => {
             {/* Dynamic content will be announced to screen readers */}
           </div>
         </section>
-        <img src={ImageDesign} alt="" />
+        <img
+          src={ImageDesign}
+          alt="Ilustração representando a atuação de design"
+        />
       </main>
 
       <section>

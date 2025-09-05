@@ -92,7 +92,10 @@ const TechRecruiterView: React.FC = () => {
             {/* Dynamic content will be announced to screen readers */}
           </div>
         </section>
-        <img src={ImageRecruiter} alt="" />
+        <img
+          src={ImageRecruiter}
+          alt="Ilustração representando a atuação de Tech Recruiter"
+        />
       </main>
 
       <section style={{ marginBlock: '4rem 5rem' }}>

@@ -3,6 +3,6 @@ export interface ListProps {
   width?: number;
   color?: string;
   size?: number;
-  weight?: number;
+  weight?: number | string;
   lineHeight?: string;
 }

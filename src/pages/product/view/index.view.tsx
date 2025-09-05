@@ -70,7 +70,10 @@ const ProductView: React.FC = () => {
             {/* Dynamic content will be announced to screen readers */}
           </div>
         </section>
-        <img src={ImageProduct} alt="" />
+        <img
+          src={ImageProduct}
+          alt="Ilustração representando a atuação de Produto"
+        />
       </main>
 
       <section>

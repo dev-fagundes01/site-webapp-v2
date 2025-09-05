@@ -4,17 +4,17 @@ import Text from '../../../components/.global/text';
 import Title from '../../../components/.global/title';
 import ImageAgility from '../../../assets/areas-expertise/agility.png';
 import Card from '../../../components/card';
-import Carousel from '../../../components/.global/carousel';
+import Carousel from '../../../components/carousel';
 import IconCommunication from '../../../assets/skills/communication.svg';
 import IconListening from '../../../assets/skills/listening.svg';
 import IconOrganization from '../../../assets/skills/organization.svg';
 import IconWatchful from '../../../assets/skills/watchful-eye.svg';
 
 const carouselItems = [
-  { id: 1, description: 'Facilitação de runiões', icon: IconCommunication },
+  { id: 1, description: 'Facilitação de reuniões', icon: IconCommunication },
   { id: 2, description: 'Organização e visão sistêmica', icon: IconListening },
   { id: 3, description: 'Comunicação não-violenta', icon: IconOrganization },
-  { id: 3, description: 'Liderança e falicitação', icon: IconWatchful },
+  { id: 4, description: 'Liderança e falicitação', icon: IconWatchful },
 ];
 
 const AgilityView = () => {

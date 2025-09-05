@@ -7,7 +7,7 @@ export const StyledButton = styled.button<ButtonProps>`
   opacity: ${({ disabled }) => (disabled ? 0.6 : 1)};
   font-size: ${({ size }) => pxToRem(size || 16)};
   background: ${({ variant }) =>
-    variant === 'secondary'
+    !variant || variant === 'secondary'
       ? '#fff'
       : variant === 'tertiary'
         ? 'transparent'
