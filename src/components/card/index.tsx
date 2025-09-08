@@ -6,6 +6,7 @@ import Image from '../.global/image';
 import Text from '../.global/text';
 import List from '../.global/list';
 import Button from '../.global/button';
+import Paragraph from '../.global/paragraph';
 
 const Card: React.FC<CardProps> = ({
   edgeSection,
@@ -41,13 +42,19 @@ const Card: React.FC<CardProps> = ({
   descriptionWeight,
   descriptionWidth,
   descriptionBlockMargin,
-  descriptionAlign,
+  descriptionTextAlign,
 
   list,
   listSize,
   listColor,
   listWeight,
-  lineHeight,
+  listLineHeight,
+
+  paragraph,
+  paragraphSize,
+  paragraphColor,
+  paragraphWeight,
+  paragraphTextAlign,
 
   buttonText,
   buttonVariant,
@@ -95,7 +102,7 @@ const Card: React.FC<CardProps> = ({
             color={descriptionColor}
             weight={descriptionWeight}
             marginBlock={descriptionBlockMargin}
-            textAlign={descriptionAlign}
+            textAlign={descriptionTextAlign}
           >
             {description}
           </Text>
@@ -107,9 +114,20 @@ const Card: React.FC<CardProps> = ({
             size={listSize}
             color={listColor}
             weight={listWeight}
-            lineHeight={lineHeight}
+            lineHeight={listLineHeight}
           />
         )}
+        {paragraph && (
+          <Paragraph
+            size={paragraphSize}
+            color={paragraphColor}
+            weight={paragraphWeight}
+            textAlign={paragraphTextAlign}
+          >
+            {paragraph}
+          </Paragraph>
+        )}
+
         {buttonText && (
           <Button variant={buttonVariant} onClick={onClick}>
             {buttonText}

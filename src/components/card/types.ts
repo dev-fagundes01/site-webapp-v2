@@ -19,6 +19,7 @@ export interface CardProps {
   imageSrc?: string;
   imageWidth?: number;
   imageHeight?: number;
+
   title?: string;
   titleAs?: keyof React.JSX.IntrinsicElements;
   titleSize?: number;
@@ -26,21 +27,30 @@ export interface CardProps {
   titleWidth?: number;
   titleMarginTop?: number;
   titleColor?: string;
+
   subtitle?: string;
 
-  description?: string;
+  description?: React.ReactNode;
   descriptionLineHeight?: number;
   descriptionSize?: number;
   descriptionColor?: string;
   descriptionWeight?: number;
   descriptionWidth?: number;
-  descriptionAlign?: 'left' | 'center' | 'right' | 'justify';
+  descriptionTextAlign?: 'left' | 'center' | 'right' | 'justify';
   descriptionBlockMargin?: number;
+
   list?: string[];
   listSize?: number;
   listColor?: string;
   listWeight?: number;
-  lineHeight?: string;
+  listLineHeight?: string;
+
+  paragraph?: string;
+  paragraphSize?: number;
+  paragraphColor?: string;
+  paragraphWeight?: number;
+  paragraphTextAlign?: 'left' | 'center' | 'right' | 'justify';
+
   buttonText?: string;
   buttonVariant?: 'primary' | 'secondary' | 'tertiary';
   onClick?: () => void;
