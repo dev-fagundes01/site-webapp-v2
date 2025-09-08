@@ -6,50 +6,56 @@ import {
 import Subtitle from '../../../components/.global/subtitle';
 import Text from '../../../components/.global/text';
 import Title from '../../../components/.global/title';
-import ImageRecruiter from '../../../assets/areas-expertise/front-end.png';
+import ImageRecruiter from '../../../assets/areas-expertise/back-end.png';
 import Card from '../../../components/card';
 import Button from '../../../components/.global/button';
-import Html from '../../../assets/skills/front-end/html.svg';
-import React from '../../../assets/skills/front-end/react.svg';
-import Tailwind from '../../../assets/skills/front-end/tailwind.svg';
-import Figma from '../../../assets/skills/front-end/figma.svg';
 import Git from '../../../assets/skills/git.svg';
-import Api from '../../../assets/skills/front-end/api.svg';
+import Node from '../../../assets/skills/back-end/node.svg';
+import TS from '../../../assets/skills/back-end/node.svg';
+import PostgreSQL from '../../../assets/skills/back-end/node.svg';
+import ORM from '../../../assets/skills/back-end/node.svg';
+import Jest from '../../../assets/skills/back-end/node.svg';
+import Docker from '../../../assets/skills/back-end/node.svg';
 
 const skillList = [
   {
-    image: Html,
-    skill: 'HTML, CSS, JavaScript',
-    desc: 'A base de qualquer projeto front-end.',
+    image: Node,
+    skill: 'Node.js com Express.js',
+    desc: 'Uma das stacks usada no projeto.',
   },
   {
-    image: React,
-    skill: 'React',
-    desc: 'Principal framework usado no projeto.',
+    image: TS,
+    skill: 'TypeScript',
+    desc: 'Para maior segurança e organização do código.',
   },
   {
-    image: Tailwind,
-    skill: 'Tailwind CSS, Styled Componentes',
-    desc: 'Para estilização.',
+    image: PostgreSQL,
+    skill: 'PostgreSQL, MongoDB',
+    desc: 'Para persistência de dados.',
   },
   {
-    image: Figma,
-    skill: 'Figma',
-    desc: 'Para receber os design do time de UX/UI.',
+    image: ORM,
+    skill: 'Prisma, Sequelize, Mongoose',
+    desc: 'Como ORM/ODM.',
+  },
+  {
+    image: Jest,
+    skill: 'Jest',
+    desc: 'Para testes automatizados.',
+  },
+  {
+    image: Docker,
+    skill: 'Docker',
+    desc: 'Em algumas integrações e projetos mais avançados.',
   },
   {
     image: Git,
     skill: 'Git + GitHub',
-    desc: 'Para versionamento e colaboração em código.',
-  },
-  {
-    image: Api,
-    skill: 'APIs Rest',
-    desc: 'Para consumir dados e interagir com o back-end.',
+    desc: 'Para versionamento e colaboração.',
   },
 ];
 
-const FrontEndView: React.FC = () => {
+const BackEndView: React.FC = () => {
   const { announce } = useScreenReaderAnnouncer();
   const { focusMainContent } = useFocusManagement();
 
@@ -86,20 +92,19 @@ const FrontEndView: React.FC = () => {
           <Subtitle marginBottom={36} marginTop={16}>
             Áreas de Atuação
           </Subtitle>
-          <Title size={40}>Front-end</Title>
+          <Title size={40}>Back-end</Title>
 
           <Text size={20} color="#323232" weight={400}>
-            A área de Front-end é responsável por transformar ideias e designs
-            em telas reais, aquelas que as pessoas usuárias de fato vêem e
-            interagem. É aqui que o visual do projeto ganha vida por meio de
-            código, garantindo que tudo funcione de forma fluida, acessível e
-            responsiva.
+            Na área de Back-end, você cuida da lógica por trás do que aparece na
+            tela. É aqui que moram as regras de negócio, as integrações com
+            banco de dados, as rotas das APIs e tudo o que garante que o sistema
+            funcione com segurança, escalabilidade e eficiência.
           </Text>
 
           <Text size={20} color="#323232" weight={400}>
-            Se você gosta de ver o resultado do seu trabalho na prática, tem
-            curiosidade por HTML, CSS, JavaScript e frameworks como React, esse
-            pode ser o seu lugar.
+            Se você curte lógica, organização, performance e resolver problemas
+            que exigem pensamento estruturado, essa pode ser sua área na
+            iniciativa.
           </Text>
 
           <Button variant="primary">Faça parte!</Button>
@@ -117,40 +122,51 @@ const FrontEndView: React.FC = () => {
 
       <section style={{ marginBlock: '4rem 5rem' }}>
         <Title as="h2" textAlign="center" size={32}>
-          O que você aprende e faz no Front-end na SouJunior{' '}
+          O que você aprende e faz como Back-end na SouJunior{' '}
         </Title>
 
         <Card
           padding="0rem"
-          width={1042}
-          description="Na SouJunior, você vai colocar a mão na massa e colaborar com pessoas 
-            de Produto, Design, QA e Backend para desenvolver interfaces completas."
+          //------------
+          description={
+            <>
+              &nbsp; &nbsp; &nbsp; Na SouJunior, a atuação em back-end é voltada
+              para aplicações reais, com foco &nbsp; &nbsp; &nbsp; em qualidade
+              de código e colaboração com outras áreas como Front-end, Produto e
+              QA.
+              <br />
+              <br />
+              Você vai aprender e participar de atividades como:
+            </>
+          }
           descriptionLineHeight={1.6}
           descriptionSize={20}
           descriptionColor="#000000"
           descriptionWeight={400}
-          descriptionWidth={686}
+          descriptionWidth={814}
+          descriptionTextAlign="center"
+          //------------
           list={[
-            'Desenvolver telas com base em protótipos de UI/UX (Figma).',
-            'Aplicar boas práticas de responsividade e acessibilidade.',
-            'Colaborar em revisões de código com outros devs.',
-            'Conectar o frontend com o backend via APIs.',
-            'Corrigir bugs e melhorar a experiência do usuário.',
-            'Participar das cerimônias ágeis do time (plannings, reviews, etc.).',
+            'Construção e manutenção de APIs REST.',
+            'Integração com bancos de dados relacionais e não-relacionais.',
+            'Criação de rotas, middlewares e autenticação.',
+            'Modelagem de dados e regras de negócio.',
+            'Testes de endpoints e cobertura de erros.',
+            'Documentação de endpoints e boas práticas de versionamento.',
           ]}
-          listSize={16}
+          listSize={20}
           listColor="#000000"
           listWeight={400}
+          //------------
+          paragraph="Tudo isso com revisões de código, apoio de outras pessoas desenvolvedoras e participação em cerimônias do time.."
+          paragraphSize={17}
         />
       </section>
 
       <section style={{ margin: '0 auto' }}>
-        <Title textAlign="center" size={32} width={452}>
-          Ferramentas e tecnologias que você pode explorar
+        <Title textAlign="center" size={32}>
+          Tecnologias que usamos e incentivamos a aprender:{' '}
         </Title>
-        <Text size={20} color="#323232" weight={400} textAlign="center">
-          Além disso, vai desenvolver habilidades como:
-        </Text>
 
         <div
           style={{
@@ -159,7 +175,7 @@ const FrontEndView: React.FC = () => {
             justifyContent: 'center',
             gap: '1rem',
             marginBlock: '4rem',
-            width: '55rem',
+            width: '60rem',
           }}
         >
           {skillList.map(({ skill, image, desc }) => (
@@ -188,7 +204,7 @@ const FrontEndView: React.FC = () => {
               descriptionColor="#fff"
               descriptionWeight={400}
               descriptionTextAlign="center"
-              descriptionWidth={144}
+              descriptionWidth={skill === 'Docker' ? 152 : 144}
             />
           ))}
         </div>
@@ -196,13 +212,12 @@ const FrontEndView: React.FC = () => {
 
       <Card
         marginBlock="2rem"
-        title="Por que atuar como Front-end na SouJunior?"
+        title="Por que atuar como Back-end na SouJunior?"
         list={[
-          'Colocar seus estudos em ação com um produto real.',
-          'Aprender a colaborar com times multidisciplinares.',
-          'Ganhar experiência com boas práticas de mercado.',
-          'Construir seu portfólio com entregas concretas.',
-          'Ter mentorias e apoio de pessoas mais experientes da área.',
+          'Aplique o que aprende nos cursos em um ambiente real',
+          'Resolva problemas técnicos com propósito social',
+          'Aprenda a trabalhar em equipe com processos de mercado',
+          'Desenvolva um portfólio técnico com entregas concretas',
         ]}
         listSize={16}
         listColor="#323232"
@@ -226,4 +241,4 @@ const FrontEndView: React.FC = () => {
   );
 };
 
-export default FrontEndView;
+export default BackEndView;

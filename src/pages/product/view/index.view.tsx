@@ -6,8 +6,8 @@ import {
 import Subtitle from '../../../components/.global/subtitle';
 import Text from '../../../components/.global/text';
 import Title from '../../../components/.global/title';
-import ImageProduct from '../../../assets/areas-expertise/area-activitie.png';
-import ImageProduct2 from '../../../assets/areas-expertise/area-activitie2.png';
+import ImageProduct from '../../../assets/areas-expertise/product.png';
+import ImageProduct2 from '../../../assets/areas-expertise/product2.png';
 import Card from '../../../components/card';
 import Button from '../../../components/.global/button';
 
@@ -122,7 +122,7 @@ const ProductView: React.FC = () => {
         listSize={20}
         listColor="#323232"
         listWeight={400}
-        lineHeight="140%"
+        listLineHeight="140%"
       />
 
       <div style={{ margin: 'auto', textAlign: 'center' }}>

@@ -62,7 +62,7 @@ const AgilityView = () => {
           titleTextAlign="center"
           description="Aqui, usamos práticas do ágil de forma leve e adaptada
                 à realidade do voluntariado. Nossos times podem trabalhar com:"
-          descriptionAlign="center"
+          descriptionTextAlign="center"
           list={[
             'Scrum, com sprints semanais ou quinzenais.',
             'Kanban, com fluxo contínuo e reuniões pontuais.',
@@ -71,7 +71,7 @@ const AgilityView = () => {
           listSize={20}
           listColor="#323232"
           listWeight={400}
-          lineHeight="140%"
+          listLineHeight="140%"
           descriptionWidth={670}
           descriptionBlockMargin={24}
         />
@@ -97,7 +97,7 @@ const AgilityView = () => {
         listSize={20}
         listColor="#323232"
         listWeight={400}
-        lineHeight="140%"
+        listLineHeight="140%"
       />
 
       <div style={{ margin: 'auto', textAlign: 'center' }}>
@@ -106,7 +106,7 @@ const AgilityView = () => {
           title="Junte-se a nós e faça parte dessa jornada transformadora!"
           description="Sua contribuição pode ser um passo importante para impulsionar
             carreiras e transformar o futuro de muitos profissionais da área tech."
-          descriptionAlign="center"
+          descriptionTextAlign="center"
           descriptionWidth={670}
           descriptionBlockMargin={24}
           buttonText="Faca parte!"

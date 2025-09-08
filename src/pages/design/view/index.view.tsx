@@ -131,7 +131,7 @@ const DesignView: React.FC = () => {
         listSize={20}
         listColor="#323232"
         listWeight={400}
-        lineHeight="140%"
+        listLineHeight="140%"
       />
 
       <div style={{ margin: 'auto', textAlign: 'center' }}>

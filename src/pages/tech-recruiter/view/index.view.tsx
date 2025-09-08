@@ -6,7 +6,7 @@ import {
 import Subtitle from '../../../components/.global/subtitle';
 import Text from '../../../components/.global/text';
 import Title from '../../../components/.global/title';
-import ImageRecruiter from '../../../assets/areas-expertise/area-activitie.png';
+import ImageRecruiter from '../../../assets/areas-expertise/tech-recruiter.png';
 import Card from '../../../components/card';
 import Button from '../../../components/.global/button';
 import Communication from '../../../assets/skills/communication.svg';
@@ -177,7 +177,7 @@ const TechRecruiterView: React.FC = () => {
         listSize={16}
         listColor="#323232"
         listWeight={400}
-        lineHeight="140%"
+        listLineHeight="140%"
       />
 
       <div style={{ margin: 'auto', textAlign: 'center' }}>
