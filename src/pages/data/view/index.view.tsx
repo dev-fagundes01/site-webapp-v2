@@ -6,12 +6,12 @@ import {
 import Subtitle from '../../../components/.global/subtitle';
 import Text from '../../../components/.global/text';
 import Title from '../../../components/.global/title';
-import ImageProduct from '../../../assets/areas-expertise/product.png';
-import ImageProduct2 from '../../../assets/areas-expertise/product2.png';
+import Data from '../../../assets/areas-expertise/data.png';
+import Data2 from '../../../assets/areas-expertise/data2.png';
 import Card from '../../../components/card';
 import Button from '../../../components/.global/button';
 
-const ProductView: React.FC = () => {
+const DataView: React.FC = () => {
   const { announce } = useScreenReaderAnnouncer();
   const { focusMainContent } = useFocusManagement();
 
@@ -48,19 +48,17 @@ const ProductView: React.FC = () => {
           <Subtitle marginBottom={36} marginTop={16}>
             Áreas de Atuação
           </Subtitle>
-          <Title size={40}>Product</Title>
+          <Title size={40}>Dados</Title>
 
           <Text size={20} color="#323232" weight={400}>
-            A área de Produto é o coração estratégico de muitos times. São
-            analisados problemas reais, organização de ideias, validação de
-            hipóteses e acompanha a criação de soluções que geram valor para
-            quem as usa.
+            Na área de Dados, nosso foco é transformar informações em decisões
+            estratégicas. Trabalhamos para gerar insights, criar visualizações
+            claras, organizar bases de dados e ajudar todas as áreas do projeto
+            a tomar decisões com mais inteligência e segurança.
           </Text>
-
           <Text size={20} color="#323232" weight={400}>
-            No nosso voluntariado, a área de Produto está dividida em frentes
-            que oferecem espaço para aprendizado, colaboração e crescimento
-            prático.
+            Se você gosta de números, lógica, organização ou curte encontrar
+            padrões e contar histórias com dados, este pode ser o seu espaço.
           </Text>
 
           <Button variant="primary">Faça parte!</Button>
@@ -70,15 +68,12 @@ const ProductView: React.FC = () => {
             {/* Dynamic content will be announced to screen readers */}
           </div>
         </section>
-        <img
-          src={ImageProduct}
-          alt="Ilustração representando a atuação de Produto"
-        />
+        <img src={Data} alt="Ilustração representando a atuação de Produto" />
       </main>
 
       <section>
         <Title as="h2" textAlign="center" size={32} width={568}>
-          Conheça os cargos de Produto que você pode explorar com a gente:
+          Conheça os cargos de Dados que você pode explorar com a gente:
         </Title>
 
         <Card
@@ -86,22 +81,22 @@ const ProductView: React.FC = () => {
           padding="2rem 1rem"
           width={1042}
           border="1px solid #0056b3"
-          imageSrc={ImageProduct2}
-          title="APM – Associate Product Management"
+          imageSrc={Data2}
+          title="Analytics"
           titleAs="h3"
           titleSize={24}
           titleMarginTop={45}
-          description="Se você está começando agora, essa frente é ideal para aprender o básico da gestão de produtos na prática. Como APM, você vai:"
-          descriptionLineHeight={1.6}
+          description="Quem atua com Analytics ajuda os times a entender 
+            o que os dados estão dizendo. A pessoa analista pode:"
           descriptionSize={16}
           descriptionColor="#000000"
           descriptionWeight={400}
-          descriptionWidth={468}
+          descriptionWidth={404}
           list={[
-            'Ajudar na priorização de tarefas e demandas.',
-            'Participar de rituais com o time (como plannings e reviews).',
-            'Apoiar em pesquisas com usuários.',
-            'Aprender a trabalhar com OKRs, MVPs, e Product Discovery',
+            'Acompanhar indicadores de desempenho (como engajamento, conversão, etc.).',
+            'Criar dashboards e relatórios com insights acionáveis.',
+            'Apoiar decisões de Produto, Marketing e outras áreas com dados.',
+            'Trabalhar com ferramentas como Google Sheets, Looker Studio, SQL ou Python.',
           ]}
           listSize={16}
           listColor="#000000"
@@ -111,18 +106,21 @@ const ProductView: React.FC = () => {
 
       <Card
         marginBlock="2rem"
-        title="Por que atuar em Produto na SouJunior?"
+        title="Por que atuar em Dados na SouJunior?"
+        description="Participar da área de Dados em um projeto voluntário é uma chance
+          incrível de aprender e aplicar conhecimentos de forma prática. Você vai:"
+        descriptionWidth={688}
         list={[
-          'Aprenda na prática com pessoas de diferentes áreas.',
-          'Participe de entregas reais com impacto no projeto.',
-          'Desenvolva habilidades valorizadas no mercado.',
-          'Descubra qual frente de Produto mais combina com você.',
-          'Construa um portfólio e fortalecer seu LinkedIn com experiência real.',
+          'Trabalhar com dados reais e diversos tipos de problemas.',
+          'Ajudar diferentes áreas a tomarem decisões com base em evidências.',
+          'Desenvolver seu portfólio e experiência com ferramentas do mercado.',
+          'Explorar diferentes frentes e entender qual te atrai mais.',
         ]}
         listSize={20}
         listColor="#323232"
         listWeight={400}
         listLineHeight="140%"
+        listMarginLeft={22}
       />
 
       <div style={{ margin: 'auto', textAlign: 'center' }}>
@@ -141,4 +139,4 @@ const ProductView: React.FC = () => {
   );
 };
 
-export default ProductView;
+export default DataView;

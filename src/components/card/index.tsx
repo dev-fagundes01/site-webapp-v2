@@ -96,6 +96,7 @@ const Card: React.FC<CardProps> = ({
         </Title>
 
         {subtitle && <Subtitle>{subtitle}</Subtitle>}
+
         {description && (
           <Text
             width={descriptionWidth}

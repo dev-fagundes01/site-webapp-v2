@@ -7,6 +7,6 @@ export const StyledParagraph = styled.p<ParagraphProps>`
   color: ${({ color = '#323232' }) => color};
   font-weight: ${({ weight = 400 }) => weight};
   line-height: ${({ lineHeight = 1.5 }) => lineHeight};
-  margin: ${({ margin = '0 0 1rem 0' }) => margin};
-  text-align: ${({ align = 'left' }) => align};
+  margin-bottom: 1rem;
+  text-align: ${({ textAlign = 'left' }) => textAlign};
 `;
