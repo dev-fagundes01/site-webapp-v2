@@ -92,8 +92,8 @@ a,
 input,
 select,
 textarea,
-[role="button"],
-[role="link"] {
+[role='button'],
+[role='link'] {
   min-height: 44px;
   min-width: 44px;
 }
@@ -108,7 +108,7 @@ input:valid {
 }
 
 /* Loading states */
-[aria-busy="true"] {
+[aria-busy='true'] {
   cursor: wait;
 }
 

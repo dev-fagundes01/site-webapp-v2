@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { pxToRem } from '../../../utils/pxToRem';
 
 export const LogoContainer = styled.img`
   height: 40px;
