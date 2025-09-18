@@ -44,7 +44,7 @@ const AgilityView = () => {
             </Text>
 
             <Text size={20} color="#323232" weight={400}>
-                É o papel de quem cuida do como o trabalho acontece e faz isso com muito diálogo, escuta ativa e empatia
+                É o papel de quem cuida do como o trabalho acontece e faz isso com muito diálogo, escuta ativa e empatia.
             </Text>
 
             <Button variant="primary">Faça parte!</Button>
