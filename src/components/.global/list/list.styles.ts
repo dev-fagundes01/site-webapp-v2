@@ -12,5 +12,6 @@ export const ListContainer = styled.ul<Omit<ListProps, 'list'>>`
   font-weight: ${({ weight }) => weight};
   line-height: ${({ lineHeight }) => lineHeight};
   color: ${({ color }) => color};
+  margin-top: ${({ marginTop = 0 }) => pxToRem(marginTop)};
   margin-bottom: 1rem;
 `;
