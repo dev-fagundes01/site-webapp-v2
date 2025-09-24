@@ -46,6 +46,7 @@ export interface CardProps {
   listWeight?: number;
   listLineHeight?: string;
   listMarginLeft?: number;
+  listMarginTop?: number;
 
   paragraph?: string;
   paragraphSize?: number;

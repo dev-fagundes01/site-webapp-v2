@@ -51,6 +51,7 @@ const Card: React.FC<CardProps> = ({
   listWeight,
   listLineHeight,
   listMarginLeft,
+  listMarginTop,
 
   paragraph,
   paragraphSize,
@@ -119,6 +120,7 @@ const Card: React.FC<CardProps> = ({
             weight={listWeight}
             lineHeight={listLineHeight}
             marginLeft={listMarginLeft}
+            marginTop={listMarginTop}
           />
         )}
         {paragraph && (
