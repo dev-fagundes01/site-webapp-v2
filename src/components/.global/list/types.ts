@@ -5,5 +5,6 @@ export interface ListProps {
   size?: number;
   weight?: number | string;
   lineHeight?: string;
+  marginLeft?: number;
   marginTop?: number;
 }
