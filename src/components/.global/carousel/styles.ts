@@ -35,7 +35,6 @@ export const CarouselSubtitle = styled.p`
 export const CardsWrapper = styled.div`
     display: flex;
     gap: 16px;
-    overflow-x: auto;
     padding: 10px 0;
 `;
 
@@ -69,7 +68,7 @@ export const CardTitle = styled.p`
     line-height: 140%; 
 `;
 
-export const CardDescription = styled.text`
+export const CardDescription = styled.p`
     color: var(--white-color-pure, #FFF);
     text-align: center;
     font-family: "Radio Canada";

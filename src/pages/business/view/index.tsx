@@ -8,7 +8,7 @@ import Carousel from "../../../components/.global/carousel";
 import IconChat from "../../../assets/icon-chat.png";
 import IconTools from "../../../assets/icon-tools.png";
 import IconData from "../../../assets/icon-data.png";
-import IconSquare from "../../../assets/icon-target.png";
+import IconSquare from "../../../assets/icon-square.svg";
 import IconTarget from "../../../assets/icon-target.png"
 
 const carouselItems = [
@@ -27,7 +27,7 @@ const BusinessView = () => {
         <main
             className="design-content"
             role="main"
-            aria-label="Conteúdo principal da página de agilidade"
+            aria-label="Conteúdo principal da página de business"
         >
             <section aria-labelledby="business-heading">
             <Subtitle marginBottom={36} marginTop={16}>
