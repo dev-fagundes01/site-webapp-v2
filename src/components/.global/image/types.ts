@@ -1,7 +1,7 @@
 export interface ImageProps {
   src: string;
   alt: string;
-  role?: string
+  role?: string;
   width?: number;
-  height?: number
+  height?: number;
 }
