@@ -1,9 +1,9 @@
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 
 export interface ButtonProps {
   children: ReactNode;
-  size?: number
-  variant?: "primary" | "secondary" | "tertiary";
+  size?: number;
+  variant?: 'primary' | 'secondary' | 'tertiary';
   disabled?: boolean;
   onClick?: () => void;
 }

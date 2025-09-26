@@ -7,11 +7,11 @@ export interface LinkProps {
   role?: string;
   tabIndex?: number;
   img?: boolean;
-  color?: string; 
+  color?: string;
   size?: number;
-  paddingY?: number; 
+  paddingY?: number;
   paddingX?: number;
-  width?: number;
-  height?: number;
+  width?: number | string;
+  height?: number | string;
   isFistLink?: boolean;
 }

@@ -1,11 +1,12 @@
-import Subtitle from "../.global/subtitle";
-import Title from "../.global/title";
-import { CardContainer } from "./card.styles";
-import { CardProps } from "./types";
-import Image from "../.global/image";
-import Text from "../.global/text";
-import List from "../.global/list";
-import Button from "../.global/button";
+import Subtitle from '../.global/subtitle';
+import Title from '../.global/title';
+import { CardContainer } from './card.styles';
+import type { CardProps } from './types';
+import Image from '../.global/image';
+import Text from '../.global/text';
+import List from '../.global/list';
+import Button from '../.global/button';
+import Paragraph from '../.global/paragraph';
 
 const Card: React.FC<CardProps> = ({
   edgeSection,
@@ -25,7 +26,7 @@ const Card: React.FC<CardProps> = ({
   imageHeight,
 
   title,
-  titleAs = "h2",
+  titleAs = 'h2',
   titleSize,
   titleWidth,
   titleTextAlign,
@@ -41,7 +42,8 @@ const Card: React.FC<CardProps> = ({
   descriptionWeight,
   descriptionWidth,
   descriptionBlockMargin,
-  descriptionAlign,
+  descriptionMarginInline,
+  descriptionTextAlign,
 
   titleList,
   titleListAlign,
@@ -52,17 +54,50 @@ const Card: React.FC<CardProps> = ({
   listSize,
   listColor,
   listWeight,
-  lineHeight,
+  listLineHeight,
+  listMarginLeft,
+  listMarginTop,
+
+  paragraph,
+  paragraphSize,
+  paragraphColor,
+  paragraphWeight,
+  paragraphTextAlign,
 
   buttonText,
   buttonVariant,
 }) => {
   return (
-    <CardContainer edgeSection={edgeSection} flexDirection={flexDirection} justifyContent={justifyContent} marginBlock={marginBlock} marginInline={marginInline} padding={padding} width={width} height={height} border={border} backgroundColor={backgroundColor}>
-      {imageSrc && <Image src={imageSrc} width={imageWidth} height={imageHeight} alt={title ?? ""} role="img" />}
+    <CardContainer
+      edgeSection={edgeSection}
+      flexDirection={flexDirection}
+      justifyContent={justifyContent}
+      marginBlock={marginBlock}
+      marginInline={marginInline}
+      padding={padding}
+      width={width}
+      height={height}
+      border={border}
+      backgroundColor={backgroundColor}
+    >
+      {imageSrc && (
+        <Image
+          src={imageSrc}
+          width={imageWidth}
+          height={imageHeight}
+          alt={title ?? ''}
+        />
+      )}
 
       <div>
-        <Title as={titleAs} size={titleSize} width={titleWidth} marginTop={titleMarginTop} color={titleColor} textAlign={titleTextAlign}>
+        <Title
+          as={titleAs}
+          size={titleSize}
+          width={titleWidth}
+          marginTop={titleMarginTop}
+          color={titleColor}
+          textAlign={titleTextAlign}
+        >
           {title}
         </Title>
 
@@ -75,7 +110,8 @@ const Card: React.FC<CardProps> = ({
             color={descriptionColor}
             weight={descriptionWeight}
             marginBlock={descriptionBlockMargin}
-            textAlign={descriptionAlign}
+            marginInline={descriptionMarginInline}
+            textAlign={descriptionTextAlign}
           >
             {description}
           </Text>
@@ -98,9 +134,22 @@ const Card: React.FC<CardProps> = ({
             size={listSize}
             color={listColor}
             weight={listWeight}
-            lineHeight={lineHeight}
+            lineHeight={listLineHeight}
+            marginLeft={listMarginLeft}
+            marginTop={listMarginTop}
           />
         )}
+        {paragraph && (
+          <Paragraph
+            size={paragraphSize}
+            color={paragraphColor}
+            weight={paragraphWeight}
+            textAlign={paragraphTextAlign}
+          >
+            {paragraph}
+          </Paragraph>
+        )}
+
         {buttonText && (
           <Button variant={buttonVariant} onClick={onClick}>
             {buttonText}
