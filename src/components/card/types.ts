@@ -38,14 +38,18 @@ export interface CardProps {
   descriptionWidth?: number;
   descriptionTextAlign?: 'left' | 'center' | 'right' | 'justify';
   descriptionBlockMargin?: number;
+  titleList?: string;
+  titleListSize?: number;
+  titleListAlign?: 'left' | 'center' | 'right' | 'justify';
+  titleListWeight?: number;
   descriptionMarginInline?: number;
-
   list?: string[];
   listSize?: number;
   listColor?: string;
   listWeight?: number;
   listLineHeight?: string;
   listMarginLeft?: number;
+  listMarginTop?: number;
 
   paragraph?: string;
   paragraphSize?: number;

@@ -157,6 +157,7 @@ const BackEndView: React.FC = () => {
           listSize={20}
           listColor="#000000"
           listWeight={400}
+          listMarginTop={16}
           //------------
           paragraph="Tudo isso com revisões de código, apoio de outras pessoas desenvolvedoras e participação em cerimônias do time.."
           paragraphSize={17}

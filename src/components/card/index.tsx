@@ -45,12 +45,18 @@ const Card: React.FC<CardProps> = ({
   descriptionMarginInline,
   descriptionTextAlign,
 
+  titleList,
+  titleListAlign,
+  titleListSize,
+  titleListWeight,
+
   list,
   listSize,
   listColor,
   listWeight,
   listLineHeight,
   listMarginLeft,
+  listMarginTop,
 
   paragraph,
   paragraphSize,
@@ -112,6 +118,17 @@ const Card: React.FC<CardProps> = ({
           </Text>
         )}
 
+        {titleList && (
+          <Text
+            size={titleListSize}
+            textAlign={titleListAlign}
+            weight={titleListWeight}
+          >
+            {titleList}
+          </Text>
+
+        )}
+
         {list && list.length > 0 && (
           <List
             list={list}
@@ -120,6 +137,7 @@ const Card: React.FC<CardProps> = ({
             weight={listWeight}
             lineHeight={listLineHeight}
             marginLeft={listMarginLeft}
+            marginTop={listMarginTop}
           />
         )}
         {paragraph && (
