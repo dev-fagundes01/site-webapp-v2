@@ -1,5 +1,5 @@
 export interface ListProps {
-  list: string[];
+  list?: string[];
   width?: number;
   color?: string;
   size?: number;

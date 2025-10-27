@@ -9,6 +9,7 @@ import FrontEndController from './pages/front-end/controller/index.controller';
 import BackEndController from './pages/back-end/controller/index.controller';
 import QAController from './pages/quality-assurance-(qa)/controller/index.controller';
 import SocialMediaController from './pages/social-media/controller/index.controller';
+import DataController from './pages/data/controller/index.controller';
 
 export const routes = [
   { path: RouteEnum2.UI_UX_DESIGN, component: DesignController },
@@ -22,4 +23,5 @@ export const routes = [
   { path: RouteEnum2.BACK_END, component: BackEndController },
   { path: RouteEnum2.QA, component: QAController },
   { path: RouteEnum2.SOCIAL_MEDIA, component: SocialMediaController },
+  { path: RouteEnum2.DATA, component: DataController },
 ];
