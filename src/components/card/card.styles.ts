@@ -7,10 +7,11 @@ export const CardContainer = styled.div<CardProps>`
   flex-direction: ${({ flexDirection }) => flexDirection};
   justify-content: ${({ justifyContent = 'center' }) => justifyContent};
   align-items: center;
-  gap: 1rem;
+  gap: ${({ gap = '1rem' }) => gap};
   max-width: 1200px;
-  margin: 0 ${({ marginInline = 'auto' }) => marginInline};
-  margin-block: ${({ marginBlock = '0' }) => marginBlock};
+  margin: ${({ margin = 'auto' }) => margin};
+  margin-inline: ${({ marginInline }) => marginInline};
+  margin-block: ${({ marginBlock }) => marginBlock};
   padding: ${({ padding = '1rem' }) => padding};
   width: ${({ width }) => (width ? pxToRem(width) : '100%')};
   height: ${({ height }) => (height ? pxToRem(height) : 'auto')};

@@ -8,6 +8,8 @@ export interface CardProps {
     | 'space-between'
     | 'space-around'
     | 'space-evenly';
+  gap?: string;
+  margin?: string;
   marginBlock?: string;
   marginInline?: string;
   padding?: string;

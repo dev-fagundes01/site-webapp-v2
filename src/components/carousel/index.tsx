@@ -28,7 +28,7 @@ const Carousel: React.FC<CarouselProps> = ({ items, title, subtitle }) => {
       <CarouselSubtitle>{subtitle}</CarouselSubtitle>
       <CardsWrapper>
         {items.map((item) => (
-          <Card key={item.id}>
+          <Card key={item.id} role="listitem" aria-label={item.description}>
             <CardIcon>
               <img src={item.icon} alt="" />
             </CardIcon>
