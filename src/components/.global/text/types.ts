@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 
-export interface TextProps {
+export interface TextProps
+  extends React.AllHTMLAttributes<HTMLParagraphElement> {
   children: ReactNode;
   width?: number;
   color?: string;

@@ -5,7 +5,7 @@ const List: React.FC<ListProps> = ({ list, ...props }) => {
   return (
     <div>
       <ListContainer {...props}>
-        {list.map((item, index) => (
+        {list?.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
       </ListContainer>

@@ -3,12 +3,13 @@ import DesignController from './pages/design/controller/index.controller';
 import ProductController from './pages/product/controller/index.controller';
 import AgilityController from './pages/agility/controller';
 import TechRecruiterController from './pages/tech-recruiter/controller/index.controller';
-import BusinessController from "./pages/business/controller";
-import DevopsController from "./pages/devops/controller";
+import BusinessController from './pages/business/controller';
+import DevopsController from './pages/devops/controller';
 import FrontEndController from './pages/front-end/controller/index.controller';
 import BackEndController from './pages/back-end/controller/index.controller';
 import QAController from './pages/quality-assurance-(qa)/controller/index.controller';
 import SocialMediaController from './pages/social-media/controller/index.controller';
+import DataController from './pages/data/controller/index.controller';
 
 export const routes = [
   { path: RouteEnum2.UI_UX_DESIGN, component: DesignController },
@@ -22,4 +23,5 @@ export const routes = [
   { path: RouteEnum2.BACK_END, component: BackEndController },
   { path: RouteEnum2.QA, component: QAController },
   { path: RouteEnum2.SOCIAL_MEDIA, component: SocialMediaController },
+  { path: RouteEnum2.DATA, component: DataController },
 ];
