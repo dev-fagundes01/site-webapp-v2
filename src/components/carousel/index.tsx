@@ -4,6 +4,8 @@ import {
   CardsWrapper,
   ArrowButton,
   Controls,
+  DotsContainer,
+  Dot,
 } from '../carousel/styles';
 import Card from '../card';
 
@@ -17,54 +19,77 @@ interface CarouselProps {
 
 const Carousel: React.FC<{ items: CarouselProps[] }> = ({ items }) => {
   const wrapperRef = useRef<HTMLDivElement | null>(null);
-  const [canPrev, setCanPrev] = useState(false);
-  const [canNext, setCanNext] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+
+  const getStep = () => {
+    const el = wrapperRef.current;
+    if (!el || !el.firstElementChild) return 0;
+    const firstCard = el.firstElementChild as HTMLElement;
+    let step = firstCard.getBoundingClientRect().width;
+    if (el.children.length > 1) {
+      const secondCard = el.children[1] as HTMLElement;
+      const gap = Math.max(
+        0,
+        secondCard.offsetLeft - firstCard.offsetLeft - step,
+      );
+      step += gap;
+    }
+    return step;
+  };
+
+  const handleScroll = () => {
+    const el = wrapperRef.current;
+    if (!el) return;
+
+    // Update active index
+    const step = getStep();
+    if (step > 0) {
+      const newIndex = Math.round(el.scrollLeft / step);
+      setActiveIndex(newIndex);
+    }
+
+    // For looping behavior, keep arrows enabled when there's more than one item
+    const multiple = items.length > 1;
+    setCanScrollPrev(multiple);
+    setCanScrollNext(multiple);
+  };
 
   useEffect(() => {
     const el = wrapperRef.current;
     if (!el) return;
-    const update = () => {
-      const multiple = items.length > 1;
-      setCanPrev(multiple);
-      setCanNext(multiple);
-    };
 
-    update();
-    window.addEventListener('resize', update);
-    el.addEventListener('scroll', update, { passive: true });
+    handleScroll(); // Initial check
+
+    el.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll);
+
     return () => {
-      window.removeEventListener('resize', update);
-      el.removeEventListener('scroll', update as EventListener);
+      el.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
     };
   }, [items]);
 
-  const scrollByCard = (direction: 'next' | 'prev') => {
+  const scrollToCard = (index: number) => {
     const el = wrapperRef.current;
     if (!el) return;
-    const first = el.firstElementChild as HTMLElement | null;
-    if (!first) return;
 
-    const cardWidth = first.getBoundingClientRect().width;
-    let gap = 16;
-    if (el.children.length > 1) {
-      const second = el.children[1] as HTMLElement;
-      gap = Math.max(0, second.offsetLeft - first.offsetLeft - cardWidth);
-    }
+    const step = getStep();
+    const len = items.length;
+    if (len === 0) return;
+    // wrap index so carousel loops from last->first and first->last
+    const targetIndex = ((index % len) + len) % len;
 
-    const step = cardWidth + gap;
-    const visibleIndex = Math.round(el.scrollLeft / step);
-    const len = el.children.length;
+    el.scrollTo({
+      left: targetIndex * step,
+      behavior: 'smooth',
+    });
+  };
+
+  const scrollByCard = (direction: 'next' | 'prev') => {
     const delta = direction === 'next' ? 1 : -1;
-    const targetIndex = (((visibleIndex + delta) % len) + len) % len;
-
-    const target = el.children[targetIndex] as HTMLElement | undefined;
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-        inline: 'start',
-      });
-    }
+    scrollToCard(activeIndex + delta);
   };
 
   const onKeyDown = (e: React.KeyboardEvent) => {
@@ -115,7 +140,7 @@ const Carousel: React.FC<{ items: CarouselProps[] }> = ({ items }) => {
         <ArrowButton
           aria-label="Mostrar anterior"
           onClick={() => scrollByCard('prev')}
-          disabled={!canPrev}
+          disabled={!canScrollPrev}
         >
           <svg
             width="18"
@@ -137,7 +162,7 @@ const Carousel: React.FC<{ items: CarouselProps[] }> = ({ items }) => {
         <ArrowButton
           aria-label="Mostrar próximo"
           onClick={() => scrollByCard('next')}
-          disabled={!canNext}
+          disabled={!canScrollNext}
         >
           <svg
             width="18"
@@ -156,6 +181,16 @@ const Carousel: React.FC<{ items: CarouselProps[] }> = ({ items }) => {
           </svg>
         </ArrowButton>
       </Controls>
+
+      <DotsContainer>
+        {items.map((_, index) => (
+          <Dot
+            key={index}
+            isActive={index === activeIndex}
+            onClick={() => scrollToCard(index)}
+          />
+        ))}
+      </DotsContainer>
     </CarouselContainer>
   );
 };

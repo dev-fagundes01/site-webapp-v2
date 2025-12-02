@@ -6,29 +6,6 @@ export const CarouselContainer = styled.div`
   position: relative;
 `;
 
-export const CarouselTitle = styled.h1`
-  color: var(--brand-primary-brand-color-primary-pure, #003986);
-  text-align: center;
-  font-family: 'Radio Canada';
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
-  height: 75px;
-  margin-top: 60px;
-`;
-
-export const CarouselSubtitle = styled.p`
-  color: var(--black-color-pure, #323232);
-  text-align: center;
-  margin: 50px;
-  font-family: 'Radio Canada';
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 140%;
-`;
-
 export const CardsWrapper = styled.div`
   display: flex;
   gap: 28rem;
@@ -36,7 +13,7 @@ export const CardsWrapper = styled.div`
   padding: 10px 0;
   padding-right: 29rem;
   width: ${pxToRem(1042)};
-  border: 1px solid #0056b3;
+  border: 1px solid #338aff;
   border-radius: 20px;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -44,48 +21,6 @@ export const CardsWrapper = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
-`;
-
-export const Card = styled.div`
-  display: flex;
-  width: 260px;
-  min-width: 260px;
-  height: 300px;
-  padding: 20px;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  border-radius: 16px;
-  background: var(--brand-primary-brand-color-primary-medium, #002c66);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-`;
-
-export const CardIcon = styled.div`
-  display: flex;
-  width: 120px;
-  height: 120px;
-  padding: 8px;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-
-  img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    display: block;
-  }
-`;
-
-export const CardDescription = styled.p`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 10px;
-  color: #8bb8ff;
-  width: 100%;
-  height: 100%;
 `;
 
 export const Controls = styled.div`
@@ -118,4 +53,20 @@ export const ArrowButton = styled.button`
     opacity: 0.4;
     cursor: default;
   }
+`;
+
+export const DotsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+`;
+
+export const Dot = styled.button<{ isActive: boolean }>`
+  border-radius: 50%;
+  border: none;
+  margin: 0 3px;
+  cursor: pointer;
+  background-color: ${(props) => (props.isActive ? '#338AFF' : '#ccc')};
+  padding: 0;
+  transition: background-color 0.3s;
 `;
