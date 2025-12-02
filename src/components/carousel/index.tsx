@@ -6,7 +6,7 @@ import {
   Controls,
   DotsContainer,
   Dot,
-} from '../carousel/styles';
+} from './carousel.styles';
 import Card from '../card';
 
 interface CarouselProps {
