@@ -45,6 +45,7 @@ export interface CardProps {
   titleListAlign?: 'left' | 'center' | 'right' | 'justify';
   titleListWeight?: number;
   descriptionMarginInline?: number;
+
   list?: string[];
   listSize?: number;
   listColor?: string;

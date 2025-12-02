@@ -14,7 +14,7 @@ import Img4 from '../../../assets/areas-expertise/design-carousel/img4.png';
 import Img5 from '../../../assets/areas-expertise/design-carousel/img5.png';
 import Card from '../../../components/card';
 import Button from '../../../components/.global/button';
-import Carousel from '../../../components/carousel-copy';
+import Carousel from '../../../components/carousel';
 
 const carouselItems = [
   {

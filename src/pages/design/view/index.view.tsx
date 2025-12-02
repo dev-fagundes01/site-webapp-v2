@@ -13,7 +13,7 @@ import Img3 from '../../../assets/areas-expertise/design-carousel/img3.png';
 import Img4 from '../../../assets/areas-expertise/design-carousel/img4.png';
 import Card from '../../../components/card';
 import Button from '../../../components/.global/button';
-import Carousel from '../../../components/carousel-copy';
+import Carousel from '../../../components/carousel';
 
 const DesignView: React.FC = () => {
   const { announce } = useScreenReaderAnnouncer();
