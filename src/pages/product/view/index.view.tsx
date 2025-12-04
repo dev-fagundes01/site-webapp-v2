@@ -46,9 +46,9 @@ const ProductView: React.FC = () => {
       >
         <section aria-labelledby="design-heading">
           <Subtitle marginBottom={36} marginTop={16}>
-            Áreas de Atuação
+            Área de Atuação
           </Subtitle>
-          <Title size={40}>Product</Title>
+          <Title size={40}>Produto</Title>
 
           <Text size={20} color="#323232" weight={400}>
             A área de Produto é o coração estratégico de muitos times. São
