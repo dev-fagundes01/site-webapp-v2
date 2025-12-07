@@ -48,7 +48,7 @@ const BusinessView = () => {
       >
         <section aria-labelledby="business-heading">
           <Subtitle marginBottom={36} marginTop={16}>
-            Áreas de Atuação
+            Área de Atuação
           </Subtitle>
           <Title id="business-heading" size={40}>
             Business

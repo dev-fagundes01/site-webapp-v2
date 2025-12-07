@@ -54,7 +54,7 @@ const DevopsView = () => {
       >
         <section aria-labelledby="devops-heading">
           <Subtitle marginBottom={36} marginTop={16}>
-            Áreas de Atuação
+            Área de Atuação
           </Subtitle>
           <Title id="devops-heading" size={40}>
             DevOps
