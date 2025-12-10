@@ -18,32 +18,32 @@ import Api from '../../../assets/skills/front-end/api.svg';
 
 const skillList = [
   {
-    image: Html,
+    img: Html,
     skill: 'HTML, CSS, JavaScript',
     desc: 'A base de qualquer projeto front-end.',
   },
   {
-    image: React,
+    img: React,
     skill: 'React',
     desc: 'Principal framework usado no projeto.',
   },
   {
-    image: Tailwind,
+    img: Tailwind,
     skill: 'Tailwind CSS, Styled Componentes',
     desc: 'Para estilização.',
   },
   {
-    image: Figma,
+    img: Figma,
     skill: 'Figma',
     desc: 'Para receber os design do time de UX/UI.',
   },
   {
-    image: Git,
+    img: Git,
     skill: 'Git + GitHub',
     desc: 'Para versionamento e colaboração em código.',
   },
   {
-    image: Api,
+    img: Api,
     skill: 'APIs Rest',
     desc: 'Para consumir dados e interagir com o back-end.',
   },
@@ -162,7 +162,7 @@ const FrontEndView: React.FC = () => {
             width: '55rem',
           }}
         >
-          {skillList.map(({ skill, image, desc }) => (
+          {skillList.map(({ skill, img, desc }) => (
             <Card
               key={skill}
               edgeSection
@@ -174,7 +174,7 @@ const FrontEndView: React.FC = () => {
               height={218}
               backgroundColor="#002C66"
               //------------
-              imageSrc={image}
+              imageSrc={img}
               imageWidth={80}
               imageHeight={80}
               //------------

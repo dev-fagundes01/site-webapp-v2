@@ -22,7 +22,7 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
             <Link
               key={link.label}
               onClick={link.onClick}
-              ariaLabel={
+              aria-label={
                 link.ariaLabel || `Navegar para ${t(`links.${link.label}`)}`
               }
               role="menuitem"
@@ -46,7 +46,7 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
           <Link
             key={link.label}
             onClick={link.onClick}
-            ariaLabel={
+            aria-label={
               link.ariaLabel || `Navegar para ${t(`links.${link.label}`)}`
             }
             role="menuitem"

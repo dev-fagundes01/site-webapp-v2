@@ -12,6 +12,8 @@ const Card: React.FC<CardProps> = ({
   edgeSection,
   flexDirection,
   justifyContent,
+  gap,
+  margin,
   marginBlock,
   marginInline,
   padding,
@@ -72,6 +74,8 @@ const Card: React.FC<CardProps> = ({
       edgeSection={edgeSection}
       flexDirection={flexDirection}
       justifyContent={justifyContent}
+      gap={gap}
+      margin={margin}
       marginBlock={marginBlock}
       marginInline={marginInline}
       padding={padding}
@@ -126,7 +130,6 @@ const Card: React.FC<CardProps> = ({
           >
             {titleList}
           </Text>
-
         )}
 
         {list && list.length > 0 && (

@@ -8,6 +8,8 @@ export interface CardProps {
     | 'space-between'
     | 'space-around'
     | 'space-evenly';
+  gap?: string;
+  margin?: string;
   marginBlock?: string;
   marginInline?: string;
   padding?: string;
@@ -43,6 +45,7 @@ export interface CardProps {
   titleListAlign?: 'left' | 'center' | 'right' | 'justify';
   titleListWeight?: number;
   descriptionMarginInline?: number;
+
   list?: string[];
   listSize?: number;
   listColor?: string;

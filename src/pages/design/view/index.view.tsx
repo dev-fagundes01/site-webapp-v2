@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import {
   useScreenReaderAnnouncer,
   useFocusManagement,
@@ -6,14 +6,69 @@ import {
 import Subtitle from '../../../components/.global/subtitle';
 import Text from '../../../components/.global/text';
 import Title from '../../../components/.global/title';
-import ImageDesign from '../../../assets/areas-expertise/area-activitie.png';
-import ImageDesign2 from '../../../assets/areas-expertise/area-activitie2.png';
+import ImageDesign from '../../../assets/areas-expertise/design.png';
+import Img from '../../../assets/areas-expertise/design-carousel/img.png';
+import Img2 from '../../../assets/areas-expertise/design-carousel/img2.png';
+import Img3 from '../../../assets/areas-expertise/design-carousel/img3.png';
+import Img4 from '../../../assets/areas-expertise/design-carousel/img4.png';
 import Card from '../../../components/card';
 import Button from '../../../components/.global/button';
+import Carousel from '../../../components/carousel';
 
 const DesignView: React.FC = () => {
   const { announce } = useScreenReaderAnnouncer();
   const { focusMainContent } = useFocusManagement();
+
+  const carouselItems = [
+    {
+      id: 1,
+      img: Img,
+      title: 'UX - User Experience',
+      description: `Aqui, você vai investigar dores e necessidades das pessoas usuárias, mapear jornadas, criar fluxos e wireframes. É uma área muito colaborativa, que conversa com Produto, Tech e Pesquisa.`,
+      list: [
+        'Criar fluxos e mapas de navegação.',
+        'Fazer entrevistas e testes de usabilidade (junto da pesquisa).',
+        'Prototipar soluções de forma iterativa.',
+        'Garantir acessibilidade e clareza na experiência.',
+      ],
+    },
+    {
+      id: 2,
+      img: Img2,
+      title: 'UI - User Interface',
+      description: `Aqui, o foco está em criar interfaces lindas, responsivas e consistentes com a identidade do projeto. No time de UI, você vai:`,
+      list: [
+        'Criar componentes visuais (botões, cards, menus etc.).',
+        'Montar telas com base em wireframes.',
+        'Cuidar da identidade visual do produto.',
+        'Trabalhar com sistemas de design.',
+      ],
+    },
+    {
+      id: 3,
+      img: Img3,
+      title: 'UX Research - Pesquisa com Usuário',
+      description: `A frente da UX Research é responsável por entender profundamente o comportamento e as necessidades das pessoas usuárias por meio de pesquisa. Aqui você vai:`,
+      list: [
+        'Conduzir entrevistas e grupos de teste.',
+        'Aplicar questionários e organizar dados qualitativos.',
+        'Criar relatórios e compartilhar insights com o time de Produto e Design.',
+        'Ajudar a validar hipóteses e decisões de design.',
+      ],
+    },
+    {
+      id: 4,
+      img: Img4,
+      title: 'Design Ops - Organização e Fluxo do Time',
+      description: `Essa frente cuida da parte operacional do time de design. O foco é garantir consistência, produtividade e boa comunicação entre as frentes. Aqui, você pode:`,
+      list: [
+        'Padronizar processos e rituais do time.',
+        'Organizar ferramentas, assets e sistemas de design.',
+        'Ajudar na governança e boas práticas do time.',
+        'Facilitar integrações com outras áreas (Produto, Tech, etc.).',
+      ],
+    },
+  ];
 
   // Set page title for screen readers
   useEffect(() => {
@@ -48,19 +103,19 @@ const DesignView: React.FC = () => {
           </Subtitle>
           <Title size={40}>Design</Title>
 
-          <Text size={20} color="#323232" weight={400}>
+          <Text color="#323232" weight={400}>
             Na área de Design, o foco está em criar experiências que sejam
             bonitas, intuitivas e centradas nas pessoas. Aqui, design não é só
             aparência, é sobre resolver problemas, facilitar jornadas e gerar
             conexões reais com quem usa o projeto.
           </Text>
 
-          <Text size={20} color="#323232" weight={400}>
+          <Text color="#323232" weight={400}>
             Se você é uma pessoa criativa, curiosa e gosta de pensar em como as
             coisas funcionam para os outros, essa área tem muito a te oferecer.
           </Text>
 
-          <Text size={20} color="#323232" weight={400}>
+          <Text color="#323232" weight={400}>
             Dentro do nosso projeto, temos cargos específicos para diferentes
             etapas e perfis do design.
           </Text>
@@ -89,34 +144,7 @@ const DesignView: React.FC = () => {
           Conheça os cargos de Design que você pode explorar com a gente:
         </Title>
 
-        <Card
-          edgeSection
-          padding="2rem 1rem"
-          width={1042}
-          border="1px solid #0056b3"
-          imageSrc={ImageDesign2}
-          title="UX - User Experience"
-          titleAs="h3"
-          titleSize={24}
-          titleMarginTop={45}
-          description="Aqui, você vai investigar dores e necessidades das pessoas usuárias,
-            mapear jornadas, criar fluxos e wireframes. É uma área muito
-            colaborativa, que conversa com Produto, Tech e Pesquisa."
-          descriptionLineHeight={1.6}
-          descriptionSize={16}
-          descriptionColor="#000000"
-          descriptionWeight={400}
-          descriptionWidth={500}
-          list={[
-            'Criar fluxos e mapas de navegação.',
-            'Fazer entrevistas e testes de usabilidade (junto da pesquisa).',
-            'Prototipar soluções de forma iterativa.',
-            'Garantir acessibilidade e clareza na experiência.',
-          ]}
-          listSize={16}
-          listColor="#000000"
-          listWeight={400}
-        />
+        <Carousel items={carouselItems} />
       </section>
 
       <Card

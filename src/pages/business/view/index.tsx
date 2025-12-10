@@ -4,44 +4,37 @@ import Text from '../../../components/.global/text';
 import Title from '../../../components/.global/title';
 import ImageBusiness from '../../../assets/image-business.png';
 import Card from '../../../components/card';
-import Carousel from '../../../components/.global/carousel';
 import IconChat from '../../../assets/icon-chat.png';
 import IconTools from '../../../assets/icon-tools.png';
 import IconData from '../../../assets/icon-data.png';
 import IconSquare from '../../../assets/icon-square.svg';
 import IconTarget from '../../../assets/icon-target.png';
 
-const carouselItems = [
+const skillList = [
   {
-    id: 1,
-    title: 'Soft Skills',
-    description: 'Negociação, estratégia e comunicação com organização.',
-    icon: IconChat,
+    img: IconChat,
+    skill: 'Soft Skills',
+    desc: 'Negociação, estratégia e comunicação com organização.',
   },
   {
-    id: 2,
-    title: 'Ferramentas',
-    description: 'Notion, Google Workspace, Canva, Excel e PowerPoint.',
-    icon: IconTools,
+    img: IconTools,
+    skill: 'Ferramentas',
+    desc: 'Notion, Google Workspace, Canva, Excel e PowerPoint.',
   },
   {
-    id: 3,
-    title: 'Análise de Dados',
-    description: 'Aprender a medir e apresentar resultados.',
-    icon: IconData,
+    img: IconData,
+    skill: 'Análise de Dados',
+    desc: 'Aprender a medir e apresentar resultados.',
   },
   {
-    id: 4,
-    title: 'Visão Sistêmica',
-    description:
-      'Entender como cada área se conecta para fazer o projeto crescer.',
-    icon: IconSquare,
+    skill: 'Visão Sistêmica',
+    img: IconSquare,
+    desc: 'Entender como cada área se conecta para fazer o projeto crescer.',
   },
   {
-    id: 5,
-    title: 'Relacionamento',
-    description: 'Aprender a representar uma marca com confiança e clareza.',
-    icon: IconTarget,
+    img: IconTarget,
+    skill: 'Relacionamento',
+    desc: 'Aprender a representar uma marca com confiança e clareza.',
   },
 ];
 
@@ -111,10 +104,51 @@ const BusinessView = () => {
         />
       </div>
 
-      <Carousel
-        title="Ferramentas e habilidades que você desenvolve na SouJunior:"
-        items={carouselItems}
-      />
+      <section style={{ margin: '0 auto' }}>
+        <Title textAlign="center" size={32} width={500}>
+          Ferramentas e habilidades que você desenvolve na SouJunior:
+        </Title>
+
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            gap: '1rem',
+            marginBlock: '4rem',
+          }}
+        >
+          {skillList.map(({ skill, img, desc }) => (
+            <Card
+              key={skill}
+              edgeSection
+              flexDirection="column"
+              justifyContent="flex-start"
+              marginInline="0.6rem"
+              padding="20px"
+              width={191}
+              height={218}
+              backgroundColor="#002C66"
+              //------------
+              imageSrc={img}
+              imageWidth={80}
+              imageHeight={80}
+              //------------
+              title={skill}
+              titleSize={16}
+              titleColor="#8BB8FF"
+              titleTextAlign="center"
+              // ------------
+              description={desc}
+              descriptionSize={14}
+              descriptionColor="#fff"
+              descriptionWeight={400}
+              descriptionTextAlign="center"
+              descriptionWidth={144}
+            />
+          ))}
+        </div>
+      </section>
 
       <Card
         titleMarginTop={60}
@@ -125,7 +159,7 @@ const BusinessView = () => {
           'Trabalhar em um ambiente colaborativo com propósito social.',
           'Criar conexões com empresas e profissionais do mercado.',
           'Ter experiências reais que contam no currículo.',
-          'Participar de decisões que impactam o futuro da organização.',
+          'Participar de decisões que impactam o futuro da organização',
         ]}
         listSize={20}
         listColor="#323232"

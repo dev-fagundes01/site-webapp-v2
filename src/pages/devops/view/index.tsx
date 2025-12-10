@@ -4,7 +4,6 @@ import Text from '../../../components/.global/text';
 import Title from '../../../components/.global/title';
 import ImageBusiness from '../../../assets/image-business.png';
 import Card from '../../../components/card';
-import Carousel from '../../../components/.global/carousel';
 import IconGitHub from '../../../assets/icon-github.svg';
 import IconDocker from '../../../assets/icon-docker.svg';
 import IconDeploy from '../../../assets/icon-deploy.svg';
@@ -12,42 +11,36 @@ import IconAWS from '../../../assets/icon-aws.svg';
 import IconLinux from '../../../assets/icon-linux.svg';
 import IconMonitoring from '../../../assets/icon-monitoring.svg';
 
-const carouselItems = [
+const skillList = [
   {
-    id: 1,
-    title: 'SGitHub Actions',
-    description: 'Para CI/CD.',
-    icon: IconGitHub,
+    img: IconGitHub,
+    skill: 'SGitHub Actions',
+    desc: 'Para CI/CD.',
   },
   {
-    id: 2,
-    title: 'Docker + Compose',
-    description: 'Gerenciamento de containers, e orquestração local.',
-    icon: IconDocker,
+    img: IconDocker,
+    skill: 'Docker + Compose',
+    desc: 'Gerenciamento de containers, e orquestração local.',
   },
   {
-    id: 3,
-    title: 'Railway, Render, Vercel, Netlify',
-    description: 'Para deploy de apps.',
-    icon: IconDeploy,
+    img: IconDeploy,
+    skill: 'Railway, Render, Vercel, Netlify',
+    desc: 'Para deploy de apps.',
   },
   {
-    id: 4,
-    title: 'AWS, GCP ou Azure',
-    description: 'Para maior segurança e organização do código.',
-    icon: IconAWS,
+    img: IconAWS,
+    skill: 'AWS, GCP ou Azure',
+    desc: 'Para maior segurança e organização do código.',
   },
   {
-    id: 5,
-    title: 'Linux',
-    description: 'Para persistência de dados.',
-    icon: IconLinux,
+    img: IconLinux,
+    skill: 'Linux',
+    desc: 'Para persistência de dados.',
   },
   {
-    id: 6,
-    title: 'Monitoramento',
-    description: 'Como Grafana, Logtail, ou ferramentas simples.',
-    icon: IconMonitoring,
+    img: IconMonitoring,
+    skill: 'Monitoramento',
+    desc: 'Como Grafana, Logtail, ou ferramentas simples.',
   },
 ];
 
@@ -118,10 +111,52 @@ const DevopsView = () => {
         />
       </div>
 
-      <Carousel
-        title="Tecnologias e ferramentas que você pode usar:"
-        items={carouselItems}
-      />
+      <section style={{ margin: '0 auto' }}>
+        <Title textAlign="center" size={32}>
+          Tecnologias e ferramentas que você pode usar:
+        </Title>
+
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            gap: '1rem',
+            marginBlock: '4rem',
+            width: '55rem',
+          }}
+        >
+          {skillList.map(({ skill, img, desc }) => (
+            <Card
+              key={skill}
+              edgeSection
+              flexDirection="column"
+              justifyContent="flex-start"
+              marginInline="0.6rem"
+              padding="20px"
+              width={191}
+              height={218}
+              backgroundColor="#002C66"
+              //------------
+              imageSrc={img}
+              imageWidth={80}
+              imageHeight={80}
+              //------------
+              title={skill}
+              titleSize={16}
+              titleColor="#8BB8FF"
+              titleTextAlign="center"
+              // ------------
+              description={desc}
+              descriptionSize={14}
+              descriptionColor="#fff"
+              descriptionWeight={400}
+              descriptionTextAlign="center"
+              descriptionWidth={144}
+            />
+          ))}
+        </div>
+      </section>
 
       <Card
         titleMarginTop={60}
