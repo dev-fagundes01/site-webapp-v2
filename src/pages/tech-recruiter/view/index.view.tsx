@@ -68,7 +68,7 @@ const TechRecruiterView: React.FC = () => {
       >
         <section aria-labelledby="design-heading">
           <Subtitle marginBottom={36} marginTop={16}>
-            Áreas de Atuação
+            Área de Atuação
           </Subtitle>
           <Title size={40}>Tech Recruiter</Title>
 

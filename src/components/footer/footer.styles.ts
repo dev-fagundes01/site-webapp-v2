@@ -58,7 +58,7 @@ export const Hr = styled.hr`
 export const Copyright = styled.p`
   grid-area: copy;
   font-size: 0.9rem;
-  color: #666;
+  color: #fff;
   margin-top: 1rem;
   text-align: end;
 `;

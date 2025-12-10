@@ -14,7 +14,7 @@ const carouselItems = [
   { id: 1, description: 'Facilitação de reuniões', icon: IconCommunication },
   { id: 2, description: 'Organização e visão sistêmica', icon: IconListening },
   { id: 3, description: 'Comunicação não-violenta', icon: IconOrganization },
-  { id: 4, description: 'Liderança e falicitação', icon: IconWatchful },
+  { id: 4, description: 'Liderança e facilitação', icon: IconWatchful },
 ];
 
 const AgilityView = () => {
@@ -27,7 +27,7 @@ const AgilityView = () => {
       >
         <section aria-labelledby="design-heading">
           <Subtitle marginBottom={36} marginTop={16}>
-            Áreas de Atuação
+            Área de Atuação
           </Subtitle>
           <Title size={40}>Agilidade</Title>
 
@@ -58,7 +58,7 @@ const AgilityView = () => {
       <div>
         <Card
           titleMarginTop={60}
-          title="Como aplicamos agilidade no projeto"
+          title="Como aplicamos agilidade no projeto?"
           titleTextAlign="center"
           description="Aqui, usamos práticas do ágil de forma leve e adaptada
                 à realidade do voluntariado. Nossos times podem trabalhar com:"
