@@ -69,7 +69,7 @@ const AgilityView = () => {
       <div>
         <Card
           titleMarginTop={60}
-          title="Como aplicamos agilidade no projeto"
+          title="Como aplicamos agilidade no projeto?"
           titleTextAlign="center"
           description="Aqui, usamos práticas do ágil de forma leve e adaptada
                 à realidade do voluntariado. Nossos times podem trabalhar com:"

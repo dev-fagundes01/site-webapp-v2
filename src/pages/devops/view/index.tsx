@@ -174,6 +174,7 @@ const DevopsView = () => {
         listWeight={400}
         listLineHeight="140%"
       />
+
       <div style={{ margin: 'auto', textAlign: 'center' }}>
         <Card
           titleMarginTop={60}
