@@ -135,7 +135,6 @@ const QAView: React.FC = () => {
           }
           descriptionLineHeight={1.6}
           descriptionSize={20}
-          descriptionColor="#000000"
           descriptionWeight={400}
           descriptionTextAlign="center"
           list={[
@@ -146,8 +145,7 @@ const QAView: React.FC = () => {
             'Colaborar com Produto e Tech para prever possíveis erros.',
             'Apoiar na identificação e documentação de bugs.',
           ]}
-          listSize={16}
-          listColor="#000000"
+          listSize={20}
           listWeight={400}
         />
       </section>
