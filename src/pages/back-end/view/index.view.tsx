@@ -141,7 +141,6 @@ const BackEndView: React.FC = () => {
           }
           descriptionLineHeight={1.6}
           descriptionSize={20}
-          descriptionColor="#000000"
           descriptionWeight={400}
           descriptionWidth={814}
           descriptionTextAlign="center"
@@ -155,12 +154,11 @@ const BackEndView: React.FC = () => {
             'Documentação de endpoints e boas práticas de versionamento.',
           ]}
           listSize={20}
-          listColor="#000000"
           listWeight={400}
           listMarginTop={16}
           //------------
           paragraph="Tudo isso com revisões de código, apoio de outras pessoas desenvolvedoras e participação em cerimônias do time.."
-          paragraphSize={17}
+          paragraphSize={20}
         />
       </section>
 
@@ -220,7 +218,7 @@ const BackEndView: React.FC = () => {
           'Aprenda a trabalhar em equipe com processos de mercado.',
           'Desenvolva um portfólio técnico com entregas concretas.',
         ]}
-        listSize={16}
+        listSize={20}
         listColor="#323232"
         listWeight={400}
         listLineHeight="140%"

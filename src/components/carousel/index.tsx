@@ -124,13 +124,11 @@ const Carousel: React.FC<{ items: CarouselProps[] }> = ({ items }) => {
             description={item.description}
             descriptionLineHeight={1.6}
             descriptionSize={16}
-            descriptionColor="#000000"
             descriptionWeight={400}
             descriptionWidth={500}
             list={item.list}
             listAlignContent="flex-start"
             listSize={16}
-            listColor="#000000"
             listWeight={400}
             listMarginLeft={item.hasListMarginLeft ? 0 : 24}
             listMargin="0 0 2.5rem 0"

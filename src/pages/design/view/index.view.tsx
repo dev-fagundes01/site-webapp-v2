@@ -152,7 +152,7 @@ const DesignView: React.FC = () => {
           'Desenvolver seu portfólio com segurança e acompanhamento.',
           'Aprender a colaborar, iterar e defender ideias com base em dados.',
         ]}
-        listSize={20}
+        listSize={16}
         listColor="#323232"
         listWeight={400}
         listLineHeight="140%"
