@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
         role="img"
       />
       <NavLinks role="navigation" aria-label="Navegação principal">
-        {links[0].map((link) => (
+        {links[0]?.map((link) => (
           <Link
             key={link.label}
             onClick={link.onClick}

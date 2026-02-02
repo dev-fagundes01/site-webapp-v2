@@ -1,5 +1,4 @@
 import React from 'react';
-import type { FooterProps } from './types';
 import {
   FooterContainer,
   Nav,
@@ -49,7 +48,7 @@ function Footer() {
                     to={link.to}
                     color="#fff"
                     size={index === 0 ? 20 : 16}
-                    isFistLink={isFirst}
+                    isFirstLink={isFirst}
                   >
                     {link.label}
                   </Link>
@@ -66,7 +65,7 @@ function Footer() {
                       to={link.to}
                       color="#fff"
                       size={index === 0 ? 20 : 16}
-                      isFistLink={isFirst}
+                      isFirstLink={isFirst}
                     >
                       {link.label}
                     </Link>
@@ -83,7 +82,7 @@ function Footer() {
                       to={link.to}
                       color="#fff"
                       size={index === 0 ? 20 : 16}
-                      isFistLink={isFirst}
+                      isFirstLink={isFirst}
                     >
                       {link.label}
                     </Link>

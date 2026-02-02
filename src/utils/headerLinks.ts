@@ -16,7 +16,7 @@ export const createHeaderLinks = (
     },
     {
       label: 'newsAndEvents',
-      onClick: () => navigate(RouteEnum.newsAndEvents),
+      onClick: () => navigate(RouteEnum.NEWS_AND_EVENTS),
       ariaLabel: 'Navegar para a página Notícias & Eventos',
     },
     {
