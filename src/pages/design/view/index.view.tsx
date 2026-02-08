@@ -21,6 +21,7 @@ const DesignView: React.FC = () => {
 
   const carouselItems = [
     {
+      id: 1,
       img: Img,
       title: 'UX - User Experience',
       description: `Aqui, você vai investigar dores e necessidades das pessoas usuárias, mapear jornadas, criar fluxos e wireframes. É uma área muito colaborativa, que conversa com Produto, Tech e Pesquisa.`,
@@ -32,6 +33,7 @@ const DesignView: React.FC = () => {
       ],
     },
     {
+      id: 2,
       img: Img2,
       title: 'UI - User Interface',
       description: `Aqui, o foco está em criar interfaces lindas, responsivas e consistentes com a identidade do projeto. No time de UI, você vai:`,
@@ -43,6 +45,7 @@ const DesignView: React.FC = () => {
       ],
     },
     {
+      id: 3,
       img: Img3,
       title: 'UX Research - Pesquisa com Usuário',
       description: `A frente da UX Research é responsável por entender profundamente o comportamento e as necessidades das pessoas usuárias por meio de pesquisa. Aqui você vai:`,
@@ -54,6 +57,7 @@ const DesignView: React.FC = () => {
       ],
     },
     {
+      id: 4,
       img: Img4,
       title: 'Design Ops - Organização e Fluxo do Time',
       description: `Essa frente cuida da parte operacional do time de design. O foco é garantir consistência, produtividade e boa comunicação entre as frentes. Aqui, você pode:`,
@@ -152,7 +156,7 @@ const DesignView: React.FC = () => {
           'Desenvolver seu portfólio com segurança e acompanhamento.',
           'Aprender a colaborar, iterar e defender ideias com base em dados.',
         ]}
-        listSize={16}
+        listSize={20}
         listColor="#323232"
         listWeight={400}
         listLineHeight="140%"
