@@ -19,7 +19,7 @@ const HomeView = () => {
           </Title>
 
           <Text size={20} color="white" weight={300}>
-            Na SouJunior, você trabalha com produtos digitais e adquiri
+            Na SouJunior, você trabalha com produtos digitais e adquire
             habilidades valiosas para a sua carreira.
           </Text>
 
@@ -29,7 +29,13 @@ const HomeView = () => {
             chances de sucesso na sua trajetória profissional.
           </Text>
 
-          <HomeButton>Faça Parte!</HomeButton>
+          <HomeButton
+            onClick={() =>
+              window.open('https://stars.soujunior.tech/', '_blank')
+            }
+          >
+            Faça Parte!
+          </HomeButton>
         </HomeTextContent>
 
         <img src={ImageMascote} alt="" width={443} height={443} />

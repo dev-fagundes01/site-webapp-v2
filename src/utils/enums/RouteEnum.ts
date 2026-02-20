@@ -7,6 +7,7 @@ export enum RouteEnum {
 }
 
 export enum RouteEnum2 {
+  HOME = '/',
   BUSINESS = '/business',
   TECH_RECRUITER = '/tech-recruiter',
   PRODUCT = '/produto',
@@ -18,5 +19,4 @@ export enum RouteEnum2 {
   DATA = '/dados',
   QA = '/qa',
   DEV_OPS = '/dev-ops',
-  HOME = '/',
 }
