@@ -144,7 +144,7 @@ input:valid {
 .design-content p {
   font-size: 1.125rem;
   line-height: 1.6;
-  color: #323232;
+  color: var(--secondary-color);
   margin-bottom: 1.5rem;
 }
 

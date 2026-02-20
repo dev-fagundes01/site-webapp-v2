@@ -109,6 +109,7 @@ const TechRecruiterView: React.FC = () => {
           description="O processo seletivo é leve, humanizado e feito por pessoas voluntárias."
           descriptionLineHeight={1.6}
           descriptionSize={20}
+          descriptionColor="#000000"
           descriptionWeight={400}
           list={[
             'Análise de inscrições.',
@@ -117,7 +118,8 @@ const TechRecruiterView: React.FC = () => {
             'Alinhamento de expectativas e cultura do projeto.',
             'Feedback final (positivo ou negativo).',
           ]}
-          listSize={20}
+          listSize={16}
+          listColor="#000000"
           listWeight={400}
         />
       </section>
@@ -153,7 +155,7 @@ const TechRecruiterView: React.FC = () => {
               imageWidth={80}
               imageHeight={80}
               title={skill}
-              titleSize={20}
+              titleSize={16}
               titleWidth={skill === 'Organização de processos.' ? 102 : 151}
               titleColor="#fff"
               titleTextAlign="center"
@@ -172,7 +174,7 @@ const TechRecruiterView: React.FC = () => {
           'Contato direto com outras áreas.',
           'Apoio de mentores e uma rede de voluntários.',
         ]}
-        listSize={20}
+        listSize={16}
         listColor="#323232"
         listWeight={400}
         listLineHeight="140%"

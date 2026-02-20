@@ -127,6 +127,7 @@ const FrontEndView: React.FC = () => {
             de Produto, Design, QA e Backend para desenvolver interfaces completas."
           descriptionLineHeight={1.6}
           descriptionSize={20}
+          descriptionColor="#000000"
           descriptionWeight={400}
           descriptionWidth={686}
           list={[
@@ -137,7 +138,8 @@ const FrontEndView: React.FC = () => {
             'Corrigir bugs e melhorar a experiência do usuário.',
             'Participar das cerimônias ágeis do time (plannings, reviews, etc.).',
           ]}
-          listSize={20}
+          listSize={16}
+          listColor="#000000"
           listWeight={400}
         />
       </section>
@@ -202,7 +204,7 @@ const FrontEndView: React.FC = () => {
           'Construir seu portfólio com entregas concretas.',
           'Ter mentorias e apoio de pessoas mais experientes da área.',
         ]}
-        listSize={20}
+        listSize={16}
         listColor="#323232"
         listWeight={400}
         listLineHeight="140%"
