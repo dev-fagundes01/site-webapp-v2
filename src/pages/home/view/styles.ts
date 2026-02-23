@@ -26,7 +26,7 @@ export const HomeTextContent = styled.div`
   flex-shrink: 0;
 `;
 
-export const HomeButton = styled.button`
+export const HomeButton = styled.a`
   width: 127px;
   height: 40px;
   border-radius: 10px;
@@ -34,4 +34,8 @@ export const HomeButton = styled.button`
   background-color: #003986;
   border: none;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 `;

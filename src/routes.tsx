@@ -15,7 +15,6 @@ import HomeController from './pages/home/controller';
 export const routes = [
   { path: RouteEnum2.UI_UX_DESIGN, component: DesignController },
   { path: RouteEnum2.PRODUCT, component: ProductController },
-  { path: RouteEnum2.AGILITY, component: AgilityController },
   { path: RouteEnum2.TECH_RECRUITER, component: TechRecruiterController },
   { path: RouteEnum2.BUSINESS, component: BusinessController },
   { path: RouteEnum2.DEV_OPS, component: DevopsController },

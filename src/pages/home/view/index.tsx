@@ -30,9 +30,9 @@ const HomeView = () => {
           </Text>
 
           <HomeButton
-            onClick={() =>
-              window.open('https://stars.soujunior.tech/', '_blank')
-            }
+            href="https://stars.soujunior.tech/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Faça Parte!
           </HomeButton>
