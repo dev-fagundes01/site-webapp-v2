@@ -11,7 +11,7 @@
 // import SocialMediaController from './pages/area-operation/social-media/controller/index.controller';
 // import DataController from './pages/area-operation/data/controller/index.controller';
 
-import HomeController from './pages/home/index.controller';
+import HomeController from './pages/home/controller/index';
 
 export const routes = [
   { path: '/', component: HomeController },
