@@ -1,5 +1,5 @@
 export enum RouteEnum {
-  ABOUT_US = '/sobre-nos',
+  ABOUT_US = '/#sobre-nos',
   INITIATIVES = '/nossas-iniciativas',
   NEWS_AND_EVENTS = '/noticias-e-eventos',
   JOIN_US = '/faca-parte',
