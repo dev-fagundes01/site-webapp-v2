@@ -44,7 +44,7 @@ const HomeView = () => {
         </HomeContent>
       </HomeContainer>
 
-      <section style={{ margin: '0 auto', marginTop: '4rem' }}>
+      <section id="sobre-nos" style={{ margin: '0 auto', marginTop: '4rem' }}>
         <Title
           as="h2"
           textAlign="center"
