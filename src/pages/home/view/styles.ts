@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const HomeContainer = styled.div`
-  min-width: 100vw;
   height: 583px;
   padding: 94px 70px;
   background-color: #001633;
@@ -11,7 +10,7 @@ export const HomeContainer = styled.div`
   user-select: none;
 `;
 
-export const HomeContent = styled.div`
+export const HomeContent = styled.main`
   display: flex;
   align-items: center;
   gap: 150px;
