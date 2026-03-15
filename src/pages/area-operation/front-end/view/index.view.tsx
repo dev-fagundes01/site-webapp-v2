@@ -3,18 +3,18 @@ import {
   useScreenReaderAnnouncer,
   useFocusManagement,
 } from '@hooks/useAccessibility';
-import Subtitle from '@components/.global/subtitle';
-import Text from '@components/.global/text';
-import Title from '@components/.global/title';
-import ImageRecruiter from '../../../assets/areas-expertise/front-end.png';
+import Subtitle from '@global/subtitle';
+import Text from '@global/text';
+import Title from '@global/title';
+import ImageRecruiter from '@assets/areas-expertise/front-end.png';
 import Card from '@components/card';
-import Button from '@components/.global/button';
-import Html from '../../../assets/skills/front-end/html.svg';
-import React from '../../../assets/skills/front-end/react.svg';
-import Tailwind from '../../../assets/skills/front-end/tailwind.svg';
-import Figma from '../../../assets/skills/front-end/figma.svg';
-import Git from '../../../assets/skills/git.svg';
-import Api from '../../../assets/skills/front-end/api.svg';
+import Button from '@global/button';
+import Html from '@assets/skills/front-end/html.svg';
+import React from '@assets/skills/front-end/react.svg';
+import Tailwind from '@assets/skills/front-end/tailwind.svg';
+import Figma from '@assets/skills/front-end/figma.svg';
+import Git from '@assets/skills/git.svg';
+import Api from '@assets/skills/front-end/api.svg';
 
 const skillList = [
   {

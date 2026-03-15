@@ -1,15 +1,15 @@
-import Button from '@components/.global/button';
-import Subtitle from '@components/.global/subtitle';
-import Text from '@components/.global/text';
-import Title from '@components/.global/title';
-import ImageBusiness from '../../../assets/image-business.png';
+import Button from '@global/button';
+import Subtitle from '@global/subtitle';
+import Text from '@global/text';
+import Title from '@global/title';
+import ImageBusiness from '@assets/areas-expertise/devops.png';
 import Card from '@components/card';
-import IconGitHub from '../../../assets/icon-github.svg';
-import IconDocker from '../../../assets/icon-docker.svg';
-import IconDeploy from '../../../assets/icon-deploy.svg';
-import IconAWS from '../../../assets/icon-aws.svg';
-import IconLinux from '../../../assets/icon-linux.svg';
-import IconMonitoring from '../../../assets/icon-monitoring.svg';
+import IconGitHub from '@assets/icon-github.svg';
+import IconDocker from '@assets/icon-docker.svg';
+import IconDeploy from '@assets/icon-deploy.svg';
+import IconAWS from '@assets/icon-aws.svg';
+import IconLinux from '@assets/icon-linux.svg';
+import IconMonitoring from '@assets/icon-monitoring.svg';
 
 const skillList = [
   {

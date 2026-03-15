@@ -20,6 +20,7 @@
     "baseUrl": "./src",
     "paths": {
       "@components/*": ["components/*"],
+      "@global/*": ["components/.global/*"],
       "@assets/*": ["assets/*"],
       "@utils/*": ["utils/*"],
       "@hooks/*": ["hooks/*"],

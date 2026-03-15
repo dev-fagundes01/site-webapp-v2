@@ -3,17 +3,17 @@ import {
   useScreenReaderAnnouncer,
   useFocusManagement,
 } from '@hooks/useAccessibility';
-import Subtitle from '@components/.global/subtitle';
-import Text from '@components/.global/text';
-import Title from '@components/.global/title';
-import ImgProduct from '../../../assets/areas-expertise/product.png';
-import Img from '../../../assets/areas-expertise/product-carousel/img.png';
-import Img2 from '../../../assets/areas-expertise/design-carousel/img2.png';
-import Img3 from '../../../assets/areas-expertise/design-carousel/img3.png';
-import Img4 from '../../../assets/areas-expertise/design-carousel/img4.png';
-import Img5 from '../../../assets/areas-expertise/design-carousel/img5.png';
+import Subtitle from '@global/subtitle';
+import Text from '@global/text';
+import Title from '@global/title';
+import ImgProduct from '@assets/areas-expertise/product.png';
+import Img from '@assets/areas-expertise/product-carousel/img.png';
+import Img2 from '@assets/areas-expertise/product-carousel/img2.png';
+import Img3 from '@assets/areas-expertise/product-carousel/img3.png';
+import Img4 from '@assets/areas-expertise/product-carousel/img4.png';
+import Img5 from '@assets/areas-expertise/product-carousel/img5.png';
 import Card from '@components/card';
-import Button from '@components/.global/button';
+import Button from '@global/button';
 import Carousel from '@components/carousel';
 
 const carouselItems = [

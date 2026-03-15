@@ -3,16 +3,16 @@ import {
   useScreenReaderAnnouncer,
   useFocusManagement,
 } from '@hooks/useAccessibility';
-import Subtitle from '@components/.global/subtitle';
-import Text from '@components/.global/text';
-import Title from '@components/.global/title';
-import ImageRecruiter from '../../../assets/areas-expertise/tech-recruiter.png';
+import Subtitle from '@global/subtitle';
+import Text from '@global/text';
+import Title from '@global/title';
+import ImageRecruiter from '@assets/areas-expertise/tech-recruiter.png';
 import Card from '@components/card';
-import Button from '@components/.global/button';
-import Communication from '../../../assets/skills/communication.svg';
-import Listening from '../../../assets/skills/listening.svg';
-import Organization from '../../../assets/skills/organization.svg';
-import WatchfulEye from '../../../assets/skills/watchful-eye.svg';
+import Button from '@global/button';
+import Communication from '@assets/skills/communication.svg';
+import Listening from '@assets/skills/listening.svg';
+import Organization from '@assets/skills/organization.svg';
+import WatchfulEye from '@assets/skills/watchful-eye.svg';
 
 const skillList = [
   {

@@ -17,6 +17,7 @@ export const HomeContent = styled.main`
   width: 1144px;
   max-width: 100%;
 `;
+
 export const HomeTextContent = styled.div`
   display: flex;
   flex-direction: column;
@@ -37,4 +38,36 @@ export const HomeButton = styled.a`
   align-items: center;
   justify-content: center;
   text-decoration: none;
+`;
+
+export const AreasContainer = styled.div`
+  padding: 60px 0 40px 0;
+  background-color: #e6e6e6;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+  margin-top: 20px;
+`;
+
+export const AreasContent = styled.div`
+  width: 1144px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+`;
+
+export const AreasTextContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  max-width: 920px;
+`;
+
+export const CarouselContainer = styled.div`
+  width: 100%;
+  max-width: 935px;
 `;

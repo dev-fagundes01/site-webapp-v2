@@ -1,14 +1,14 @@
-import Button from '@components/.global/button';
-import Subtitle from '@components/.global/subtitle';
-import Text from '@components/.global/text';
-import Title from '@components/.global/title';
-import ImageBusiness from '@/assets/image-business.png';
-import Card from '@/components/card';
-import IconChat from '@/assets/icon-chat.png';
-import IconTools from '@/assets/icon-tools.png';
-import IconData from '@/assets/icon-data.png';
-import IconSquare from '@/assets/icon-square.svg';
-import IconTarget from '@/assets/icon-target.png';
+import Button from '@global/button';
+import Subtitle from '@global/subtitle';
+import Text from '@global/text';
+import Title from '@global/title';
+import ImageBusiness from '@assets/areas-expertise/image-business.png';
+import Card from '@components/card';
+import IconChat from '@assets/icon-chat.png';
+import IconTools from '@assets/icon-tools.png';
+import IconData from '@assets/icon-data.png';
+import IconSquare from '@assets/icon-square.svg';
+import IconTarget from '@assets/icon-target.png';
 
 const skillList = [
   {
