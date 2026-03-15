@@ -4,8 +4,5 @@ export enum RouteEnum {
   NEWS_AND_EVENTS = '/noticias-e-eventos',
   JOIN_US = '/faca-parte',
   SUPPORT_US = '/seja-um-apoiador',
-}
-
-export enum RouteEnum2 {
   HOME = '/',
 }

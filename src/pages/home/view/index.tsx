@@ -25,7 +25,6 @@ import IconData from '../../../assets/icon-data2.png';
 import IconQA from '../../../assets/icon-qa.png';
 import IconDevOps from '../../../assets/icon-devops.png';
 import SkillsCarousel from '../../../components/skills.carousel';
-import { RouteEnum2 } from '../../../utils/enums/RouteEnum';
 
 const carouselItems = [
   {
