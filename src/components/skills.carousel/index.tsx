@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import Card from '../card';
 import {
   ArrowButton,
+  ArrowsContainer,
   CarouselWrapper,
   ItemWrapper,
   ScrollContainer,
@@ -78,25 +79,27 @@ export default function SkillsCarousel({ items }: SkillsCarouselProps) {
         ))}
       </ScrollContainer>
 
-      <ArrowButton
-        onClick={() => scroll('prev')}
-        disabled={!canScrollLeft}
-        aria-label="Ver item anterior"
-      >
-        <svg width="32" height="32" viewBox="0 0 24 24">
-          <polyline points="15 18 9 12 15 6" fill="none" strokeWidth="2" />
-        </svg>
-      </ArrowButton>
+      <ArrowsContainer>
+        <ArrowButton
+          onClick={() => scroll('prev')}
+          disabled={!canScrollLeft}
+          aria-label="Ver item anterior"
+        >
+          <svg width="32" height="32" viewBox="0 0 24 24">
+            <polyline points="15 18 9 12 15 6" fill="none" strokeWidth="2" />
+          </svg>
+        </ArrowButton>
 
-      <ArrowButton
-        onClick={() => scroll('next')}
-        disabled={!canScrollRight}
-        aria-label="Ver próximo item"
-      >
-        <svg width="32" height="32" viewBox="0 0 24 24">
-          <polyline points="9 18 15 12 9 6" fill="none" strokeWidth="2" />
-        </svg>
-      </ArrowButton>
+        <ArrowButton
+          onClick={() => scroll('next')}
+          disabled={!canScrollRight}
+          aria-label="Ver próximo item"
+        >
+          <svg width="32" height="32" viewBox="0 0 24 24">
+            <polyline points="9 18 15 12 9 6" fill="none" strokeWidth="2" />
+          </svg>
+        </ArrowButton>
+      </ArrowsContainer>
     </CarouselWrapper>
   );
 }

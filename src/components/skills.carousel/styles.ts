@@ -5,8 +5,9 @@ export const ArrowButton = styled.button<{ disabled?: boolean }>`
   border: none;
   cursor: pointer;
   padding: 20px;
-  width: 130px;
-  height: 20px;
+  padding: 8px;
+  width: auto;
+  height: auto;
 
   svg {
     width: 50px;
@@ -35,4 +36,10 @@ export const ScrollContainer = styled.div`
 export const ItemWrapper = styled.div`
   flex: 0 0 191px;
   scroll-snap-align: start;
+`;
+
+export const ArrowsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 80px;
 `;
