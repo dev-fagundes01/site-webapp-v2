@@ -25,8 +25,9 @@ import IconData from '../../../assets/icon-data2.png';
 import IconQA from '../../../assets/icon-qa.png';
 import IconDevOps from '../../../assets/icon-devops.png';
 import SkillsCarousel from '../../../components/skills.carousel';
+import type { SkillItem } from '../../../components/skills.carousel';
 
-const carouselItems = [
+const carouselItems: SkillItem[] = [
   {
     id: 1,
     img: IconBusiness,

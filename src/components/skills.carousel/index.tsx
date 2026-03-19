@@ -1,9 +1,14 @@
 import { useRef, useState } from 'react';
 import Card from '../card';
-import { ArrowButton } from './styles';
+import {
+  ArrowButton,
+  CarouselWrapper,
+  ItemWrapper,
+  ScrollContainer,
+} from './styles';
 import { Link } from 'react-router-dom';
 
-interface SkillItem {
+export interface SkillItem {
   id: number;
   img: string;
   title: string;
@@ -47,27 +52,10 @@ export default function SkillsCarousel({ items }: SkillsCarouselProps) {
   };
 
   return (
-    <div style={{ width: '100%', textAlign: 'center', gap: '40px' }}>
-      <div
-        ref={containerRef}
-        onScroll={checkScroll}
-        style={{
-          display: 'flex',
-          gap: `${GAP}px`,
-          padding: '10px 0 0 0',
-          overflowX: 'auto',
-          scrollSnapType: 'x mandatory',
-          scrollbarWidth: 'none',
-        }}
-      >
+    <CarouselWrapper>
+      <ScrollContainer ref={containerRef} onScroll={checkScroll}>
         {items.map((item) => (
-          <div
-            key={item.id}
-            style={{
-              flex: `0 0 ${CARD_WIDTH}px`,
-              scrollSnapAlign: 'start',
-            }}
-          >
+          <ItemWrapper key={item.id}>
             <Link to={`/area/${item.area}`} style={{ textDecoration: 'none' }}>
               <Card
                 edgeSection
@@ -86,9 +74,9 @@ export default function SkillsCarousel({ items }: SkillsCarouselProps) {
                 titleTextAlign="center"
               />
             </Link>
-          </div>
+          </ItemWrapper>
         ))}
-      </div>
+      </ScrollContainer>
 
       <ArrowButton
         onClick={() => scroll('prev')}
@@ -109,6 +97,6 @@ export default function SkillsCarousel({ items }: SkillsCarouselProps) {
           <polyline points="9 18 15 12 9 6" fill="none" strokeWidth="2" />
         </svg>
       </ArrowButton>
-    </div>
+    </CarouselWrapper>
   );
 }
