@@ -16,12 +16,13 @@ function DefaultLayout() {
       const element = document.getElementById(hash);
 
       if (element) {
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }, 0);
+        element.scrollIntoView({ behavior: 'smooth' });
+        return;
       }
     }
-  }, [location.hash]);
+
+    window.scrollTo(0, 0);
+  }, [location]);
 
   return (
     <>

@@ -3,19 +3,19 @@ import {
   useScreenReaderAnnouncer,
   useFocusManagement,
 } from '@hooks/useAccessibility';
-import Subtitle from '@components/.global/subtitle';
-import Text from '@components/.global/text';
-import Title from '@components/.global/title';
-import ImageRecruiter from '../../../assets/areas-expertise/back-end.png';
+import Subtitle from '@global/subtitle';
+import Text from '@global/text';
+import Title from '@global/title';
+import ImageRecruiter from '@assets/areas-expertise/back-end.png';
 import Card from '@components/card';
-import Button from '@components/.global/button';
-import Git from '../../../assets/skills/git.svg';
-import Node from '../../../assets/skills/back-end/node.svg';
-import TS from '../../../assets/skills/back-end/node.svg';
-import PostgreSQL from '../../../assets/skills/back-end/node.svg';
-import ORM from '../../../assets/skills/back-end/node.svg';
-import Jest from '../../../assets/skills/back-end/node.svg';
-import Docker from '../../../assets/skills/back-end/node.svg';
+import Button from '@global/button';
+import Git from '@assets/skills/git.svg';
+import Node from '@assets/skills/back-end/node.svg';
+import TS from '@assets/skills/back-end/ts.svg';
+import PostgreSQL from '@assets/skills/back-end/postgre-sql.svg';
+import ORM from '@assets/skills/back-end/orm-odm.svg';
+import Jest from '@assets/skills/back-end/jest.svg';
+import Docker from '@assets/skills/back-end/docker.svg';
 
 const skillList = [
   {

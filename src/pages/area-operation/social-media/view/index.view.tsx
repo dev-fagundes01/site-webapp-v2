@@ -3,13 +3,13 @@ import {
   useScreenReaderAnnouncer,
   useFocusManagement,
 } from '@hooks/useAccessibility';
-import Subtitle from '@components/.global/subtitle';
-import Text from '@components/.global/text';
-import Title from '@components/.global/title';
-import ImageSocialMedia from '../../../assets/areas-expertise/social-media.png';
-import ImageSocialMedia2 from '../../../assets/areas-expertise/social-media2.png';
+import Subtitle from '@global/subtitle';
+import Text from '@global/text';
+import Title from '@global/title';
+import ImageSocialMedia from '@assets/areas-expertise/social-media.png';
+import ImageSocialMedia2 from '@assets/areas-expertise/social-media2.png';
 import Card from '@components/card';
-import Button from '@components/.global/button';
+import Button from '@global/button';
 
 const SocialMediaView: React.FC = () => {
   const { announce } = useScreenReaderAnnouncer();

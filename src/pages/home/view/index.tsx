@@ -3,12 +3,98 @@ import Title from '../../../components/.global/title';
 import Text from '../../../components/.global/text';
 
 import {
+  AreasContainer,
+  AreasContent,
+  AreasTextContent,
+  CarouselContainer,
   HomeButton,
   HomeContainer,
   HomeContent,
   HomeTextContent,
 } from './styles';
 import Card from '../../../components/card';
+import IconBusiness from '../../../assets/icon-business.png';
+import IconTechRecruiter from '../../../assets/icon-techrecruiter.png';
+import IconProduct from '../../../assets/icon-produto.png';
+import IconAgile from '../../../assets/icon-agil.png';
+import IconSocialMedia from '../../../assets/icon-socialmedia.png';
+import IconDesigner from '../../../assets/icon-ui.png';
+import IconFront from '../../../assets/icon-front.png';
+import IconBack from '../../../assets/icon-back.png';
+import IconData from '../../../assets/icon-data2.png';
+import IconQA from '../../../assets/icon-qa.png';
+import IconDevOps from '../../../assets/icon-devops.png';
+import SkillsCarousel from '../../../components/skills.carousel';
+import type { SkillItem } from '../../../components/skills.carousel';
+
+const carouselItems: SkillItem[] = [
+  {
+    id: 1,
+    img: IconBusiness,
+    title: 'Business',
+    area: 'business',
+  },
+  {
+    id: 2,
+    img: IconTechRecruiter,
+    title: 'Tech Recruiter',
+    area: 'tech-recruiter',
+  },
+  {
+    id: 3,
+    img: IconProduct,
+    title: 'Produto',
+    area: 'product',
+  },
+  {
+    id: 4,
+    img: IconAgile,
+    title: 'Ágil',
+    area: 'agility',
+  },
+  {
+    id: 5,
+    img: IconSocialMedia,
+    title: 'Social Media',
+    area: 'social-media',
+  },
+  {
+    id: 6,
+    img: IconDesigner,
+    title: 'UI & UX Designer',
+    area: 'design',
+  },
+  {
+    id: 7,
+    img: IconFront,
+    title: 'Front-end',
+    area: 'front-end',
+  },
+  {
+    id: 8,
+    img: IconBack,
+    title: 'Back-end',
+    area: 'back-end',
+  },
+  {
+    id: 9,
+    img: IconData,
+    title: 'Dados',
+    area: 'data',
+  },
+  {
+    id: 10,
+    img: IconQA,
+    title: 'QA',
+    area: 'qa',
+  },
+  {
+    id: 11,
+    img: IconDevOps,
+    title: 'DevOps',
+    area: 'devops',
+  },
+];
 
 const HomeView = () => {
   return (
@@ -20,12 +106,12 @@ const HomeView = () => {
               Desenvolva habilidades no mercado Tech
             </Title>
 
-            <Text size={20} color="white" weight={300}>
+            <Text size={20} color="white" weight={300} marginBlock={0}>
               Na SouJunior, você trabalha com produtos digitais e adquire
               habilidades valiosas para a sua carreira.
             </Text>
 
-            <Text size={20} color="white" weight={300}>
+            <Text size={20} color="white" weight={300} marginBlock={0}>
               Você terá chance de desenvolver suas competências e aprofundar o
               seu conhecimento em áreas de seu interesse, aumentando assim suas
               chances de sucesso na sua trajetória profissional.
@@ -36,7 +122,7 @@ const HomeView = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Faça Parte!
+              Faça Parte
             </HomeButton>
           </HomeTextContent>
 
@@ -127,6 +213,32 @@ const HomeView = () => {
           style={{ width: '400px', marginTop: '3rem', marginInline: 'auto' }}
         />
       </section>
+
+      <AreasContainer>
+        <AreasContent>
+          <AreasTextContent>
+            <Title
+              color="#003986"
+              size={40}
+              textAlign="center"
+              marginBottom={20}
+            >
+              Áreas de atuação
+            </Title>
+            <Text size={16} color="#323232" weight={400} marginBlock={0}>
+              Aqui na SouJunior, atuam profissionais iniciantes das diversas
+              áreas que compõem uma empresa de tecnologia.
+            </Text>
+            <Text size={16} color="#323232" weight={400} marginBlock={0}>
+              Confira abaixo as áreas de atuação que temos em nosso quadro
+              atualmente:
+            </Text>
+          </AreasTextContent>
+          <CarouselContainer>
+            <SkillsCarousel items={carouselItems} />
+          </CarouselContainer>
+        </AreasContent>
+      </AreasContainer>
     </>
   );
 };
