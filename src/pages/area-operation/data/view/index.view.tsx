@@ -3,13 +3,13 @@ import {
   useScreenReaderAnnouncer,
   useFocusManagement,
 } from '@hooks/useAccessibility';
-import Subtitle from '@components/.global/subtitle';
-import Text from '@components/.global/text';
-import Title from '@components/.global/title';
-import Data from '../../../assets/areas-expertise/data.png';
-import Data2 from '../../../assets/areas-expertise/data2.png';
+import Subtitle from '@global/subtitle';
+import Text from '@global/text';
+import Title from '@global/title';
+import Data from '@assets/areas-expertise/data.png';
+import Data2 from '@assets/areas-expertise/data2.png';
 import Card from '@components/card';
-import Button from '@components/.global/button';
+import Button from '@global/button';
 
 const DataView: React.FC = () => {
   const { announce } = useScreenReaderAnnouncer();

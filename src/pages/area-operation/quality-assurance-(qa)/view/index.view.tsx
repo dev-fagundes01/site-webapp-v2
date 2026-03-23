@@ -3,17 +3,17 @@ import {
   useScreenReaderAnnouncer,
   useFocusManagement,
 } from '@hooks/useAccessibility';
-import Subtitle from '@components/.global/subtitle';
-import Text from '@components/.global/text';
-import Title from '@components/.global/title';
-import ImageQA from '../../../assets/areas-expertise/qa.png';
+import Subtitle from '@global/subtitle';
+import Text from '@global/text';
+import Title from '@global/title';
+import ImageQA from '@assets/areas-expertise/qa.png';
 import Card from '@components/card';
-import Button from '@components/.global/button';
-import CriticalThinking from '../../../assets/skills/qa/critical-thinking.svg';
-import Communication from '../../../assets/skills/communication.svg';
-import Documentation from '../../../assets/skills/qa/documentation.svg';
-import Tests from '../../../assets/skills/qa/tests.svg';
-import Feedbacks from '../../../assets/skills/qa/feedbacks.svg';
+import Button from '@global/button';
+import CriticalThinking from '@assets/skills/qa/critical-thinking.svg';
+import Communication from '@assets/skills/communication.svg';
+import Documentation from '@assets/skills/qa/documentation.svg';
+import Tests from '@assets/skills/qa/tests.svg';
+import Feedbacks from '@assets/skills/qa/feedbacks.svg';
 
 const skillList = [
   {

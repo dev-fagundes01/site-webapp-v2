@@ -1,13 +1,13 @@
-import Button from '@components/.global/button';
-import Subtitle from '@components/.global/subtitle';
-import Text from '@components/.global/text';
-import Title from '@components/.global/title';
-import ImageAgility from '../../../assets/areas-expertise/agility.png';
+import Button from '@global/button';
+import Subtitle from '@global/subtitle';
+import Text from '@global/text';
+import Title from '@global/title';
+import ImageAgility from '@assets/areas-expertise/agility.png';
 import Card from '@components/card';
-import IconCommunication from '../../../assets/skills/communication.svg';
-import IconListening from '../../../assets/skills/listening.svg';
-import IconOrganization from '../../../assets/skills/organization.svg';
-import IconWatchful from '../../../assets/skills/watchful-eye.svg';
+import IconCommunication from '@assets/skills/communication.svg';
+import IconListening from '@assets/skills/listening.svg';
+import IconOrganization from '@assets/skills/organization.svg';
+import IconWatchful from '@assets/skills/watchful-eye.svg';
 
 const skillList = [
   {

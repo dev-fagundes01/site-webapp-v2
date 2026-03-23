@@ -3,16 +3,16 @@ import {
   useScreenReaderAnnouncer,
   useFocusManagement,
 } from '@hooks/useAccessibility';
-import Subtitle from '@components/.global/subtitle';
-import Text from '@components/.global/text';
-import Title from '@components/.global/title';
-import ImageDesign from '../../../assets/areas-expertise/design.png';
-import Img from '../../../assets/areas-expertise/design-carousel/img.png';
-import Img2 from '../../../assets/areas-expertise/design-carousel/img2.png';
-import Img3 from '../../../assets/areas-expertise/design-carousel/img3.png';
-import Img4 from '../../../assets/areas-expertise/design-carousel/img4.png';
+import Subtitle from '@global/subtitle';
+import Text from '@global/text';
+import Title from '@global/title';
+import ImageDesign from '@assets/areas-expertise/design.png';
+import Img from '@assets/areas-expertise/design-carousel/img.png';
+import Img2 from '@assets/areas-expertise/design-carousel/img2.png';
+import Img3 from '@assets/areas-expertise/design-carousel/img3.png';
+import Img4 from '@assets/areas-expertise/design-carousel/img4.png';
 import Card from '@components/card';
-import Button from '@components/.global/button';
+import Button from '@global/button';
 import Carousel from '@components/carousel';
 
 const DesignView: React.FC = () => {
