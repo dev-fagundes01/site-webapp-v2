@@ -1,4 +1,5 @@
 import ImageMascote from '../../../assets/mascote.png';
+import Avatar from '../../../components/.global/avatar';
 import Title from '../../../components/.global/title';
 import Text from '../../../components/.global/text';
 
@@ -7,8 +8,13 @@ import {
   HomeContainer,
   HomeContent,
   HomeTextContent,
+  TestimonialAuthor,
+  TestimonialCard,
+  TestimonialColumn,
 } from './styles';
+import { HOME_TESTIMONIALS } from './testimonialsData';
 import Card from '../../../components/card';
+import Carousel from '../../../components/carousel';
 
 const HomeView = () => {
   return (
@@ -125,6 +131,83 @@ const HomeView = () => {
         </div>
         <hr
           style={{ width: '400px', marginTop: '3rem', marginInline: 'auto' }}
+        />
+      </section>
+
+      <section
+        id="depoimentos"
+        aria-label="Depoimentos"
+        style={{
+          margin: '4rem auto 0',
+          paddingBottom: '3rem',
+          maxWidth: '1220px',
+        }}
+      >
+        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+          <Title
+            as="h2"
+            color="#001633"
+            size={48}
+            fontWeight={700}
+            textAlign="center"
+            marginBottom={0}
+          >
+            Depoimentos
+          </Title>
+          <Text
+            as="p"
+            color="#001633"
+            size={24}
+            weight={600}
+            lineHeight={1.2}
+            textAlign="center"
+            marginBlock={12}
+          >
+            O que falam sobre a SouJunior
+          </Text>
+        </div>
+
+        <Carousel
+          items={HOME_TESTIMONIALS}
+          renderItem={(t) => (
+            <TestimonialColumn key={t.id}>
+              <TestimonialCard>
+                <Text
+                  as="p"
+                  color="#FFFFFF"
+                  size={15}
+                  weight={400}
+                  lineHeight={1.45}
+                  marginBlock={0}
+                >
+                  {t.quote}
+                </Text>
+              </TestimonialCard>
+              <TestimonialAuthor>
+                <Avatar src={t.avatarSrc || ''} alt={t.avatarAlt || ''} />
+                <Text
+                  as="p"
+                  color="#323232"
+                  size={18}
+                  weight={500}
+                  marginBlock={10}
+                  textAlign="center"
+                >
+                  {t.name}
+                </Text>
+                <Text
+                  as="p"
+                  color="#323232"
+                  size={14}
+                  weight={400}
+                  marginBlock={0}
+                  textAlign="center"
+                >
+                  {t.role}
+                </Text>
+              </TestimonialAuthor>
+            </TestimonialColumn>
+          )}
         />
       </section>
     </>

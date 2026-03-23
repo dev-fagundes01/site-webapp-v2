@@ -9,7 +9,6 @@ export const HomeContainer = styled.div`
   justify-content: center;
   user-select: none;
 `;
-
 export const HomeContent = styled.main`
   display: flex;
   align-items: center;
@@ -24,7 +23,6 @@ export const HomeTextContent = styled.div`
   width: 551px;
   flex-shrink: 0;
 `;
-
 export const HomeButton = styled.a`
   width: 127px;
   height: 40px;
@@ -37,4 +35,24 @@ export const HomeButton = styled.a`
   align-items: center;
   justify-content: center;
   text-decoration: none;
+`;
+
+export const TestimonialColumn = styled.div`
+  margin-inline: auto;
+  min-width: 354px;
+`;
+
+export const TestimonialCard = styled.article`
+  background-color: #001633;
+  border-radius: 16px;
+  height: 270px;
+  width: 354px;
+  padding: 1.5rem;
+`;
+
+export const TestimonialAuthor = styled.div`
+  margin-top: -1.15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
