@@ -32,3 +32,25 @@ export const CardsWrapper = styled.div`
     display: none;
   }
 `;
+
+export const ArrowsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+`;
+
+export const ArrowButton = styled.button<{ disabled?: boolean }>`
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 20px;
+  padding: 8px;
+  width: auto;
+  height: auto;
+
+  svg {
+    width: 50px;
+    height: 50px;
+    stroke: ${(props) => (props.disabled ? '#9CA3AF' : '#001633')};
+  }
+`;

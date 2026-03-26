@@ -1,5 +1,10 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { CarouselContainer, CardsWrapper } from './carousel.styles';
+import {
+  CarouselContainer,
+  CardsWrapper,
+  ArrowsContainer,
+  ArrowButton,
+} from './carousel.styles';
 import Card from '../card';
 
 export interface CarouselItem {
@@ -116,41 +121,27 @@ const Carousel: React.FC<CarouselProps> = ({ items, renderItem }) => {
         )}
       </CardsWrapper>
 
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          marginTop: '3rem',
-          gap: '1.5rem',
-          userSelect: 'none',
-        }}
-      >
-        <span
-          aria-label="Anterior"
+      <ArrowsContainer>
+        <ArrowButton
           onClick={() => canScrollPrev && scrollByPage('prev')}
-          style={{
-            fontSize: '2.6rem',
-            color: canScrollPrev ? '#001633' : '#b5b5b5',
-            cursor: canScrollPrev ? 'pointer' : 'default',
-            fontWeight: 300,
-          }}
+          disabled={!canScrollPrev}
+          aria-label="Ver item anterior"
         >
-          {'<'}
-        </span>
-        <span
-          aria-label="Próximo"
-          onClick={() => canScrollNext && scrollByPage('next')}
-          style={{
-            fontSize: '2.6rem',
-            color: canScrollNext ? '#001633' : '#b5b5b5',
-            cursor: canScrollNext ? 'pointer' : 'default',
-            fontWeight: 300,
-          }}
+          <svg width="32" height="32" viewBox="0 0 24 24">
+            <polyline points="15 18 9 12 15 6" fill="none" strokeWidth="2" />
+          </svg>
+        </ArrowButton>
+
+        <ArrowButton
+          onClick={() => scrollByPage('next')}
+          disabled={!canScrollNext}
+          aria-label="Ver próximo item"
         >
-          {'>'}
-        </span>
-      </div>
+          <svg width="32" height="32" viewBox="0 0 24 24">
+            <polyline points="9 18 15 12 9 6" fill="none" strokeWidth="2" />
+          </svg>
+        </ArrowButton>
+      </ArrowsContainer>
     </CarouselContainer>
   );
 };
