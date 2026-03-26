@@ -136,7 +136,15 @@ const HomeView = () => {
         </HomeContent>
       </HomeContainer>
 
-      <section id="sobre-nos" style={{ margin: '0 auto', marginTop: '4rem' }}>
+      <section
+        id="sobre-nos"
+        style={{
+          minHeight: '70vh',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'flex-end',
+        }}
+      >
         <Title
           as="h2"
           textAlign="center"
@@ -151,6 +159,7 @@ const HomeView = () => {
 
         <Card
           width={879}
+          marginBlock="0"
           description={
             <>
               O projeto SouJunior, criado em 1º de julho de 2022 por Wouerner
@@ -170,7 +179,7 @@ const HomeView = () => {
           }
           descriptionSize={16}
           descriptionWeight={400}
-          descriptionColor="#666666"
+          descriptionColor="#323232"
         />
 
         <Title
@@ -196,7 +205,9 @@ const HomeView = () => {
               textAlign: 'center',
             }}
           >
-            + 200 <br /> Participantes
+            <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>+ 200</span>
+            <br />
+            <span style={{ fontWeight: 600 }}>Participantes</span>
           </p>{' '}
           <p
             style={{
@@ -209,10 +220,14 @@ const HomeView = () => {
               textAlign: 'center',
             }}
           >
-            + 200 <br /> Participantes
+            <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>+ 200</span>
+            <br />
+            <span style={{ fontWeight: 600 }}>Participantes</span>
           </p>{' '}
           <p style={{ fontSize: '1.5rem', textAlign: 'center' }}>
-            + 200 <br /> Participantes
+            <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>+ 200</span>
+            <br />
+            <span style={{ fontWeight: 600 }}>Participantes</span>
           </p>
         </div>
         <hr

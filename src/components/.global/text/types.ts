@@ -10,6 +10,6 @@ export interface TextProps
   lineHeight?: number;
   margin?: number;
   marginBlock?: number;
-  marginInline?: number;
+  marginInline?: number | string;
   textAlign?: 'left' | 'center' | 'right' | 'justify';
 }
