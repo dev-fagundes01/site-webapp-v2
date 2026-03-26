@@ -20,9 +20,7 @@ export const CardsWrapper = styled.div`
 
   & > * {
     scroll-snap-align: start;
-    flex: 0 0 auto;
-    width: 354px;
-    min-width: 354px;
+    flex: 1 1 auto;
     max-width: 354px;
     box-sizing: border-box;
   }
