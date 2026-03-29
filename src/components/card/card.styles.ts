@@ -10,8 +10,9 @@ export const CardContainer = styled.div<CardProps>`
   gap: ${({ gap = '1rem' }) => gap};
   max-width: 1200px;
   margin: ${({ margin = 'auto' }) => margin};
-  margin-inline: ${({ marginInline }) => marginInline};
-  margin-block: ${({ marginBlock }) => marginBlock};
+  margin-inline: ${({ marginInline }) =>
+    marginInline ? marginInline : 'auto'};
+  margin-block: ${({ marginBlock }) => (marginBlock ? marginBlock : 'auto')};
   padding: ${({ padding = '1rem' }) => padding};
   width: ${({ width }) => (width ? pxToRem(width) : '100%')};
   height: ${({ height }) => (height ? pxToRem(height) : 'auto')};

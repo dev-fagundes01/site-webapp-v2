@@ -1,18 +1,9 @@
 import ImageMascote from '../../../assets/mascote.png';
+import Avatar from '../../../components/.global/avatar';
 import Title from '../../../components/.global/title';
 import Text from '../../../components/.global/text';
-
-import {
-  AreasContainer,
-  AreasContent,
-  AreasTextContent,
-  CarouselContainer,
-  HomeButton,
-  HomeContainer,
-  HomeContent,
-  HomeTextContent,
-} from './styles';
 import Card from '../../../components/card';
+import Carousel from '../../../components/carousel';
 import IconBusiness from '../../../assets/icon-business.png';
 import IconTechRecruiter from '../../../assets/icon-techrecruiter.png';
 import IconProduct from '../../../assets/icon-produto.png';
@@ -26,6 +17,21 @@ import IconQA from '../../../assets/icon-qa.png';
 import IconDevOps from '../../../assets/icon-devops.png';
 import SkillsCarousel from '../../../components/skills.carousel';
 import type { SkillItem } from '../../../components/skills.carousel';
+
+import {
+  AreasContainer,
+  AreasContent,
+  AreasTextContent,
+  CarouselContainer,
+  HomeButton,
+  HomeContainer,
+  HomeContent,
+  HomeTextContent,
+  TestimonialAuthor,
+  TestimonialCard,
+  TestimonialColumn,
+} from './styles';
+import { HOME_TESTIMONIALS } from './testimonialsData';
 
 const carouselItems: SkillItem[] = [
   {
@@ -130,7 +136,15 @@ const HomeView = () => {
         </HomeContent>
       </HomeContainer>
 
-      <section id="sobre-nos" style={{ margin: '0 auto', marginTop: '4rem' }}>
+      <section
+        id="sobre-nos"
+        style={{
+          minHeight: '70vh',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'flex-end',
+        }}
+      >
         <Title
           as="h2"
           textAlign="center"
@@ -145,6 +159,7 @@ const HomeView = () => {
 
         <Card
           width={879}
+          marginBlock="0"
           description={
             <>
               O projeto SouJunior, criado em 1º de julho de 2022 por Wouerner
@@ -164,7 +179,7 @@ const HomeView = () => {
           }
           descriptionSize={16}
           descriptionWeight={400}
-          descriptionColor="#666666"
+          descriptionColor="#323232"
         />
 
         <Title
@@ -190,7 +205,9 @@ const HomeView = () => {
               textAlign: 'center',
             }}
           >
-            + 200 <br /> Participantes
+            <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>+ 200</span>
+            <br />
+            <span style={{ fontWeight: 600 }}>Participantes</span>
           </p>{' '}
           <p
             style={{
@@ -203,10 +220,14 @@ const HomeView = () => {
               textAlign: 'center',
             }}
           >
-            + 200 <br /> Participantes
+            <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>+ 200</span>
+            <br />
+            <span style={{ fontWeight: 600 }}>Participantes</span>
           </p>{' '}
           <p style={{ fontSize: '1.5rem', textAlign: 'center' }}>
-            + 200 <br /> Participantes
+            <span style={{ fontSize: '2.25rem', fontWeight: 300 }}>+ 200</span>
+            <br />
+            <span style={{ fontWeight: 600 }}>Participantes</span>
           </p>
         </div>
         <hr
@@ -239,6 +260,83 @@ const HomeView = () => {
           </CarouselContainer>
         </AreasContent>
       </AreasContainer>
+
+      <section
+        id="depoimentos"
+        aria-label="Depoimentos"
+        style={{
+          margin: '4rem auto 0',
+          paddingBottom: '3rem',
+          maxWidth: '1220px',
+        }}
+      >
+        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+          <Title
+            as="h2"
+            color="#001633"
+            size={48}
+            fontWeight={700}
+            textAlign="center"
+            marginBottom={0}
+          >
+            Depoimentos
+          </Title>
+          <Text
+            as="p"
+            color="#001633"
+            size={24}
+            weight={600}
+            lineHeight={1.2}
+            textAlign="center"
+            marginBlock={12}
+          >
+            O que falam sobre a SouJunior
+          </Text>
+        </div>
+
+        <Carousel
+          items={HOME_TESTIMONIALS}
+          renderItem={(t) => (
+            <TestimonialColumn key={t.id}>
+              <TestimonialCard>
+                <Text
+                  as="p"
+                  color="#FFFFFF"
+                  size={15}
+                  weight={400}
+                  lineHeight={1.45}
+                  marginBlock={0}
+                >
+                  {t.quote}
+                </Text>
+              </TestimonialCard>
+              <TestimonialAuthor>
+                <Avatar src={t.avatarSrc || ''} alt={t.avatarAlt || ''} />
+                <Text
+                  as="p"
+                  color="#323232"
+                  size={18}
+                  weight={500}
+                  marginBlock={10}
+                  textAlign="center"
+                >
+                  {t.name}
+                </Text>
+                <Text
+                  as="p"
+                  color="#323232"
+                  size={14}
+                  weight={400}
+                  marginBlock={0}
+                  textAlign="center"
+                >
+                  {t.role}
+                </Text>
+              </TestimonialAuthor>
+            </TestimonialColumn>
+          )}
+        />
+      </section>
     </>
   );
 };

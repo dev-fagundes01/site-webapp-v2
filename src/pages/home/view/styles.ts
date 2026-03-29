@@ -40,6 +40,26 @@ export const HomeButton = styled.a`
   text-decoration: none;
 `;
 
+export const TestimonialColumn = styled.div`
+  margin-inline: auto;
+  min-width: 354px;
+`;
+
+export const TestimonialCard = styled.article`
+  background-color: #001633;
+  border-radius: 16px;
+  height: 270px;
+  width: 354px;
+  padding: 1.5rem;
+`;
+
+export const TestimonialAuthor = styled.div`
+  margin-top: -1.15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 export const AreasContainer = styled.div`
   padding: 60px 0 40px 0;
   background-color: #e6e6e6;

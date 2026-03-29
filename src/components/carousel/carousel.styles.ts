@@ -1,72 +1,54 @@
 import styled from 'styled-components';
-import { pxToRem } from '../../utils/pxToRem';
 
 export const CarouselContainer = styled.div`
-  padding: 20px;
+  padding: 10px 0;
   position: relative;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
 `;
 
 export const CardsWrapper = styled.div`
   display: flex;
-  gap: 28rem;
+  gap: 1.5rem;
   margin: 0 auto;
   padding: 10px 0;
-  padding-right: 29rem;
-  width: ${pxToRem(1042)};
-  border: 1px solid #338aff;
-  border-radius: 20px;
+  width: 100%;
   overflow-x: auto;
   scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+
+  & > * {
+    scroll-snap-align: start;
+    flex: 1 1 auto;
+    max-width: 354px;
+    box-sizing: border-box;
+  }
+
   /* hide default scrollbar */
   &::-webkit-scrollbar {
     display: none;
   }
 `;
 
-export const Controls = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 88%;
-  display: flex;
-  justify-content: space-between;
-`;
-
-export const ArrowButton = styled.button`
-  background: rgba(0, 0, 0, 0.06);
-  border: none;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background 0.15s ease;
-
-  &:hover {
-    background: rgba(0, 0, 0, 0.12);
-  }
-
-  &:disabled {
-    opacity: 0.4;
-    cursor: default;
-  }
-`;
-
-export const DotsContainer = styled.div`
+export const ArrowsContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  gap: 80px;
 `;
 
-export const Dot = styled.button<{ isActive: boolean }>`
-  border-radius: 50%;
+export const ArrowButton = styled.button<{ disabled?: boolean }>`
+  background: none;
   border: none;
-  margin: 0 3px;
   cursor: pointer;
-  background-color: ${(props) => (props.isActive ? '#338AFF' : '#ccc')};
-  padding: 0;
-  transition: background-color 0.3s;
+  padding: 20px;
+  padding: 8px;
+  width: auto;
+  height: auto;
+
+  svg {
+    width: 50px;
+    height: 50px;
+    stroke: ${(props) => (props.disabled ? '#9CA3AF' : '#001633')};
+  }
 `;

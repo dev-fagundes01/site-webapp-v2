@@ -2,58 +2,44 @@ import React, { useRef, useState, useEffect } from 'react';
 import {
   CarouselContainer,
   CardsWrapper,
+  ArrowsContainer,
   ArrowButton,
-  Controls,
-  DotsContainer,
-  Dot,
 } from './carousel.styles';
 import Card from '../card';
 
-interface CarouselProps {
-  img: string;
-  title: string;
+export interface CarouselItem {
+  id?: string | number;
+  img?: string;
+  title?: string;
   subtitle?: string;
   description?: string;
   list?: string[];
+  quote?: string;
+  name?: string;
+  role?: string;
+  avatarSrc?: string;
+  avatarAlt?: string;
 }
 
-const Carousel: React.FC<{ items: CarouselProps[] }> = ({ items }) => {
-  const wrapperRef = useRef<HTMLDivElement | null>(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [canScrollPrev, setCanScrollPrev] = useState(false);
-  const [canScrollNext, setCanScrollNext] = useState(false);
+export interface CarouselProps {
+  items: CarouselItem[];
+  renderItem?: (item: CarouselItem, index: number) => React.ReactNode;
+}
 
-  const getStep = () => {
-    const el = wrapperRef.current;
-    if (!el || !el.firstElementChild) return 0;
-    const firstCard = el.firstElementChild as HTMLElement;
-    let step = firstCard.getBoundingClientRect().width;
-    if (el.children.length > 1) {
-      const secondCard = el.children[1] as HTMLElement;
-      const gap = Math.max(
-        0,
-        secondCard.offsetLeft - firstCard.offsetLeft - step,
-      );
-      step += gap;
-    }
-    return step;
-  };
+const Carousel: React.FC<CarouselProps> = ({ items, renderItem }) => {
+  const wrapperRef = useRef<HTMLDivElement | null>(null);
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(true);
 
   const handleScroll = () => {
     const el = wrapperRef.current;
     if (!el) return;
 
-    // Update active index
-    const step = getStep();
-    if (step > 0) {
-      const newIndex = Math.round(el.scrollLeft / step);
-      setActiveIndex(newIndex);
-    }
+    const isAtStart = el.scrollLeft <= 5;
+    const isAtEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 5;
 
-    // For looping behavior, keep arrows enabled when there's more than one item
-    const multiple = items.length > 1;
-    setCanScrollPrev(multiple);
-    setCanScrollNext(multiple);
+    setCanScrollPrev(!isAtStart);
+    setCanScrollNext(!isAtEnd);
   };
 
   useEffect(() => {
@@ -65,40 +51,34 @@ const Carousel: React.FC<{ items: CarouselProps[] }> = ({ items }) => {
     el.addEventListener('scroll', handleScroll, { passive: true });
     window.addEventListener('resize', handleScroll);
 
+    // After mount, verify dimensions because DOM sizing can be delayed
+    setTimeout(handleScroll, 100);
+
     return () => {
       el.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleScroll);
     };
   }, [items]);
 
-  const scrollToCard = (index: number) => {
+  const scrollByPage = (direction: 'next' | 'prev') => {
     const el = wrapperRef.current;
     if (!el) return;
 
-    const step = getStep();
-    const len = items.length;
-    if (len === 0) return;
-    // wrap index so carousel loops from last->first and first->last
-    const targetIndex = ((index % len) + len) % len;
+    const cardWidth = 354 + 24; // Card width + gap (1.5rem = 24px)
+    // Scroll intentionally by exactly 3 cards for an entire new session
+    const scrollAmount =
+      direction === 'next' ? cardWidth * 3 : -(cardWidth * 3);
 
-    el.scrollTo({
-      left: targetIndex * step,
-      behavior: 'smooth',
-    });
-  };
-
-  const scrollByCard = (direction: 'next' | 'prev') => {
-    const delta = direction === 'next' ? 1 : -1;
-    scrollToCard(activeIndex + delta);
+    el.scrollBy({ left: scrollAmount, behavior: 'smooth' });
   };
 
   const onKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'ArrowRight') {
+    if (e.key === 'ArrowRight' && canScrollNext) {
       e.preventDefault();
-      scrollByCard('next');
-    } else if (e.key === 'ArrowLeft') {
+      scrollByPage('next');
+    } else if (e.key === 'ArrowLeft' && canScrollPrev) {
       e.preventDefault();
-      scrollByCard('prev');
+      scrollByPage('prev');
     }
   };
 
@@ -109,88 +89,59 @@ const Carousel: React.FC<{ items: CarouselProps[] }> = ({ items }) => {
       aria-roledescription="carousel"
     >
       <CardsWrapper ref={wrapperRef} role="list">
-        {items.map((item, index) => (
-          <Card
-            justifyContent="flex-start"
-            gap="0"
-            padding="2rem 1rem"
-            marginInline="1.5rem"
-            imageSrc={item.img}
-            key={index}
-            title={item.title}
-            titleAs="h3"
-            titleSize={24}
-            titleMarginTop={45}
-            description={item.description}
-            descriptionLineHeight={1.6}
-            descriptionSize={16}
-            descriptionColor="#000000"
-            descriptionWeight={400}
-            descriptionWidth={468}
-            list={item.list}
-            listSize={16}
-            listColor="#000000"
-            listWeight={400}
-            listMarginLeft={24}
-          />
-        ))}
+        {items.map((item, index) =>
+          renderItem ? (
+            renderItem(item, index)
+          ) : (
+            <Card
+              justifyContent="flex-start"
+              gap="0"
+              padding="2rem 1rem"
+              marginInline="1.5rem"
+              imageSrc={item.img}
+              key={index}
+              title={item.title}
+              titleAs="h3"
+              titleSize={24}
+              titleMarginTop={45}
+              subtitle={item.subtitle}
+              description={item.description}
+              descriptionLineHeight={1.6}
+              descriptionSize={16}
+              descriptionColor="#000000"
+              descriptionWeight={400}
+              descriptionWidth={468}
+              list={item.list}
+              listSize={16}
+              listColor="#000000"
+              listWeight={400}
+              listMarginLeft={24}
+            />
+          ),
+        )}
       </CardsWrapper>
 
-      <Controls>
+      <ArrowsContainer>
         <ArrowButton
-          aria-label="Mostrar anterior"
-          onClick={() => scrollByCard('prev')}
+          onClick={() => canScrollPrev && scrollByPage('prev')}
           disabled={!canScrollPrev}
+          aria-label="Ver item anterior"
         >
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M15 18L9 12L15 6"
-              stroke="#003986"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
+          <svg width="32" height="32" viewBox="0 0 24 24">
+            <polyline points="15 18 9 12 15 6" fill="none" strokeWidth="2" />
           </svg>
         </ArrowButton>
 
         <ArrowButton
-          aria-label="Mostrar próximo"
-          onClick={() => scrollByCard('next')}
+          onClick={() => scrollByPage('next')}
           disabled={!canScrollNext}
+          aria-label="Ver próximo item"
         >
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M9 6L15 12L9 18"
-              stroke="#003986"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
+          <svg width="32" height="32" viewBox="0 0 24 24">
+            <polyline points="9 18 15 12 9 6" fill="none" strokeWidth="2" />
           </svg>
         </ArrowButton>
-      </Controls>
-
-      <DotsContainer>
-        {items.map((_, index) => (
-          <Dot
-            key={index}
-            isActive={index === activeIndex}
-            onClick={() => scrollToCard(index)}
-          />
-        ))}
-      </DotsContainer>
+      </ArrowsContainer>
     </CarouselContainer>
   );
 };

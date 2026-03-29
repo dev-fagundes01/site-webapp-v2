@@ -11,6 +11,7 @@ export const TextContainer = styled.p<TextProps>`
   color: ${({ color = '#323232' }) => color};
   margin: 0 auto;
   margin-block: ${({ marginBlock = 16 }) => pxToRem(marginBlock)};
-  margin-inline: ${({ marginInline }) => marginInline && pxToRem(marginInline)};
+  margin-inline: ${({ marginInline }) =>
+    typeof marginInline === 'number' ? pxToRem(marginInline) : marginInline};
   text-align: ${({ textAlign = 'left' }) => textAlign};
 `;
