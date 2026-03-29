@@ -344,7 +344,7 @@ const HomeView = () => {
 
       <section
         id="nossas-iniciativas"
-        aria-label="Nossas-iniciativas"
+        aria-label="Nossas iniciativas"
         style={{
           margin: 'auto',
           maxWidth: '1440px',
@@ -371,8 +371,8 @@ const HomeView = () => {
               title="SouJunior Labs"
               description={
                 <>
-                  Coloque em pratica suas expertises em projetos reais, e ganhe
-                  experiencia no mercado de trabalho.
+                  Coloque em prática suas expertises em projetos reais, e ganhe
+                  experiência no mercado de trabalho.
                 </>
               }
               titleSize={24}
