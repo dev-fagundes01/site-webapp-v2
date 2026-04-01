@@ -11,13 +11,40 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
 
   return (
     <HeaderContainer role="banner">
-      <Logo
-        src={logoImage}
-        alt="Sou Junior - Logo da organização que impulsiona carreiras em tecnologia"
-        role="img"
-      />
-      <NavLinks role="navigation" aria-label="Navegação principal">
-        {links[0]?.map((link) => (
+      <div>
+        <div>
+          <a href="/">
+            <Logo
+              src={logoImage}
+              alt="Sou Junior - Logo da organização que impulsiona carreiras em tecnologia"
+              role="img"
+            />
+          </a>
+          <NavLinks role="navigation" aria-label="Navegação principal">
+            {links[0]?.map((link) => (
+              <Link
+                key={link.label}
+                onClick={link.onClick}
+                aria-label={
+                  link.ariaLabel || `Navegar para ${t(`links.${link.label}`)}`
+                }
+                role="menuitem"
+                paddingY={8}
+                paddingX={12}
+              >
+                {t(`links.${link.label}`)}
+              </Link>
+            ))}
+          </NavLinks>
+        </div>
+      </div>
+
+      <NavLinks
+        role="navigation"
+        aria-label="Navegação secundaria"
+        style={{ gap: '1.25rem', marginTop: '1.5rem', marginBottom: '1rem' }}
+      >
+        {links[1].map((link) => (
           <Link
             key={link.label}
             onClick={link.onClick}

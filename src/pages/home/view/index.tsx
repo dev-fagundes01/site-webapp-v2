@@ -50,13 +50,13 @@ const carouselItems: SkillItem[] = [
     id: 3,
     img: IconProduct,
     title: 'Produto',
-    area: 'product',
+    area: 'produto',
   },
   {
     id: 4,
     img: IconAgile,
     title: 'Ágil',
-    area: 'agility',
+    area: 'agilidade',
   },
   {
     id: 5,
@@ -86,7 +86,7 @@ const carouselItems: SkillItem[] = [
     id: 9,
     img: IconData,
     title: 'Dados',
-    area: 'data',
+    area: 'dados',
   },
   {
     id: 10,
@@ -98,7 +98,7 @@ const carouselItems: SkillItem[] = [
     id: 11,
     img: IconDevOps,
     title: 'DevOps',
-    area: 'devops',
+    area: 'dev-ops',
   },
 ];
 
