@@ -108,16 +108,16 @@ const HomeView = () => {
       <HomeContainer>
         <HomeContent>
           <HomeTextContent>
-            <Title id="home-heading" color="white" size={40}>
+            <Title id="home-heading" color="white" size={40} marginBottom={40}>
               Desenvolva habilidades no mercado Tech
             </Title>
 
-            <Text size={20} color="white" weight={300} marginBlock={0}>
+            <Text size={18} color="white" weight={300} marginBlock={0}>
               Na SouJunior, você trabalha com produtos digitais e adquire
               habilidades valiosas para a sua carreira.
             </Text>
 
-            <Text size={20} color="white" weight={300} marginBlock={0}>
+            <Text size={18} color="white" weight={300} marginBlock={0}>
               Você terá chance de desenvolver suas competências e aprofundar o
               seu conhecimento em áreas de seu interesse, aumentando assim suas
               chances de sucesso na sua trajetória profissional.
@@ -139,10 +139,10 @@ const HomeView = () => {
       <section
         id="sobre-nos"
         style={{
-          minHeight: '70vh',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'flex-end',
+          paddingTop: '3rem',
         }}
       >
         <Title

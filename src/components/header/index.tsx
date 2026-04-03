@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { HeaderContainer, NavLinks } from './header.styles';
 import Link from '../.global/link';
@@ -8,6 +9,8 @@ import Logo from '../.global/logo';
 
 const Header: React.FC<HeaderProps> = ({ links }) => {
   const { t } = useTranslation();
+  const location = useLocation();
+  const isAreaPage = location.pathname.startsWith('/area/');
 
   return (
     <HeaderContainer role="banner">
@@ -39,27 +42,29 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
         </div>
       </div>
 
-      <NavLinks
-        role="navigation"
-        aria-label="Navegação secundaria"
-        style={{ gap: '1.25rem', marginTop: '1.5rem', marginBottom: '1rem' }}
-      >
-        {links[1].map((link) => (
-          <Link
-            key={link.label}
-            onClick={link.onClick}
-            aria-label={
-              link.ariaLabel || `Navegar para ${t(`links.${link.label}`)}`
-            }
-            role="menuitem"
-            paddingY={8}
-            paddingX={12}
-            isLastLink={link.label === 'supportUs' && true}
-          >
-            {t(`links.${link.label}`)}
-          </Link>
-        ))}
-      </NavLinks>
+      {isAreaPage && (
+        <NavLinks
+          role="navigation"
+          aria-label="Navegação secundaria"
+          style={{ gap: '1.35rem', marginTop: '1.5rem', marginBottom: '1rem' }}
+        >
+          {links[1]?.map((link) => (
+            <Link
+              key={link.label}
+              onClick={link.onClick}
+              aria-label={
+                link.ariaLabel || `Navegar para ${t(`links.${link.label}`)}`
+              }
+              role="menuitem"
+              paddingY={8}
+              paddingX={12}
+              isLastLink={link.label === 'supportUs' && true}
+            >
+              {t(`links.${link.label}`)}
+            </Link>
+          ))}
+        </NavLinks>
+      )}
     </HeaderContainer>
   );
 };

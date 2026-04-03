@@ -27,7 +27,8 @@ export interface CardProps {
   titleSize?: number;
   titleTextAlign?: 'left' | 'center' | 'right' | 'justify' | 'initial';
   titleWidth?: number;
-  titleMarginTop?: number;
+  titleMarginTop?: number | string;
+  titleMarginBottom?: number | string;
   titleColor?: string;
 
   subtitle?: string;

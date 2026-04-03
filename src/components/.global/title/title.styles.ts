@@ -10,6 +10,10 @@ export const TitleContainer = styled.h1<TitleProps>`
   width: ${({ width }) =>
     typeof width === 'string' ? width : width ? `${pxToRem(width)}` : '100%'};
   margin: auto;
-  margin-top: ${({ marginTop = 0 }) => `${pxToRem(marginTop)}`};
-  margin-bottom: ${({ marginBottom = 16 }) => `${pxToRem(marginBottom)}`};
+  margin-top: ${({ marginTop = 0 }) =>
+    typeof marginTop === 'number' ? `${pxToRem(marginTop)}` : marginTop};
+  margin-bottom: ${({ marginBottom = 16 }) =>
+    typeof marginBottom === 'number'
+      ? `${pxToRem(marginBottom)}`
+      : marginBottom};
 `;
