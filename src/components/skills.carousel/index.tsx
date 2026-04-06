@@ -70,9 +70,11 @@ export default function SkillsCarousel({ items }: SkillsCarouselProps) {
                 imageWidth={61}
                 imageHeight={61}
                 title={item.title}
-                titleSize={12}
+                titleSize={16}
                 titleColor="#FFF"
                 titleTextAlign="center"
+                titleMarginTop="0.5rem"
+                titleMarginBottom="0rem"
               />
             </Link>
           </ItemWrapper>

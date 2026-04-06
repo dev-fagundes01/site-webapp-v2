@@ -1,4 +1,4 @@
-import { RouteEnum } from './enums/RouteEnum';
+import { RouteEnum, RouteEnum2 } from './enums/RouteEnum';
 
 export const createHeaderLinks = (navigate: (route: RouteEnum) => void) => {
   const handleAnchorClick = (route: string) => {
@@ -43,6 +43,63 @@ export const createHeaderLinks = (navigate: (route: RouteEnum) => void) => {
         label: 'supportUs',
         onClick: () => handleAnchorClick(RouteEnum.SUPPORT_US),
         ariaLabel: 'Navegar para a página Seja um Apoiador',
+      },
+    ],
+    [
+      {
+        label: 'business',
+        onClick: () => handleAnchorClick(RouteEnum2.BUSINESS),
+        ariaLabel: 'Navegar para a página business',
+      },
+      {
+        label: 'techRecruiter',
+        onClick: () => handleAnchorClick(RouteEnum2.TECH_RECRUITER),
+        ariaLabel: 'Navegar para a página tech-recruiter',
+      },
+      {
+        label: 'product',
+        onClick: () => handleAnchorClick(RouteEnum2.PRODUCT),
+        ariaLabel: 'Navegar para a página produto',
+      },
+      {
+        label: 'agility',
+        onClick: () => handleAnchorClick(RouteEnum2.AGILITY),
+        ariaLabel: 'Navegar para a página agilidade',
+      },
+      {
+        label: 'socialMedia',
+        onClick: () => handleAnchorClick(RouteEnum2.SOCIAL_MEDIA),
+        ariaLabel: 'Navegar para a página social-media',
+      },
+      {
+        label: 'uiUxDesign',
+        onClick: () => handleAnchorClick(RouteEnum2.UI_UX_DESIGN),
+        ariaLabel: 'Navegar para a página design',
+      },
+      {
+        label: 'frontEnd',
+        onClick: () => handleAnchorClick(RouteEnum2.FRONT_END),
+        ariaLabel: 'Navegar para a página front-end',
+      },
+      {
+        label: 'backEnd',
+        onClick: () => handleAnchorClick(RouteEnum2.BACK_END),
+        ariaLabel: 'Navegar para a página back-end',
+      },
+      {
+        label: 'data',
+        onClick: () => handleAnchorClick(RouteEnum2.DATA),
+        ariaLabel: 'Navegar para a página dados',
+      },
+      {
+        label: 'qA',
+        onClick: () => handleAnchorClick(RouteEnum2.QA),
+        ariaLabel: 'Navegar para a página qa',
+      },
+      {
+        label: 'devOps',
+        onClick: () => handleAnchorClick(RouteEnum2.DEV_OPS),
+        ariaLabel: 'Navegar para a página dev-ops',
       },
     ],
   ];

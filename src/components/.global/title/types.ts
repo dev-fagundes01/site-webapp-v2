@@ -6,8 +6,8 @@ export interface TitleProps
   size?: number;
   textAlign?: 'left' | 'center' | 'right' | 'justify' | 'initial';
   width?: number | string;
-  marginTop?: number;
-  marginBottom?: number;
+  marginTop?: number | string;
+  marginBottom?: number | string;
   color?: string;
   backgroundColor?: string;
   as?: keyof React.JSX.IntrinsicElements; //"h1" | "h2" | "h3";

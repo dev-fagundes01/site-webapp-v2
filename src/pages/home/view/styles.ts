@@ -8,6 +8,7 @@ export const HomeContainer = styled.div`
   align-items: center;
   justify-content: center;
   user-select: none;
+  margin-top: 1rem;
 `;
 
 export const HomeContent = styled.main`
@@ -21,7 +22,7 @@ export const HomeContent = styled.main`
 export const HomeTextContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 0.9rem;
   width: 551px;
   flex-shrink: 0;
 `;
@@ -38,6 +39,7 @@ export const HomeButton = styled.a`
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  margin-top: 3rem;
 `;
 
 export const TestimonialColumn = styled.div`

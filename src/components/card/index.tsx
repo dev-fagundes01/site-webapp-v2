@@ -33,6 +33,7 @@ const Card: React.FC<CardProps> = ({
   titleWidth,
   titleTextAlign,
   titleMarginTop,
+  titleMarginBottom,
   titleColor,
 
   subtitle,
@@ -99,6 +100,7 @@ const Card: React.FC<CardProps> = ({
           size={titleSize}
           width={titleWidth}
           marginTop={titleMarginTop}
+          marginBottom={titleMarginBottom}
           color={titleColor}
           textAlign={titleTextAlign}
         >
