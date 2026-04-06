@@ -16,4 +16,14 @@ export const StyledButton = styled.button<ButtonProps>`
   padding: 1rem 2rem;
   border-radius: 10px;
   border: none;
+  ${({ variant }) =>
+    variant === 'outline' &&
+    `
+      background: transparent;
+      border: 2px solid #003986;
+      border-radius: 8px;
+      color: #003986;
+      padding: 0.6rem 1.3rem;
+      font-weight: 600;
+  `}
 `;

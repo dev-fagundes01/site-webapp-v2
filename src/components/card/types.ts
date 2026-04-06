@@ -1,6 +1,6 @@
 export interface CardProps {
   edgeSection?: boolean;
-  flexDirection?: 'row' | 'column';
+  flexDirection?: 'row' | 'column' | 'row-reverse';
   justifyContent?:
     | 'flex-start'
     | 'center'
@@ -62,6 +62,6 @@ export interface CardProps {
   paragraphTextAlign?: 'left' | 'center' | 'right' | 'justify';
 
   buttonText?: string;
-  buttonVariant?: 'primary' | 'secondary' | 'tertiary';
+  buttonVariant?: 'primary' | 'secondary' | 'tertiary' | 'outline';
   onClick?: () => void;
 }
