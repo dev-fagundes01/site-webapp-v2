@@ -137,7 +137,6 @@ export const SectionTitle = styled.h2`
 `;
 
 export const SectionText = styled.p`
-  marginblock: '0';
   font-size: 1rem;
   color: #323232;
   text-align: center;
@@ -169,7 +168,6 @@ export const TextContainer = styled.div`
 
   @media (max-width: 606px) {
     width: 100%;
-    min-width: 406px;
     height: auto;
     padding: 0 0.5rem;
   }
