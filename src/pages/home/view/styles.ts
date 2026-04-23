@@ -168,6 +168,7 @@ export const TextContainer = styled.div`
 
   @media (max-width: 606px) {
     width: 100%;
+    max-width: 420px;
     height: auto;
     padding: 0 0.5rem;
   }
