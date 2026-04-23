@@ -77,6 +77,10 @@ export const AreasContainer = styled.div`
   justify-content: center;
   user-select: none;
   margin-top: 20px;
+
+  @media (max-width: 606px) {
+    padding: 20px 0 10px 0;
+  }
 `;
 
 export const AreasContent = styled.div`
@@ -117,4 +121,89 @@ export const CustomCardWrapper = styled.div`
   border-radius: 24px;
   background-color: #fff;
   max-width: 600px;
+`;
+
+export const SectionTitle = styled.h2`
+  color: #003986;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+  margin-top: 0.625rem;
+
+  @media (max-width: 606px) {
+    font-size: 1.5rem;
+    margin-top: 0.25rem;
+  }
+`;
+
+export const SectionText = styled.p`
+  marginblock: '0';
+  font-size: 1rem;
+  color: #323232;
+  text-align: center;
+  margin-bottom: 1rem;
+
+  @media (max-width: 606px) {
+    width: 100%;
+    text-align: start;
+    margin-left: 1rem;
+  }
+`;
+
+export const PapersContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (max-width: 606px) {
+    flex-direction: column;
+  }
+`;
+
+export const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  height: 129px;
+
+  @media (max-width: 606px) {
+    width: 100%;
+    min-width: 406px;
+    height: auto;
+    padding: 0 0.5rem;
+  }
+`;
+
+export const ToothpickPapers = styled.div`
+  width: 1px;
+  height: 3.125rem;
+  background-color: #acacac;
+  margin: 1rem 1.5rem;
+
+  @media (max-width: 606px) {
+    height: 1px;
+    width: 3.125rem;
+    margin-top: 2rem;
+  }
+`;
+
+export const JoinButton = styled.a`
+  width: 121px;
+  height: 44px;
+  border-radius: 10px;
+  color: white;
+  background-color: #003986;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-top: 1.56rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: 606px) {
+    margin-bottom: 1rem;
+  }
 `;
