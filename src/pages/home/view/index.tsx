@@ -31,10 +31,16 @@ import {
   HomeContainer,
   HomeContent,
   HomeTextContent,
+  JoinButton,
   TestimonialAuthor,
   TestimonialCard,
   TestimonialColumn,
   Toothpick,
+  SectionTitle,
+  TextContainer,
+  SectionText,
+  PapersContainer,
+  ToothpickPapers,
 } from './styles';
 import { HOME_TESTIMONIALS } from './testimonialsData';
 
@@ -356,6 +362,98 @@ const HomeView = () => {
         />
       </section>
 
+      <AreasContainer>
+        <AreasContent>
+          <AreasTextContent>
+            <SectionTitle>
+              Faça você também parte da nossa comunidade!
+            </SectionTitle>
+
+            <SectionText>
+              Na SouJunior, há diversas maneiras de participar:
+            </SectionText>
+            <div
+              style={{
+                minHeight: '12.31rem',
+              }}
+            >
+              <PapersContainer>
+                <TextContainer>
+                  <Text
+                    size={24}
+                    color="#002C66"
+                    weight={500}
+                    textAlign="center"
+                  >
+                    Júnior
+                  </Text>
+                  <Text
+                    size={16}
+                    color="#000000"
+                    weight={400}
+                    textAlign="center"
+                    marginBlock={0}
+                  >
+                    Júnior executa tarefas do projeto enquanto aprende na
+                    prática e desenvolve habilidades, sempre sob orientação de
+                    mentores e heads.
+                  </Text>
+                </TextContainer>
+                <ToothpickPapers />
+                <TextContainer>
+                  <Text
+                    size={24}
+                    color="#002C66"
+                    weight={500}
+                    textAlign="center"
+                  >
+                    Mentor
+                  </Text>
+                  <Text
+                    size={16}
+                    color="#000000"
+                    weight={400}
+                    textAlign="center"
+                    marginBlock={0}
+                  >
+                    Mentor orienta, tira dúvidas e apoia o crescimento dos
+                    juniores dentro de cada área de atuação.
+                  </Text>
+                </TextContainer>
+                <ToothpickPapers />
+                <TextContainer>
+                  <Text
+                    size={24}
+                    color="#002C66"
+                    weight={500}
+                    textAlign="center"
+                  >
+                    Head
+                  </Text>
+                  <Text
+                    size={16}
+                    color="#000000"
+                    weight={400}
+                    marginBlock={0}
+                    textAlign="center"
+                  >
+                    Head organiza e lidera equipes, toma decisões e garante que
+                    tudo funcione bem dentro do projeto.
+                  </Text>
+                </TextContainer>
+              </PapersContainer>
+              <JoinButton
+                href="https://stars.soujunior.tech/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Participar
+              </JoinButton>
+            </div>
+          </AreasTextContent>
+        </AreasContent>
+      </AreasContainer>
+
       <section
         id="nossas-iniciativas"
         aria-label="Nossas iniciativas"
@@ -364,7 +462,13 @@ const HomeView = () => {
           maxWidth: '1440px',
         }}
       >
-        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <div
+          style={{
+            textAlign: 'center',
+            marginBottom: '2rem',
+            marginTop: '2.56rem',
+          }}
+        >
           <Title
             as="h2"
             color="#001633"
